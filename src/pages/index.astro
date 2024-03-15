@@ -1,35 +1,52 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astral</span></h1>
-		<p class="instructions">
+	<main class="container">
+		<h1 class="display-4 mt-md-5 mb-3">Welcome to <span class="text-primary">Astral</span></h1>
+		<p class="lead fw-bold text-center mb-4">
 			Visual styles, markup & CSS guide for the Astral project.
 		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Censydiam"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
+		<ul role="list" class="list-unstyled">
+			<li>
+				<div class="card py-2 px-2">
+					<div class="row g-0">
+						<div class="col-2 text-center">
+							<img src="images/prototype/panelone.svg" class="img-fluid" alt="PanelOne" />
+						</div><!-- /.col-2 -->
+						<div class="col-10">
+							<div class="card-body">
+								<h2 class="card-title h3">PanelOne & Survey Experience</h2>
+								<ul class="list-unstyled fs-6">
+									<li><a href="recruitment/step_01_current" class="text-decoration-none">Recruitment landing page</a></li>
+									<li><a href="pollpredictor/intro&brand=panelone" class="text-decoration-none">Poll Predictor</a></li>
+									<li><a href="fish/gdpr_compliance&brand=panelone&progressive_points=persistent" class="text-decoration-none">Survey Experience</a></li>
+								</ul>
+							</div><!-- /.card-body -->
+						</div><!-- /.col-10 -->
+					</div><!-- /.row -->
+				</div><!-- /.card -->
+			</li>
+
+			<li>
+				<div class="card py-2 px-2 mt-4">
+					<div class="row g-0">
+						<div class="col-2 text-center">
+							<img src="images/prototype/panelone.svg" class="img-fluid" alt="PanelOne" />
+						</div><!-- /.col-2 -->
+						<div class="col-10">
+							<div class="card-body">
+								<h2 class="card-title h3">Projects</h2>
+								<ul class="list-unstyled fs-6">
+									<li><a href="recruitment/step_01_current" class="text-decoration-none">Censydiam</a></li>
+								</ul>
+							</div><!-- /.card-body -->
+						</div><!-- /.col-10 -->
+					</div><!-- /.row -->
+				</div><!-- /.card -->
+			</li>
+
 		</ul>
 	</main>
 </Layout>
