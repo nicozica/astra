@@ -1,10 +1,16 @@
+---
+
+import { Image } from 'astro:assets';
+import headerLogo from '../assets/images/logo.svg';
+
+---
 
 <nav class="navbar navbar-expand-md">
     <div class="container">
         <div class="row">
         <div class="col-12">
             <div class="navbar-brand">
-                <img src="/images/logo.svg" alt="Ipsos iSay" />
+                <Image src={headerLogo} class="img-fluid" alt="Ipsos iSay" />
             </div>
         </div>
         </div>

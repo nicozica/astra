@@ -4,6 +4,12 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
+
+// Images
+import { Image } from 'astro:assets';
+import imgSquadHome from '../../../assets/images/projects/censydiam/squad-home.png';
+import imgPlanet from '../../../assets/images/projects/censydiam/planet.png';
+
 ---
 <Header/>
 <Layout>
@@ -11,15 +17,15 @@ import Footer from '../../../components/Footer.astro';
     <div class="panel panel-intro-blue">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center">                    
-                    <img class="img-fluid" src="/images/projects/censydiam/squad-home.png" aria-hidden="true">
+                <div class="col-12 text-center">
+                    <Image src={imgSquadHome} class="img-fluid" alt="" aria-hidden="true" />
                 </div><!-- col -->
             </div><!-- row -->
             <div class="row">
                 <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 text-center">                    
                     <h1 class="text-white mb-3">Unleash Your Hidden  Superpower ⚡</h1>
                     <p class="lead text-white">Your thoughts aren't just opinions, they're superpowers that can shape the world!  Are you a creative mastermind or a wisdom guru? Uncover your inner superpower with our quiz.</p>
-                    <a href="quiz_flow_01.html" class="btn btn-light btn-start btn-lg px-5 mt-4">Start Quiz!</a>
+                    <a href="quiz_flow_01" class="btn btn-light btn-start btn-lg px-5 mt-4">Start Quiz!</a>
                 </div><!-- col -->
             </div><!-- row -->
         </div><!-- container -->
@@ -40,7 +46,7 @@ import Footer from '../../../components/Footer.astro';
             </div><!-- row -->
             <div class="row">
                 <div class="col-12 text-center">                    
-                    <img class="img-fluid" src="/images/projects/censydiam/planet.png" aria-hidden="true">
+                    <Image src={imgPlanet} class="img-fluid" alt="" aria-hidden="true" />
                 </div><!-- col -->
             </div><!-- row -->
             <div class="row">
