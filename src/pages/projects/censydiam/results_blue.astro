@@ -7,7 +7,7 @@ import Footer from '../../../components/Footer.astro';
 
 ---
 <Header/>
-<Layout>
+<Layout title="Creative">
 <!-- START: Intro -->
 <div class="panel panel-results panel-results-blue">
     <div class="container">
@@ -36,7 +36,7 @@ import Footer from '../../../components/Footer.astro';
 
                         <div class="mb-3">
                             <label for="passwordInput" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="passwordInput" data-indicator="pwindicator" onkeypress="capLock(event)" placeholder="Choose password" rel="popover" data-trigger="focus" data-placement="top">
+                            <input type="password" class="form-control" id="passwordInput" data-indicator="pwindicator" onkeypress="capLock(event)" placeholder="Choose password" data-trigger="focus" data-placement="top">
                             <div class="row mt-2">
                                 <div class="col">
                                     <div id="divMayus" class="caps-on font-size-xs" style="display:none"><i class="fa fa-exclamation-circle"></i> Caps Lock is on</div>
