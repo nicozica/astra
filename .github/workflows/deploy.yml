@@ -27,4 +27,4 @@ jobs:
           username: ${{ secrets.PRODUCTION_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "dist/*"
-          target: "var/www/ipsos/dist/*"
+          target: "var/www/ipsos/dist/"
