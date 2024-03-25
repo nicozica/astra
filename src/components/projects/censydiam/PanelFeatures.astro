@@ -1,3 +1,11 @@
+---
+// Images
+import { Image } from 'astro:assets';
+import iconThumbsUp from '../../../assets/images/projects/censydiam/thumbs-up.svg';
+import iconPanelone from '../../../assets/images/projects/censydiam/bullhorn.svg';
+import iconGift from '../../../assets/images/projects/censydiam/gift.svg';
+---
+
 <!-- START: Panel Grey -->
 <div class="panel panel-grey">
     <div class="container">
@@ -14,21 +22,21 @@
         <div class="row mt-4">
             <div class="col-12 col-md-4 text-center"> 
                 <div class="panel mt-3 panel-default pt-4 pb-3 px-4">
-                    <img class="img-fluid" src="images/thumbs-up.svg" aria-hidden="true">
+                    <Image src={iconThumbsUp} class="img-fluid" alt="" aria-hidden="true" />
                     <h3 class="mt-4">Sign Up</h3>
                     <p>Complete the registration form and create your account.</p>
                 </div>
             </div><!-- col -->
             <div class="col-12 col-md-4 text-center">
                 <div class="panel mt-3 panel-default pt-4 pb-3 px-4">
-                    <img class="img-fluid" src="images/bullhorn.svg" aria-hidden="true">
+                    <Image src={iconPanelone} class="img-fluid" alt="" aria-hidden="true" />
                     <h3 class="mt-4">Influence the future</h3>
                     <p>Share your opinion and influence brands, governments and societies.</p>
                 </div>                
             </div><!-- col -->
             <div class="col-12 col-md-4 text-center">
                 <div class="panel mt-3 panel-default pt-4 pb-3 px-4">
-                    <img class="img-fluid" src="images/gift.svg" aria-hidden="true">
+                    <Image src={iconGift} class="img-fluid" alt="" aria-hidden="true" />
                     <h3 class="mt-4">Choose your rewards</h3>
                     <p>Choose from a variety of gift cards, vouchers, donations and more!</p>
                 </div>

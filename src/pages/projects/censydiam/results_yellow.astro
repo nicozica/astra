@@ -1,0 +1,59 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+import Header from '../../../components/Header.astro';
+import PanelFeatures from '../../../components/projects/censydiam/PanelFeatures.astro';
+import RecruitmentForm from '../../../components/projects/censydiam/RecruitmentForm.astro';
+import Footer from '../../../components/Footer.astro';
+
+// CSS to be optimized
+import '../../../assets/styles/projects/censydiam/censydiam.css';
+
+// Images
+import { Image } from 'astro:assets';
+import imgBear from '../../../assets/images/projects/censydiam/bear.png';
+---
+<Layout title="Magnetic Connectivity">
+<Header/>
+<!-- START: Intro -->
+<div class="panel panel-results panel-results-yellow">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">                    
+                <p class="mb-1">Your superpower is...</p>
+                <h1>Magnetic Connectivity</h1>
+                <p class="lead">You are a fantastic people-magnet, thriving on meaningful connections. You're awesome at making everyone feel like a part of the gang,  shrugging off any differences and welcoming folks into your world. Your ability to connect people is the key to a vibrant community, where diverse voices unite into a single, powerful force.</p>
+                <div class="text-center">
+                    <Image src={imgBear} class="img-fluid" alt="Bear" />
+                </div>
+                <hr class="mb-4">
+                <p class="lead">Your adventure has only just begun! Uncover more traits of your <strong>Loyal Protection</strong> superpower and use them to influence the world around you.</p>
+                <p class="lead">Join the Ipsos iSay community, where every opinion holds the power to shape the future.</p>
+                <p class="lead">Sign up to unlock more insights and make an impact!</p>
+            </div><!-- col -->
+            <div class="col-12 col-lg-6">
+                <h2 class="fs-3">Sign up for Ipsos iSay</h2>              
+                <RecruitmentForm/>
+            </div><!-- col  -->
+        </div><!-- row -->
+    </div><!-- container -->
+</div><!-- END: Intro -->
+
+   
+
+<PanelFeatures/>
+<Footer/>
+</Layout>
+
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+
+<style>
+.panel.panel-intro-blue {
+    background: linear-gradient(to bottom right, #009CFF, #0063AA);
+}
+
+.btn.btn-light.btn-start {
+    color: #009CFF !important;
+}
+</style>
