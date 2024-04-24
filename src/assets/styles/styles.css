@@ -1,4 +1,7 @@
 /* styles.css */
 
-/* Importa estilos globales */
+/* Imported stylesheets */
 @import url('global.css');
+@import url('variables.css');
+@import url('buttons.css');
+@import url('common.css');

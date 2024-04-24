@@ -1,0 +1,83 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+// Images
+import { Image } from 'astro:assets';
+import imgIpsosiSay01 from '../../../assets/images/p1/survey/loading/ipsos-isay-01.gif';
+import imgIpsosiSay02 from '../../../assets/images/p1/survey/loading/ipsos-isay-02.gif';
+
+import imgFaviconItems from '../../../assets/images/p1/survey/loading/favicon-items.gif';
+import imgBubbleLoading from '../../../assets/images/p1/survey/loading/bubble-loading.gif';
+import imgBubbleItems from '../../../assets/images/p1/survey/loading/bubble-items.gif';
+import imgBubbleSpinner from '../../../assets/images/p1/survey/loading/bubble-spinner.gif';
+---
+
+<Layout title="Survey Experience">
+  <Header/>
+  <!-- Main Content -->
+  <div class="container">
+
+    <div class="row">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-7 mx-auto">
+
+            <div class="panel panel-default with-bigger-inputs py-3">
+
+              <div class="row text-center">
+                  <div class="col-12">
+                      <Image src={imgIpsosiSay01} class="img-fluid" alt="Gift and voucher" aria-hidden="true" />
+                  </div>
+                  <div class="col-12">
+                      <h1 class="h3 mt-2 mb-3 loading-dots">Validating your profile</h1>
+                      <p class="lead mt-1 mb-3">Please wait while we find the right survey for you.</p>
+                  </div><!-- /.col -->
+
+              </div><!-- row -->
+
+            </div><!-- panel -->
+
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+
+  <Footer/>
+</Layout>
+<script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
+<script>
+// Wait for the DOM to be fully loaded
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    // Redirect after 2 seconds
+    setTimeout(function() {
+            window.location.href = "/p1/survey/intro";
+        }, 2000);
+});
+*/
+
+</script>
+
+<style>
+
+/* CSS para el punto suspensivo animado */
+@keyframes loading {
+  0%, 100% {
+    content: ".";
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Aplicar la animación a la clase loading-dots */
+.loading-dots::after {
+  content: "."; /* Inicia con un punto */
+  display: inline-block;
+  overflow: hidden; /* Ocultar el exceso de anchura */
+  white-space: nowrap; /* Evitar que el texto se divida en líneas */
+  animation: loading 1s infinite;
+}
+
+</style>

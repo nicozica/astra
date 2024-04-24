@@ -1,0 +1,130 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+// CSS to be optimized
+//import '../../../../assets/styles/projects/censydiam/censydiam.css';
+
+// Images
+import { Image } from 'astro:assets';
+import imgVoucher from '../../../assets/images/p1/survey/gift_voucher_bkg.svg';
+---
+
+<Layout title="Survey Experience">
+  <Header/>
+<!-- Main Content -->
+<div class="container">
+
+  <div class="row">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-7 mx-auto">
+
+          <div class="panel panel-default with-bigger-inputs py-3">
+
+              <div class="row">
+                  <div class="col-md-4 text-center py-2 px-4">
+                    <Image src={imgVoucher} class="img-fluid" alt="Gift and voucher" aria-hidden="true" />
+                  </div>
+                  <div class="col-md-8">
+
+                      <!-- FOR INTERNAL USERS -->
+                      <h1 class="h3 mt-2 mb-3">Action required before continuing</h1>
+                      <div class="box-scroll">
+                          <p class="mt-1 mb-3">We&rsquo;ve revised our Privacy Policy and Terms &amp; Conditions to embrace the GDPR new legal provisions. Before you continue with this survey, please take a moment to read our updated policies. Highlighted changes include:</p>
+                          <ol class="small">
+                              <li>
+                                  <p class="mb-0"><strong>This can be a title or question</strong></p>
+                                  <p class="mt-1 text-muted">Pro iusto adipiscing temporibus ex. Eu erroribus consequat sit, idque harum legere cum et. Ipsum elaboraret ea vim, sed ea idque scribentur, eu sale fierent euripidis cum. Cu prima adolescens sit, placerat dignissim scripserit est cu. Error euripidis eum an, in sed exerci explicari. Dicunt iuvaret omnesque qui eu, nec ne wisi legimus consequat.</p>
+                              </li>
+                              <li>
+                                  <p class="mb-0"><strong>This can be a title or question</strong></p>
+                                  <p class="mt-1 text-muted">Pro iusto adipiscing temporibus ex. Eu erroribus consequat sit, idque harum legere cum et. Ipsum elaboraret ea vim, sed ea idque scribentur, eu sale fierent euripidis cum. Cu prima adolescens sit, placerat dignissim scripserit est cu. Error euripidis eum an, in sed exerci explicari. Dicunt iuvaret omnesque qui eu, nec ne wisi legimus consequat.</p>
+                              </li>
+                              <li>
+                                  <p class="mb-0"><strong>This can be a title or question</strong></p>
+                                  <p class="mt-1 text-muted">Pro iusto adipiscing temporibus ex. Eu erroribus consequat sit, idque harum legere cum et. Ipsum elaboraret ea vim, sed ea idque scribentur, eu sale fierent euripidis cum. Cu prima adolescens sit, placerat dignissim scripserit est cu. Error euripidis eum an, in sed exerci explicari. Dicunt iuvaret omnesque qui eu, nec ne wisi legimus consequat.</p>
+                              </li>
+                              <li>
+                                  <p class="mb-0"><strong>This can be a title or question</strong></p>
+                                  <p class="mt-1 text-muted">Pro iusto adipiscing temporibus ex. Eu erroribus consequat sit, idque harum legere cum et. Ipsum elaboraret ea vim, sed ea idque scribentur, eu sale fierent euripidis cum. Cu prima adolescens sit, placerat dignissim scripserit est cu. Error euripidis eum an, in sed exerci explicari. Dicunt iuvaret omnesque qui eu, nec ne wisi legimus consequat.</p>
+                              </li>
+                          </ol>
+                      </div><!-- box-scroll -->
+
+                  </div><!-- /.col -->
+
+              </div><!-- row -->
+
+              <div class="row">
+                  <div class="col-12">
+                      <hr class="mt-4">
+                      <div class="row">
+                          <div class="col-12 mb-1 text-center with-bigger-inputs">
+                              <label>
+                                  <div class="form-check my-3">
+                                      <input class="form-check-input" type="checkbox"> I have read and accept the <a target="_blank" href="index.php?page=frank/privacy_policy&status=visitor">Privacy Policy</a> and <a target="_blank" href="index.php?page=frank/privacy_policy&status=visitor">Terms &amp; Conditions</a>.
+                                  </div><!-- form-check -->
+                                  <p class="text-danger mt-1 mb-0 d-none">You must agree to the privacy policies before continuing.</p>
+                              </label>
+                          </div>
+                      </div><!-- row -->
+
+                      <div class="d-grid gap-2 mt-1 mb-3 text-center">
+                          <button id="loadingBtn" style="display:none" class="btn btn-primary btn-block btn-lg m-progress disabled">&nbsp;</button>
+                          <button id="loadedBtn" onclick="loadSurvey()" class="btn btn-primary btn-block btn-lg">
+                              Accept and take the survey
+                          </button>
+                      </div><!-- /.mt-1 mb-3 text-center -->
+                      <div class="mb-1 text-center">
+                          <a href="maltvinegar.php?page=sniffout&logo=ipsos">Decline and finish</a>
+                      </div><!-- /.mb-1 text-center -->
+                  </div><!-- /.col -->
+              </div><!-- row -->
+
+          </div><!-- panel -->
+
+      </div><!-- /.col -->
+  </div><!-- /.row -->
+</div><!-- /.container -->
+
+<Footer/>
+</Layout>
+<script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
+<script>
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Get references to the loaded button and the loading button
+    var loadedBtn = document.getElementById('loadedBtn');
+    var loadingBtn = document.getElementById('loadingBtn');
+    
+    // Add an event listener to the loaded button
+    loadedBtn!.addEventListener('click', function() {
+        // Hide the loaded button and show the loading button
+        loadedBtn!.style.display = 'none';
+        loadingBtn!.style.display = 'block';
+        
+        // Redirect after 2 seconds
+        setTimeout(function() {
+            window.location.href = "/p1/survey/validation";
+        }, 3500);
+    });
+});
+</script>
+
+<style>
+
+.panel.panel-default.padding-md img {
+		width: 175px; height: 175px;
+}
+		
+.box-scroll {
+  height: 250px;
+  overflow-y: auto;
+  border: 1px solid var(--cborder);
+  border-radius: 6px;
+  margin-right: 5px;
+  padding: 10px;
+}
+
+</style>

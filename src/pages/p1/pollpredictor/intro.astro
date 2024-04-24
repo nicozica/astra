@@ -1,0 +1,114 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+---
+
+<Layout title="Poll Predictor">
+  <Header/>
+  <div class="container pollpredictor_intro">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="panel panel-default py-3 text-center">
+          <div class="row">
+            <div class="col-12 text-center">
+              <div class="row">
+                <div class="col-12 col-sm-10 offset-sm-1">
+                  <h1 class="h2 mt-3 mb-1">Welcome to Poll Predictor!</h1>
+                  <p class="lead mt-0 mb-1">Can you predict the answer?</p>
+                  <p class="fs-lg fs-md text-muted">The closer you guess, the more draw entries you get to win prizes!</p>
+                </div><!-- col -->
+              </div><!-- row -->
+              <lottie-player src="/public/pollpredictor/pp_intro.jsonsx" background="transparent" speed="1" class="mt-4 mb-1" style="margin: 0 auto;" autoplay loop></lottie-player>
+              <div class="row">
+                <div class="col-sm-10 offset-sm-1 text-center mt-4 mb-0">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"/> I agree with the <a href="#modalStatements" data-bs-toggle="modal">General Statements</a> and the <a href="index.php?page=frank/contest_rules&status=logged">draw rules</a>.
+                    <p class="validation-warn text-danger mt-1 d-none">You need to accept our Privacy policy.</p>
+                  </label>
+                </div><!-- col -->
+              </div><!-- row -->
+              <div class="mt-1 text-muted text-center">
+                <div class="d-grid gap-2 text-center mt-4 mb-1">
+                  <a id="loadingBtn" href="javascript:void(0)" class="btn btn-primary m-progress disabled padding-left-lg padding-right-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                  <a class="btn btn-lg btn-primary btn-block mt-2 mb-1" data-callback="onSubmit" href="pollpredictor.php?page=pollpredictor/slider&brand=panelone&prize_type=entries&external=no">Play now!</a>
+                </div>
+              </div><!-- mt-1 text-muted text-center -->
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- panel -->
+  
+        <div class="fs-xs text-center mt-3">
+          <a href="#modalHelp" data-bs-toggle="modalHelp" onclick="$('#modalHelp').modal();">What is Poll Predictor?</a>
+        </div>
+      </div><!-- col -->
+    </div><!-- row -->
+  </div><!-- container -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modalHelp" tabindex="-1" role="dialog" aria-labelledby="modalHelpLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2 class="h4 text-dark">What is Poll Predictor?</h2>
+          <p>
+            The goal of Poll Predictor is to see how closely you can guess what percentage of respondents answered <strong class="text-secondary">&ldquo;YES&rdquo;</strong> to different poll questions. You&rsquo;re
+            awarded draw entries to win prizes depending on how close you are to the correct answer.
+          </p>
+  
+          <h2 class="h4 mt-3 text-dark">How do you play?</h2>
+          <ol class="list-unstyled">
+            <li class="mb-1">
+              You are shown with one random question. Then, you&rsquo;ll be asked to guess the percentage of respondents who answered <strong class="text-secondary">&ldquo;YES.&rdquo;</strong>
+            </li>
+            <li class="mb-1">
+              Use the sliding bar to submit your answer between <strong class="text-secondary">0% to 100%</strong>.
+            </li>
+            <li class="mb-1">The closer you are to the correct answer, the better.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <a type="button" class="btn btn-primary btn-block mb-1" data-bs-dismiss="modal" href="javascript:void(0);">Got it</a>
+        </div>
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+  
+<Footer/>
+</Layout>
+<script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
+<style>
+
+.pollpredictor_intro .img-pp_intro,
+.pollpredictor_results .img-pp_results {
+    width: 250px;
+    height: 104px;
+    margin: 0 auto;
+}
+
+.pollpredictor_results .img-pp_congrats {
+    width: 250px;
+    height: 152px;
+    margin: 0 auto;
+    background-size: 250px 152px;
+}
+
+.pollpredictor_results .img-pp_results {
+    background-size: 250px 104px;
+}
+
+@media (min-width: 768px) {
+    .pollpredictor_intro .img-pp_intro,
+    .pollpredictor_results .img-pp_results {
+        width: 360px;
+        height: 150px;
+        background-size: 360px 150px;
+    }
+    .pollpredictor_results .img-pp_results {
+        background-size: 360px 150px;
+    }
+}
+
+</style>
+

@@ -1,0 +1,63 @@
+/*  Variables of the app
+// ============================================================== */
+
+/* Variables Override
+// We'll use this file to override Bootstrap's default values. */
+
+:root {
+    /* Color system */
+    --cprimary-lightest: #DBE2FF;
+    --cprimary-lighter: #8496D8;
+    --cprimary: #2F469C;
+    --cprimary-darker: #1D3590;
+    --cprimary-darkest: #112572;
+
+    --csecondary-lightest: #EEC8F9;
+    --csecondary-lighter: #9E45B7;
+    --csecondary: #84329B;
+    --csecondary-darker: #641978;
+    --csecondary-darkest: #4A0B5A;
+
+    --cgray-lightest: #F9F9FA;
+    --cgray-lighter: #939096;
+    --cgray: #767279;
+    --cgray-darker: #59545C;
+    --cgray-darkest: #3A343D;
+
+    --csuccess-lightest: #4E9F82;
+    --csuccess-lighter: #4E9F82;
+    --csuccess: #287D5F;
+    --csuccess-darker: #196248;
+    --csuccess-darkest: #0F4E37;
+
+    --cwarning-lightest: #E08844;
+    --cwarning-lighter: #E08844;
+    --cwarning: #D3681B;
+    --cwarning-darker: #B36119;
+    --cwarning-darkest: #904917;
+
+    --cdanger-lightest: #FFEBF0;
+    --cdanger-lighter: #F27D99;
+    --cdanger: #CF2C53;
+    --cdanger-darker: #B51A3F;
+    --cdanger-darkest: #8F0D2C;
+
+    /* Borders */
+    --cborder: #B8B7B9;
+
+    /* Border radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 6px;
+    --border-radius-lg: 8px;
+    --border-radius-xl: 10px;
+
+    /* Padding */
+    --border-radius-xxs: 4px;
+    --border-radius-xs: 8px;
+    --border-radius-sm: 16px;
+    --border-radius-md: 24px;
+    --border-radius-lg: 40px;
+    --border-radius-xl: 64px;
+    --border-radius-xxl: 96px;
+}
+  

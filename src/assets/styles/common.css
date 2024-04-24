@@ -1,0 +1,9 @@
+/*  Custom classes that are common through the app
+// ============================================================== */
+
+img.img-200px {
+    max-width: 200px;
+    height: auto;
+}
+
+
