@@ -1,0 +1,74 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import HeaderVisitor from "../../components/HeaderVisitor.astro";
+import RecruitmentForm from '../../components/nmux/RecruitmentForm.astro';
+import Footer from "../../components/Footer.astro";
+
+---
+
+<Layout title="Survey Experience">
+  <HeaderVisitor />
+  <!-- Main Content -->
+  <div class="panel panel-white banner-top-reg py-4 mb-0">
+    <div class="container">
+      <div class="row">
+        <div class="campaign-item col-md-4 text-center">
+          <img style="width: 80px; height: 80px;" src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/icons/survey_pencil_bkg.svg" alt="" />
+          <h5 class="mt-3">Sign up</h5>
+          <p class="d-none d-md-block">Complete the registration form and create your account.</p>
+        </div>
+        <div class="campaign-item col-md-4 text-center">
+          <img style="width: 80px; height: 80px;" src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/icons/phone_check_bkg.svg" alt="" />
+          <h5 class="mt-3">Take surveys</h5>
+          <p class="d-none d-md-block">Voice your opinion on a variety of topics to earn points.</p>
+        </div>
+        <div class="campaign-item col-md-4 text-center">
+          <img style="width: 80px; height: 80px;" src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/icons/gift_voucher_bkg.svg" alt="" />
+          <h5 class="mt-3">Choose your rewards</h5>
+          <p class="d-none d-md-block">Redeem your points for your favorite rewards.</p>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12 text-center">
+          <div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6ffb0d04a076446a9af" data-businessunit-id="618c353f8da731d4b18a79ae" data-style-height="20px" data-style-width="100%" data-theme="light">
+            <a href="https://www.trustpilot.com/review/www.ipsosisay.com" target="_blank" rel="noopener">Trustpilot</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3 mb-5">
+
+      <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3">
+
+        <h1 class="h4 mt-5 mb-3"><span>Sign up for</span> <strong>Ipsos iSay</strong></h1>
+        <RecruitmentForm/>
+    </div>
+  </div>
+
+  <Footer />
+</Layout>
+<script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
+
+<script src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async="" type="text/javascript"></script>
+<style>
+  .panel.panel-default.padding-md img {
+    width: 175px;
+    height: 175px;
+  }
+
+  .panel {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  }
+
+  .box-scroll {
+    height: 250px;
+    overflow-y: auto;
+    border: 1px solid var(--cborder);
+    border-radius: 6px;
+    margin-right: 5px;
+    padding: 10px;
+  }
+</style>

@@ -38,6 +38,11 @@ a:hover {
     color: #4e5aa4 !important;
 }
 
+a.btn.btn-outline-primary:hover {
+    background-color: var(--cprimary);
+    color: #FFF !important;
+}
+
 
 /*  Loading button animation
 // ============================================================== */

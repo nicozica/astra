@@ -43,7 +43,7 @@ export async function getStaticPaths() {
       image: imgBubbleItems,
     },
     {
-      preloader: "bubble_spinner",
+      preloader: "bubble_dots",
       image: imgBubbleDots,
     },
   ];
@@ -70,7 +70,7 @@ const { preloader } = params;
           <Image src={image} class="img-fluid" alt="Gift and voucher" height="125" width="125" aria-hidden="true"/>
         </div>
         <div class="col-12">
-          <span class="h3 mt-2 mb-3 loading-dots">We are loading your next surve...y</span>
+          <h1 class="h3 mt-3 mb-3 loading-dots">We are loading your next survey</h1>
           <p class="lead mt-1 mb-3">Please wait while we find the right survey for you.</p>
         </div><!-- /.col -->
       </div><!-- row -->
