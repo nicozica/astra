@@ -1,0 +1,123 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+---
+
+<Layout title="Poll Predictor">
+  <Header/>
+  <div class="container pollpredictor_slider">
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+
+            <div class="panel panel-default py-3 text-center">
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1 class="h5 mb-0 mt-1 visually-hidden">Drag the slider to predict</h1>
+                        
+                        <div class="row">
+                            <div class="col-12 col-sm-10 offset-sm-1">
+                                <h1 class="h3 mt-1">How many people think the Earth is flat?</h1>
+                                <p class="lead text-muted">Ipsos iSay members in United States who answered <span class="text-success">YES</span></p>
+                            </div><!-- col-12 col-sm-10 offset-sm-1 -->
+                        </div><!-- row -->
+
+                        <div class="mt-3 mb-4">
+
+                            <!-- Explanatory tooltip -->
+                            <div id="helpText" class="floating-tooltip animation">
+                                Drag the slider to predict
+                            </div>
+
+                            <!-- Percentage -->
+                            <span style="display:none;" id="userPredictionSliderValLabel" class="slider-value"><span id="userPredictionSliderVal">50</span><span class="percentage">%</span></span>
+
+                            <input id="userPredictionSlider" type="range" min="0" max="100" step="1" value="50" data-bs-toggle="tooltip" title="Hide" />
+
+                        </div>
+
+                        <div class="col-12 text-center">
+                          <div class="d-grid gap-2 mb-3 text-center">
+                            <button id="loadingBtn" style="display:none" class="btn btn-primary btn-block btn-lg m-progress disabled">&nbsp;</button>
+                            <button id="loadedBtn" onclick="loadSurvey()" class="btn btn-primary btn-block btn-lg">
+                                Place prediction
+                            </button>
+                          </div><!-- /.mt-1 mb-3 text-center -->
+                        </div><!-- mt-1 text-muted text-center -->
+
+
+                    </div><!-- col-12: #areaSlider -->
+
+                </div><!-- row -->
+
+            </div><!-- card -->
+            <p class="mt-3 text-muted small"> <a href="#modalHelp" data-bs-toggle="modal" onclick="$('#modalHelp').modal();">What is Poll Predictor?</a> <span class="text-muted">&nbsp;|&nbsp;</span> Slider not working? <a href="javascript:void(0)" href="#sliderModal" data-bs-toggle="modal" onclick="$('#sliderModal').modal({backdrop: 'static', keyboard: false});">Try this!</a></p>
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+
+  </div><!-- container -->
+
+  
+
+  
+<Footer/>
+</Layout>
+<script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
+
+<script>
+  // Wait for the DOM to be fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+      // Get references to the loaded button and the loading button
+      var loadedBtn = document.getElementById('loadedBtn');
+      var loadingBtn = document.getElementById('loadingBtn');
+      
+      // Add an event listener to the loaded button
+      loadedBtn!.addEventListener('click', function() {
+          // Hide the loaded button and show the loading button
+          loadedBtn!.style.display = 'none';
+          loadingBtn!.style.display = 'block';
+          
+          // Redirect after 2 seconds
+          setTimeout(function() {
+              window.location.href = "/p1/pollpredictor/slider";
+          }, 3500);
+      });
+  });
+  </script>
+<style>
+
+.pollpredictor_intro .img-pp_intro,
+.pollpredictor_results .img-pp_results {
+    width: 250px;
+    height: 104px;
+    margin: 0 auto;
+}
+
+.pollpredictor_results .img-pp_congrats {
+    width: 250px;
+    height: 152px;
+    margin: 0 auto;
+    background-size: 250px 152px;
+}
+
+.pollpredictor_results .img-pp_results {
+    background-size: 250px 104px;
+}
+
+@media (min-width: 768px) {
+    .pollpredictor_intro .img-pp_intro,
+    .pollpredictor_results .img-pp_results {
+        width: 360px;
+        height: 150px;
+        background-size: 360px 150px;
+    }
+    .pollpredictor_results .img-pp_results {
+        background-size: 360px 150px;
+    }
+}
+
+</style>
+
