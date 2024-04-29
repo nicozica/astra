@@ -6,16 +6,10 @@ import Footer from '../../../components/Footer.astro';
 
 // Images
 import { Image } from 'astro:assets';
-import imgIpsosiSay01 from '../../../assets/images/p1/survey/loading/ipsos-isay-01.gif';
-import imgIpsosiSay02 from '../../../assets/images/p1/survey/loading/ipsos-isay-02.gif';
-
-import imgFaviconItems from '../../../assets/images/p1/survey/loading/favicon-items.gif';
-import imgBubbleLoading from '../../../assets/images/p1/survey/loading/bubble-loading.gif';
-import imgBubbleItems from '../../../assets/images/p1/survey/loading/bubble-items.gif';
-import imgBubbleSpinner from '../../../assets/images/p1/survey/loading/bubble-spinner.gif';
+import imgBubbleProfile from '../../../assets/images/p1/survey/loading/bubble-profile.gif';
 ---
 
-<Layout title="Survey Experience">
+
   <Header/>
   <!-- Main Content -->
   <div class="container">
@@ -27,7 +21,7 @@ import imgBubbleSpinner from '../../../assets/images/p1/survey/loading/bubble-sp
 
               <div class="row text-center">
                   <div class="col-12">
-                      <Image src={imgIpsosiSay01} class="img-fluid" alt="Gift and voucher" aria-hidden="true" />
+                      <Image src={imgBubbleProfile} class="img-fluid" alt="Gift and voucher" aria-hidden="true" />
                   </div>
                   <div class="col-12">
                       <h1 class="h3 mt-2 mb-3 loading-dots">Validating your profile</h1>
@@ -43,7 +37,7 @@ import imgBubbleSpinner from '../../../assets/images/p1/survey/loading/bubble-sp
   </div><!-- /.container -->
 
   <Footer/>
-</Layout>
+
 <script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
 <script>
 // Wait for the DOM to be fully loaded

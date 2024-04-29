@@ -1,7 +1,7 @@
 ---
 import Layout from "../../../../layouts/Layout.astro";
 
-import Header from "../../../../components/Header.astro";
+import HeaderSurvey from "../../../../components/HeaderSurvey.astro";
 import Footer from "../../../../components/Footer.astro";
 
 
@@ -15,37 +15,42 @@ import imgFaviconDots from "../../../../assets/images/p1/survey/loading/favicon-
 import imgBubbleLoading from "../../../../assets/images/p1/survey/loading/bubble-loading.gif";
 import imgBubbleItems from "../../../../assets/images/p1/survey/loading/bubble-items.gif";
 import imgBubbleDots from "../../../../assets/images/p1/survey/loading/bubble-dots.gif";
+import imgBubbleProfile from '../../../../assets/images/p1/survey/loading/bubble-profile.gif';
 
 export async function getStaticPaths() {
   const preloaders = [
     {
       preloader: "logo01",
-      image: imgIpsosiSay01,
+      image: imgIpsosiSay01
     },
     {
       preloader: "logo02",
-      image: imgIpsosiSay02,
+      image: imgIpsosiSay02
     },
     {
       preloader: "faviconItems",
-      image: imgFaviconItems,
+      image: imgFaviconItems
     },
     {
       preloader: "faviconDots",
-      image: imgFaviconDots,
+      image: imgFaviconDots
     },
     {
       preloader: "bubble_loading",
-      image: imgBubbleLoading,
+      image: imgBubbleLoading
     },
     {
       preloader: "bubble_items",
-      image: imgBubbleItems,
+      image: imgBubbleItems
     },
     {
       preloader: "bubble_dots",
-      image: imgBubbleDots,
+      image: imgBubbleDots
     },
+    {
+      preloader: "bubble_profile",
+      image: imgBubbleProfile
+    }
   ];
   return preloaders.map(({ preloader, image }) => {
     return {
@@ -61,13 +66,13 @@ const { preloader } = params;
 ---
 
 <Layout title="Survey Experience · Ipsos iSay">
-  <div class="container-fluid container-full-height">
-    <Header />
+  <div class="container-fluid container-full-height px-0">
+    <HeaderSurvey />
     <!-- Main Content -->
     <div class="container content py-3">
       <div class="row text-center">
         <div class="col-12">
-          <Image src={image} class="img-fluid" alt="Gift and voucher" height="125" width="125" aria-hidden="true"/>
+          <Image src={image} class="img-fluid" alt="Gift and voucher" height="100" width="100" aria-hidden="true"/>
         </div>
         <div class="col-12">
           <h1 class="h3 mt-3 mb-3 loading-dots">We are loading your next survey</h1>

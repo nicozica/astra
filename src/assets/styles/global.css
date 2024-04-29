@@ -40,7 +40,7 @@ h2 {
 }
 
 .text-secondary {
-    color: #1D7F76 !important;
+    color: var(--csecondary) !important;
 }
 
 /*  Panels
@@ -83,3 +83,7 @@ h2 {
 .panel-success      { background-color: var(--csuccess); }
 .panel-warning      { background-color: var(--cwarning); }
 .panel-danger       { background-color: var(--cdanger); }
+
+ul.dotted {
+    padding: 10px 0 15px 0 !important; border-top: 1px dotted var(--cborder-dotted); border-bottom: 1px dotted var(--cborder-dotted);
+}

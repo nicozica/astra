@@ -44,6 +44,7 @@
 
     /* Borders */
     --cborder: #B8B7B9;
+    --cborder-dotted: #E0E0E0;
 
     /* Border radius */
     --border-radius-sm: 4px;
