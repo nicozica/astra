@@ -1,130 +1,94 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import Layout from "../../../layouts/Layout.astro";
 
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-
-// CSS to be optimized
-//import '../../../../assets/styles/projects/censydiam/censydiam.css';
-
-// Images
-import { Image } from 'astro:assets';
-import imgVoucher from '../../../assets/images/p1/survey/gift_voucher_bkg.svg';
+import HeaderSurvey from "../../../components/survey/HeaderSurvey.astro";
+import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
 ---
 
 <Layout title="Survey Experience">
-  <Header/>
-<!-- Main Content -->
-<div class="container">
-
-  <div class="row">
-      <div class="col-12 col-sm-10 col-md-8 col-lg-7 mx-auto">
-
-          <div class="panel panel-default with-bigger-inputs py-3">
-
-              <div class="row">
-                  <div class="col-md-4 text-center py-2 px-4">
-                    <Image src={imgVoucher} class="img-fluid" alt="Gift and voucher" aria-hidden="true" />
-                  </div>
-                  <div class="col-md-8">
-
-                      <!-- FOR INTERNAL USERS -->
-                      <h1 class="h3 mt-2 mb-3">Action required before continuing</h1>
-                      <div class="box-scroll">
-                          <p class="mt-1 mb-3">We&rsquo;ve revised our Privacy Policy and Terms &amp; Conditions to embrace the GDPR new legal provisions. Before you continue with this survey, please take a moment to read our updated policies. Highlighted changes include:</p>
-                          <ol class="small">
-                              <li>
-                                  <p class="mb-0"><strong>This can be a title or question</strong></p>
-                                  <p class="mt-1 text-muted">Pro iusto adipiscing temporibus ex. Eu erroribus consequat sit, idque harum legere cum et. Ipsum elaboraret ea vim, sed ea idque scribentur, eu sale fierent euripidis cum. Cu prima adolescens sit, placerat dignissim scripserit est cu. Error euripidis eum an, in sed exerci explicari. Dicunt iuvaret omnesque qui eu, nec ne wisi legimus consequat.</p>
-                              </li>
-                              <li>
-                                  <p class="mb-0"><strong>This can be a title or question</strong></p>
-                                  <p class="mt-1 text-muted">Pro iusto adipiscing temporibus ex. Eu erroribus consequat sit, idque harum legere cum et. Ipsum elaboraret ea vim, sed ea idque scribentur, eu sale fierent euripidis cum. Cu prima adolescens sit, placerat dignissim scripserit est cu. Error euripidis eum an, in sed exerci explicari. Dicunt iuvaret omnesque qui eu, nec ne wisi legimus consequat.</p>
-                              </li>
-                              <li>
-                                  <p class="mb-0"><strong>This can be a title or question</strong></p>
-                                  <p class="mt-1 text-muted">Pro iusto adipiscing temporibus ex. Eu erroribus consequat sit, idque harum legere cum et. Ipsum elaboraret ea vim, sed ea idque scribentur, eu sale fierent euripidis cum. Cu prima adolescens sit, placerat dignissim scripserit est cu. Error euripidis eum an, in sed exerci explicari. Dicunt iuvaret omnesque qui eu, nec ne wisi legimus consequat.</p>
-                              </li>
-                              <li>
-                                  <p class="mb-0"><strong>This can be a title or question</strong></p>
-                                  <p class="mt-1 text-muted">Pro iusto adipiscing temporibus ex. Eu erroribus consequat sit, idque harum legere cum et. Ipsum elaboraret ea vim, sed ea idque scribentur, eu sale fierent euripidis cum. Cu prima adolescens sit, placerat dignissim scripserit est cu. Error euripidis eum an, in sed exerci explicari. Dicunt iuvaret omnesque qui eu, nec ne wisi legimus consequat.</p>
-                              </li>
-                          </ol>
-                      </div><!-- box-scroll -->
-
-                  </div><!-- /.col -->
-
-              </div><!-- row -->
-
-              <div class="row">
-                  <div class="col-12">
-                      <hr class="mt-4">
-                      <div class="row">
-                          <div class="col-12 mb-1 text-center with-bigger-inputs">
-                              <label>
-                                  <div class="form-check my-3">
-                                      <input class="form-check-input" type="checkbox"> I have read and accept the <a target="_blank" href="index.php?page=frank/privacy_policy&status=visitor">Privacy Policy</a> and <a target="_blank" href="index.php?page=frank/privacy_policy&status=visitor">Terms &amp; Conditions</a>.
-                                  </div><!-- form-check -->
-                                  <p class="text-danger mt-1 mb-0 d-none">You must agree to the privacy policies before continuing.</p>
-                              </label>
-                          </div>
-                      </div><!-- row -->
-
-                      <div class="d-grid gap-2 mt-1 mb-3 text-center">
-                          <button id="loadingBtn" style="display:none" class="btn btn-primary btn-block btn-lg m-progress disabled">&nbsp;</button>
-                          <button id="loadedBtn" onclick="loadSurvey()" class="btn btn-primary btn-block btn-lg">
-                              Accept and take the survey
-                          </button>
-                      </div><!-- /.mt-1 mb-3 text-center -->
-                      <div class="mb-1 text-center">
-                          <a href="maltvinegar.php?page=sniffout&logo=ipsos">Decline and finish</a>
-                      </div><!-- /.mb-1 text-center -->
-                  </div><!-- /.col -->
-              </div><!-- row -->
-
+  <div class="container-fluid container-full-height px-0">
+    <HeaderSurvey />
+    <!-- Main Content -->
+    <div class="container content">
+      <div class="row">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-7 mx-auto">
+          <div class="panel panel-default with-bigger-inputs py-4">
+            <div class="row">
+              <div class="col">
+                <h1 class="h2 mb-4">
+                  <span class="h6">Before you continue</span><br />
+                  We’ve made some changes to the Ipsos iSay policies.
+                </h1>
+                <p>
+                  Our <a href="" target="_blank">Terms and Conditions</a>, and <a href="" target="_blank">Privacy Policy</a> have been updated to reflect the Ipsos local company panel ownership and the
+                  relevant contact details. Please take a moment to review them.
+                </p>
+                <p>
+                  If you choose not to accept our updated T&Cs and policies, you can terminate your Ipsos iSay panel membership by clicking <a href="javascript:void();">here</a>. If you would like to
+                  continue taking surveys with Ipsos iSay, please click on “Accept and continue”.
+                </p>
+                <div class="dotted pt-1">
+                  <label>
+                    <div class="form-check my-3">
+                      <input class="form-check-input" type="checkbox" /> I have read and accept the <a target="_blank" href="index.php?page=frank/privacy_policy&status=visitor">Privacy Policy</a> and <a
+                        target="_blank"
+                        href="index.php?page=frank/privacy_policy&status=visitor">Terms &amp; Conditions</a
+                      >.
+                    </div><!-- form-check -->
+                    <p class="text-danger mt-1 mb-0 d-none">You must agree to the privacy policies before continuing.</p>
+                  </label>
+                </div>
+              </div>
+            </div><!-- row -->
+            <div class="d-grid gap-2 my-3 text-center">
+              <button id="loadingBtn" style="display:none" class="btn btn-primary btn-block btn-lg m-progress disabled">&nbsp;</button>
+              <button id="loadedBtn" onclick="loadSurvey()" class="btn btn-primary btn-block btn-lg"> Accept and take the survey </button>
+            </div><!-- /.mt-1 mb-3 text-center -->
+            <div class="mb-1 text-center">
+              or <a href="maltvinegar.php?page=sniffout&logo=ipsos">Decline and finish</a>
+            </div><!-- /.mb-1 text-center -->
           </div><!-- panel -->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
 
-      </div><!-- /.col -->
-  </div><!-- /.row -->
-</div><!-- /.container -->
-
-<Footer/>
+    <FooterSurvey />
+  </div><!-- /.container-fluid -->
 </Layout>
-<script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
 <script>
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
+  // Wait for the DOM to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
     // Get references to the loaded button and the loading button
-    var loadedBtn = document.getElementById('loadedBtn');
-    var loadingBtn = document.getElementById('loadingBtn');
-    
+    var loadedBtn = document.getElementById("loadedBtn");
+    var loadingBtn = document.getElementById("loadingBtn");
+
     // Add an event listener to the loaded button
-    loadedBtn!.addEventListener('click', function() {
-        // Hide the loaded button and show the loading button
-        loadedBtn!.style.display = 'none';
-        loadingBtn!.style.display = 'block';
-        
-        // Redirect after 2 seconds
-        setTimeout(function() {
-            window.location.href = "/p1/survey/validation/bubble_dots";
-        }, 3500);
+    loadedBtn!.addEventListener("click", function () {
+      // Hide the loaded button and show the loading button
+      loadedBtn!.style.display = "none";
+      loadingBtn!.style.display = "block";
+
+      // Redirect after 2 seconds
+      setTimeout(function () {
+        window.location.href = "/p1/survey/validation/bubble_profile";
+      }, 2000);
     });
-});
+  });
 </script>
 
 <style>
-
-.panel.panel-default.padding-md img {
-		width: 175px; height: 175px;
-}
-		
-.box-scroll {
-  height: 250px;
-  overflow-y: auto;
-  border: 1px solid var(--cborder);
-  border-radius: 6px;
-  margin-right: 5px;
-  padding: 10px;
+html,
+body {
+  height: 100%;
 }
 
+.container-full-height {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex-grow: 1;
+}
 </style>

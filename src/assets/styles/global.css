@@ -84,6 +84,10 @@ h2 {
 .panel-warning      { background-color: var(--cwarning); }
 .panel-danger       { background-color: var(--cdanger); }
 
-ul.dotted {
-    padding: 10px 0 15px 0 !important; border-top: 1px dotted var(--cborder-dotted); border-bottom: 1px dotted var(--cborder-dotted);
+.dotted, ul.dotted {
+    padding: 10px 0 !important; border-top: 1px dotted var(--cborder-dotted); border-bottom: 1px dotted var(--cborder-dotted);
+}
+
+.dotted-top {
+    padding-top: 10px !important; border-top: 1px dotted var(--cborder-dotted);
 }

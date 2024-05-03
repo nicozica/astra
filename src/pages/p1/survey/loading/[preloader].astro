@@ -4,6 +4,7 @@ import Layout from "../../../../layouts/Layout.astro";
 import HeaderSurvey from "../../../../components/survey/HeaderSurvey.astro";
 import FooterSurvey from "../../../../components/survey/FooterSurvey.astro";
 
+import QuickFacts from "../../../../components/survey/QuickFacts.astro";
 
 // Images
 import { Image } from "astro:assets";
@@ -15,42 +16,42 @@ import imgFaviconDots from "../../../../assets/images/p1/survey/loading/favicon-
 import imgBubbleLoading from "../../../../assets/images/p1/survey/loading/bubble-loading.gif";
 import imgBubbleItems from "../../../../assets/images/p1/survey/loading/bubble-items.gif";
 import imgBubbleDots from "../../../../assets/images/p1/survey/loading/bubble-dots.gif";
-import imgBubbleProfile from '../../../../assets/images/p1/survey/loading/bubble-profile.gif';
+import imgBubbleProfile from "../../../../assets/images/p1/survey/loading/bubble-profile.gif";
 
 export async function getStaticPaths() {
   const preloaders = [
     {
       preloader: "logo01",
-      image: imgIpsosiSay01
+      image: imgIpsosiSay01,
     },
     {
       preloader: "logo02",
-      image: imgIpsosiSay02
+      image: imgIpsosiSay02,
     },
     {
       preloader: "faviconItems",
-      image: imgFaviconItems
+      image: imgFaviconItems,
     },
     {
       preloader: "faviconDots",
-      image: imgFaviconDots
+      image: imgFaviconDots,
     },
     {
       preloader: "bubble_loading",
-      image: imgBubbleLoading
+      image: imgBubbleLoading,
     },
     {
       preloader: "bubble_items",
-      image: imgBubbleItems
+      image: imgBubbleItems,
     },
     {
       preloader: "bubble_dots",
-      image: imgBubbleDots
+      image: imgBubbleDots,
     },
     {
       preloader: "bubble_profile",
-      image: imgBubbleProfile
-    }
+      image: imgBubbleProfile,
+    },
   ];
   return preloaders.map(({ preloader, image }) => {
     return {
@@ -72,67 +73,87 @@ const { preloader } = params;
     <div class="container content py-3">
       <div class="row text-center">
         <div class="col-12">
-          <Image src={image} class="img-fluid" alt="" height="100" width="100" aria-hidden="true"/>
+          <Image src={image} class="img-fluid" alt="Gift and voucher" height="100" width="100" aria-hidden="true" />
         </div>
         <div class="col-12">
-          <h1 class="h3 mt-3 mb-3 loading-dots">Validating profile</h1>
+          <h1 class="h3 mt-3 mb-3 loading-dots">We are loading your next survey</h1>
           <p class="lead mt-1 mb-3">Please wait while we find the right survey for you.</p>
         </div><!-- /.col -->
       </div><!-- row -->
     </div><!-- /.container -->
 
+    <div class="container">
+      <div class="row text-center dotted-top">
+        <div class="col-12">
+          <QuickFacts />
+          <!--
+<p class="lead mt-4"><span class="text-secondary" id="percentage">48%</span> <span id="subject">of Californians</span> <br>
+<span class="fs-6" id="fact">Claim to have seen an UFO at least once</span></p>
+-->
+        </div><!-- /.col -->
+      </div><!-- row -->
+    </div><!-- /.container -->
     <FooterSurvey />
   </div>
 </Layout>
 <script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
 <script>
-window.addEventListener('load', function() {
-    setTimeout(function() {
-        window.location.href = "/p1/survey/intro";
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      window.location.href = "/p1/survey/dim_data";
     }, 5000);
-});
+  });
 </script>
-  
 
 <style>
-html,
-body {
-  height: 100%;
-}
-.container-full-height {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100% !important;
-}
+  html,
+  body {
+    height: 100%;
+  }
+  .container-full-height {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
 
-/* loading dots */
-.loading-dots:after {
-    content: '.';
+  /* loading dots */
+  .loading-dots:after {
+    content: ".";
     animation: dots 1s steps(5, end) infinite;
-    color: #02103F;
+    color: #02103f;
   }
 
   @keyframes dots {
-    0%, 20% {
-      color: rgba(0,0,0,0);
-      text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0);
+    0%,
+    20% {
+      color: rgba(0, 0, 0, 0);
+      text-shadow:
+        0.25em 0 0 rgba(0, 0, 0, 0),
+        0.5em 0 0 rgba(0, 0, 0, 0);
     }
     40% {
-      color: #02103F;
-      text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0);
+      color: #02103f;
+      text-shadow:
+        0.25em 0 0 rgba(0, 0, 0, 0),
+        0.5em 0 0 rgba(0, 0, 0, 0);
     }
     60% {
-      text-shadow: .25em 0 0 #02103F, .5em 0 0 rgba(0,0,0,0);
+      text-shadow:
+        0.25em 0 0 #02103f,
+        0.5em 0 0 rgba(0, 0, 0, 0);
     }
-    80%, 100% {
-      text-shadow: .25em 0 0 #02103F, .5em 0 0 #02103F;
+    80%,
+    100% {
+      text-shadow:
+        0.25em 0 0 #02103f,
+        0.5em 0 0 #02103f;
     }
   }
 </style>

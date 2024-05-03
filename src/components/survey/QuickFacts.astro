@@ -1,0 +1,68 @@
+<p class="lead mt-4">
+  <span class="text-secondary" id="percentage"></span>
+  <span id="subject"></span> <br>
+  <span class="fs-6" id="fact"></span>
+</p>
+
+<script>
+  // Array de datos de ejemplo, cada elemento contiene un objeto con la información para una fact
+  const factsData = [
+    {
+      percentage: "48%",
+      subject: "of Californians",
+      fact: "Claim to have seen a UFO at least once"
+    },
+    {
+      percentage: "35%",
+      subject: "of Texans",
+      fact: "Secretly wish they were cowboys"
+    },
+    {
+      percentage: "71%",
+      subject: "of New Yorkers",
+      fact: "Prefer pizza over bagels"
+    },
+    {
+      percentage: "89%",
+      subject: "of South Dakotans",
+      fact: "Have visited Mount Rushmore"
+    },
+    {
+      percentage: "77%",
+      subject: "of Americans",
+      fact: "Believe in Big Foot"
+    },
+    {
+      percentage: "29%",
+      subject: "of Utah residents",
+      fact: "Have 5 or more siblings"
+    }
+  ];
+
+  // Función para actualizar el contenido con un nuevo fact
+  function updateFact() {
+    // Escoge un índice aleatorio para seleccionar un fact del array
+    const randomIndex = Math.floor(Math.random() * factsData.length);
+    const fact = factsData[randomIndex];
+    
+    // Actualiza el contenido HTML con los datos del fact seleccionado
+    const percentageElement = document.getElementById("percentage");
+    const subjectElement = document.getElementById("subject");
+    const factElement = document.getElementById("fact");
+
+    // Verifica si los elementos existen antes de actualizar su contenido
+    if (percentageElement && subjectElement && factElement) {
+      percentageElement.innerText = fact.percentage;
+      subjectElement.innerText = fact.subject;
+      factElement.innerText = fact.fact;
+    } else {
+      console.error("No se pudo encontrar algún elemento necesario para actualizar el contenido.");
+    }
+  }
+
+  // Llama a la función `updateFact` para actualizar el contenido al cargar la página
+  updateFact();
+
+  // Llama a la función `updateFact` cada 2 segundos para cambiar el contenido
+  setInterval(updateFact, 2000);
+</script>

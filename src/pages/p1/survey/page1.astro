@@ -1,110 +1,94 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import Layout from "../../../layouts/Layout.astro";
 
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-
-// CSS to be optimized
-//import '../../../../assets/styles/projects/censydiam/censydiam.css';
-
-// Images
-import { Image } from 'astro:assets';
-import imgVoucher from '../../../assets/images/p1/survey/gift_voucher_bkg.svg';
+import HeaderSurvey from "../../../components/survey/HeaderSurvey.astro";
+import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
 ---
 
 <Layout title="Survey Experience">
-  <Header/>
-<!-- Main Content -->
-<div class="container">
-
-  <div class="row">
-      <div class="col-12 col-sm-10 col-md-8 col-lg-7 mx-auto">
-
-        <div class="panel panel-default with-bigger-inputs py-4">
+  <div class="container-fluid container-full-height px-0">
+    <HeaderSurvey />
+    <!-- Main Content -->
+    <div class="container content">
+      <div class="row">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-7 mx-auto">
+          <div class="panel panel-default with-bigger-inputs py-4">
             <div class="row">
-                <div class="col">
-                    <h1 class="h4">What is your date of birth?</h1>
-                    <div class="mb-3">
-                        <div class="row">
-                            <div class="col-sm-6 col-lg-4 mb-3">
-                                <label for="bday" class="form-label mb-1">Year</label>
-                                <select class="form-select" id="bday-month" name="bday-month" autocomplete="bday-month">
-                                    <option disabled selected>Month</option>
-                                    <option>January</option>
-                                    <option>February</option>
-                                    <option>March</option>
-                                    <option>April</option>
-                                </select>
-                            </div><!-- col -->
-                            <div class="col-sm-6 col-lg-4 mb-3">
-                                <label for="bday" class="form-label mb-1">Month</label>
-                                <select class="form-select" id="bday-year" name="bday-year" autocomplete="bday-year">
-                                    <option disabled selected>Year</option>
-                                    <option>1976</option>
-                                    <option>1977</option>
-                                    <option>1978</option>
-                                    <option>1979</option>
-                                </select>
-                            </div><!-- col -->
-                        </div><!-- row -->
-                        <p class="validation-warn font-size-xs text-danger mt-2 d-none">Your birth date has missing fields.</p>
-                    </div><!-- /.form-group -->
-
-                </div><!-- col -->
+              <div class="col">
+                <h1 class="h4">What is your date of birth?</h1>
+                <div class="mb-3">
+                  <div class="row">
+                    <div class="col-sm-6 col-lg-4 mb-3">
+                      <label for="bday" class="form-label mb-1">Year</label>
+                      <select class="form-select" id="bday-month" name="bday-month" autocomplete="bday-month">
+                        <option disabled selected>Month</option>
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                      </select>
+                    </div><!-- col -->
+                    <div class="col-sm-6 col-lg-4 mb-3">
+                      <label for="bday" class="form-label mb-1">Month</label>
+                      <select class="form-select" id="bday-year" name="bday-year" autocomplete="bday-year">
+                        <option disabled selected>Year</option>
+                        <option>1976</option>
+                        <option>1977</option>
+                        <option>1978</option>
+                        <option>1979</option>
+                      </select>
+                    </div><!-- col -->
+                  </div><!-- row -->
+                  <p class="validation-warn font-size-xs text-danger mt-2 d-none">Your birth date has missing fields.</p>
+                </div><!-- /.form-group -->
+              </div><!-- col -->
             </div><!-- row -->
-            <div class="row mt-3">
-                <div class="col">
-                    <p>As always, all information you provide will be kept strictly confidential and will be used for research purposes only.</p>
-                </div>
+            <div class="dotted-top">
+              <a class="btn btn-lg btn-primary mt-2 mb-1" data-callback="onSubmit" href="/p1/survey/loading/bubble_dots">Next</a>
             </div>
-            <div class="d-grid gap-2 text-center mt-3 mb-1">
-                <a class="btn btn-lg btn-primary btn-block mt-2 mb-1" data-callback="onSubmit" href="/p1/survey/page1">Get started</a>
-            </div>
-        </div><!-- panel -->
+          </div><!-- panel -->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
 
-          
-
-      </div><!-- /.col -->
-  </div><!-- /.row -->
-</div><!-- /.container -->
-
-<Footer/>
+    <FooterSurvey />
+  </div>
 </Layout>
 <script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
 <script>
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
+  // Wait for the DOM to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
     // Get references to the loaded button and the loading button
-    var loadedBtn = document.getElementById('loadedBtn');
-    var loadingBtn = document.getElementById('loadingBtn');
-    
+    var loadedBtn = document.getElementById("loadedBtn");
+    var loadingBtn = document.getElementById("loadingBtn");
+
     // Add an event listener to the loaded button
-    loadedBtn!.addEventListener('click', function() {
-        // Hide the loaded button and show the loading button
-        loadedBtn!.style.display = 'none';
-        loadingBtn!.style.display = 'block';
-        
-        // Redirect after 2 seconds
-        setTimeout(function() {
-            window.location.href = "/p1/survey/page1";
-        }, 2000);
+    loadedBtn!.addEventListener("click", function () {
+      // Hide the loaded button and show the loading button
+      loadedBtn!.style.display = "none";
+      loadingBtn!.style.display = "block";
+
+      // Redirect after 2 seconds
+      setTimeout(function () {
+        window.location.href = "/p1/survey/page1";
+      }, 2000);
     });
-});
+  });
 </script>
 
 <style>
-
-.panel.panel-default.padding-md img {
-		width: 175px; height: 175px;
-}
-		
-.box-scroll {
-  height: 250px;
-  overflow-y: auto;
-  border: 1px solid var(--cborder);
-  border-radius: 6px;
-  margin-right: 5px;
-  padding: 10px;
+html,
+body {
+  height: 100%;
 }
 
+.container-full-height {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex-grow: 1;
+}
 </style>
