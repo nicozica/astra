@@ -7,57 +7,7 @@ import Footer from "../../../components/Footer.astro";
 
 // Images
 import { Image } from "astro:assets";
-import imgIpsosiSay01 from "../../../../assets/images/p1/survey/loading/ipsos-isay-01.gif";
-import imgIpsosiSay02 from "../../../../assets/images/p1/survey/loading/ipsos-isay-02.gif";
-
-import imgFaviconItems from "../../../../assets/images/p1/survey/loading/favicon-items.gif";
-import imgFaviconDots from "../../../../assets/images/p1/survey/loading/favicon-dots.gif";
-import imgBubbleLoading from "../../../../assets/images/p1/survey/loading/bubble-loading.gif";
-import imgBubbleItems from "../../../../assets/images/p1/survey/loading/bubble-items.gif";
-import imgBubbleDots from "../../../../assets/images/p1/survey/loading/bubble-dots.gif";
-
-export async function getStaticPaths() {
-  const preloaders = [
-    {
-      preloader: "logo01",
-      image: imgIpsosiSay01,
-    },
-    {
-      preloader: "logo02",
-      image: imgIpsosiSay02,
-    },
-    {
-      preloader: "faviconItems",
-      image: imgFaviconItems,
-    },
-    {
-      preloader: "faviconDots",
-      image: imgFaviconDots,
-    },
-    {
-      preloader: "bubble_loading",
-      image: imgBubbleLoading,
-    },
-    {
-      preloader: "bubble_items",
-      image: imgBubbleItems,
-    },
-    {
-      preloader: "bubble_dots",
-      image: imgBubbleDots,
-    },
-  ];
-  return preloaders.map(({ preloader, image }) => {
-    return {
-      params: { preloader },
-      props: { image },
-    };
-  });
-}
-
-const { image } = Astro.props;
-const { params } = Astro;
-const { preloader } = params;
+import imgBubbleLoading from "../../../assets/images/p1/survey/loading/bubble-loading.gif";
 ---
 
 <Layout title="Survey Experience · Ipsos iSay">
@@ -67,7 +17,7 @@ const { preloader } = params;
     <div class="container content py-3">
       <div class="row text-center">
         <div class="col-12">
-          <Image src={image} class="img-fluid" alt="Gift and voucher" height="125" width="125" aria-hidden="true"/>
+          <Image src={imgBubbleLoading} class="img-fluid" alt="" height="100" width="100" aria-hidden="true" />
         </div>
         <div class="col-12">
           <h1 class="h3 mt-3 mb-3 loading-dots">We are loading your next survey</h1>

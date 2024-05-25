@@ -1,0 +1,113 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import HeaderVisitor from "../../../components/HeaderVisitor.astro";
+import RecruitmentFormLite from '../../../components/nmux/RecruitmentFormLite.astro';
+import Footer from "../../../components/Footer.astro";
+
+// Images
+import { Image } from 'astro:assets';
+import imgRewards from '../../../assets/images/p1/recruitment/rewards.png';
+
+---
+
+<Layout title="Survey Experience">
+  <HeaderVisitor />
+  <!-- Main Content -->
+  <div class="panel panel-intro-blue banner-top-reg py-5 mb-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="text-white">Share your opinion for amazing rewards</h1>
+          <p class="lead text-white">Take surveys and earn points that can be redeemed for a variety of gift cards and e-vouchers.</p>
+          <div class="row mt-5">
+            <div class="col-12 text-center">
+              <Image src={imgRewards} class="img-fluid" alt="" aria-hidden="true" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h1 class="fs-3 mb-3 text-white">Sign up for Ipsos iSay</h1>
+          <RecruitmentFormLite/>
+        </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </div><!-- /.panel -->
+
+  <div class="panel text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>This is how it works</h2>
+        </div>
+      </div><!-- /.row -->
+      <div class="row">
+        <div class="col">
+          <h3>Take surveys</h3>
+          <p>On various topics such as current affairs, beloved brands, leisure activities, and more.</p>
+        </div>
+        <div class="col">
+          <h3>Earn points</h3>
+          <p>For each survey completed. The greater your survey participation, the higher your points tally.</p>
+        </div>
+        <div class="col">
+          <h3>Choose your rewards</h3>
+          <p>Exchange the points you earned for rewards of your preference.</p>
+        </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </div><!-- /.panel -->
+
+  <div class="panel border-0 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="lead">You could be the next contest winner! Over <strong>10,000</strong> have won already!</p>
+        </div>
+      </div><!-- /.row -->
+      <div class="row">
+        <div class="col">
+          <!-- TrustBox widget - Carousel -->
+          <div class="trustpilot-widget" data-locale="en-US" data-template-id="53aa8912dec7e10d38f59f36" data-businessunit-id="618c353f8da731d4b18a79ae" data-style-height="140px" data-style-width="100%" data-theme="light" data-stars="1,2,3,4,5" data-review-languages="en">
+            <a href="https://www.trustpilot.com/review/www.ipsosisay.com" target="_blank" rel="noopener">Trustpilot</a>
+          </div>
+          <!-- End TrustBox widget -->
+        </div>
+      </div><!-- /.row -->
+      <div class="row mt-3">
+        <div class="col">
+          <a class="btn btn-primary btn-lg" href="javascript:void(0);" target="_blank">Earn rewards</a>
+        </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </div><!-- /.panel -->
+
+  <Footer />
+</Layout>
+<script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
+
+<script src="https://astra.nico.ar/trustpilot-widget" async="" type="text/javascript"></script>
+<style>
+  .panel.panel-default.padding-md img {
+    width: 175px;
+    height: 175px;
+  }
+
+  .panel {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  }
+
+  .panel.panel-intro-blue {
+      background: linear-gradient(to bottom right, #009CFF, #0063AA);
+  }
+
+
+  .box-scroll {
+    height: 250px;
+    overflow-y: auto;
+    border: 1px solid var(--cborder);
+    border-radius: 6px;
+    margin-right: 5px;
+    padding: 10px;
+  }
+</style>
