@@ -39,6 +39,10 @@ h2 {
     color: #666;
 }
 
+.fw-light {
+    font-weight: 400 !important;
+}
+
 .text-secondary {
     color: var(--csecondary) !important;
 }

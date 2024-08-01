@@ -1,0 +1,71 @@
+/*  Survey flow items
+// ============================================================== */
+
+/*Progress for SEM with Flexbox*/
+.sem-container-progress {
+    text-align:center;
+    margin:0px;
+    width:100%;
+    padding:0px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+}
+
+.progress-pill {
+    height:6px;
+    border-radius: 6px;
+    list-style-type:none;
+    width:inherit;
+    margin:2px;
+    background: #E4E4E4;
+}
+
+.progress-pill.completed { background: var(--csecondary) !important; }
+
+
+/*Multiple Choices*/
+
+.form-check {
+    border-radius: 6px;
+    padding: 5px 24px 8px 32px;
+    border: 2px solid transparent;
+    transition: border 300ms ease-out;
+    cursor: pointer;
+}
+
+.form-check-input {
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 0.25em;
+    vertical-align: middle;
+    border: 2px solid #939096;
+    transition: border 300ms ease-out;
+    cursor: pointer;
+}
+
+.form-check-label {
+    margin-left: 0.5em;
+    cursor: pointer;
+}
+
+.form-check:hover {
+    border: 2px solid var(--cprimary-lighter);
+}
+
+.form-check:hover .form-check-input {
+    border: 2px solid var(--cprimary-lighter);
+}
+
+.form-check:checked {
+    background-color: var(--cprimary-lighter);
+}
+
+.form-check .form-check-input:checked {
+    background-color: var(--cprimary);
+    border: 2px solid var(--cprimary-lighter);
+}
