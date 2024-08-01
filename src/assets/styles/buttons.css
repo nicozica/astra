@@ -2,8 +2,9 @@
 // ============================================================== */
 
 button, a.btn {
-    border-radius: 4px;
+    border-radius: 6px;
     font-weight: 700 !important;
+    padding: 9px 16px;
 
 }
 

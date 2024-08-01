@@ -1,0 +1,98 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import HeaderSurvey from "../../../components/survey/HeaderSurvey.astro";
+import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
+
+import { Image } from 'astro:assets';
+import iconId from '../../../assets/images/icons/fa-id.svg';
+---
+
+<Layout title="Survey Experience">
+  <div class="container-fluid container-full-height px-0">
+    <HeaderSurvey />
+    <!-- Main Content -->
+    <div class="container content">
+      <div class="row">
+        <div class="col-12 col-sm-10 col-md-8 mx-auto">
+          <div class="panel">
+            <div class="row">
+              <div class="col">
+
+                <div class="d-flex align-items-center">
+                  <Image src={iconId} class="img-fluid me-1" alt="Ipsos iSay" />
+                  <span class="ml-2">Consumer Information</span>
+                </div>
+                <h1 class="h2 mt-2">Tell us about yourself and shape your survey experience!</h1> 
+                <p>This short survey helps us understand your interests and lifestyle so we can match you with future surveys that are relevant and interesting to you.</p>
+                <p class="fs-7">
+                  <i class="fa-solid fa-circle-info text-secondary"></i> You can update your responses at any time to ensure we have the latest information about you.
+                </p>
+                
+                <ul class="list-unstyled list-inline dotted mb-2">
+                  <li class="d-inline-block me-3 py-1">
+                    Rewards:<br />
+                    <span class="h5 d-block mt-1"><strong><i class="fa-solid fa-star text-warning"></i> 15 points</strong></span>
+                  </li>
+                  <li class="d-inline-block">
+                    Duration:<br />
+                    <span class="h5 d-block mt-1"><i class="fa-regular fa-clock"></i><strong> 12 min</strong></span>
+                  </li>
+                </ul>
+              </div>
+            </div><!-- row -->
+
+            <div class="mt-2">
+              <a class="btn btn-secondary" data-callback="onSubmit" href="/p1/survey/page1">Get started</a>
+            </div>
+          </div><!-- panel -->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <FooterSurvey />
+  </div><!-- /.container-fluid -->
+</Layout>
+<script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
+<script>
+  // Wait for the DOM to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get references to the loaded button and the loading button
+    var loadedBtn = document.getElementById("loadedBtn");
+    var loadingBtn = document.getElementById("loadingBtn");
+
+    // Add an event listener to the loaded button
+    loadedBtn!.addEventListener("click", function () {
+      // Hide the loaded button and show the loading button
+      loadedBtn!.style.display = "none";
+      loadingBtn!.style.display = "block";
+
+      // Redirect after 2 seconds
+      setTimeout(function () {
+        window.location.href = "/p1/survey/page1";
+      }, 2000);
+    });
+  });
+</script>
+
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+
+  .container-full-height {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+  
+</style>

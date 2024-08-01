@@ -1,0 +1,102 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import HeaderSurvey from "../../../components/survey/HeaderSurvey.astro";
+import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
+
+// Images
+import { Image } from "astro:assets";
+
+import imgBubbleProfile from "../../../assets/images/p1/survey/loading/bubble-profile.gif";
+---
+
+<Layout title="Survey Experience · Ipsos iSay">
+  <div class="container-fluid container-full-height px-0">
+    <HeaderSurvey />
+    <!-- Main Content -->
+    <div class="container content py-3">
+      <div class="row text-center">
+        <div class="col-12">
+          <Image src={imgBubbleProfile} class="img-fluid" alt="" height="100" width="100" aria-hidden="true" />
+        </div>
+        <div class="col-12">
+          <h1 class="h3 mt-3 mb-3 loading-dots">John, we are validating your profile</h1>
+          <p class="lead mt-1 mb-3">Please wait a moment while we find the right survey for you</p>
+        </div><!-- /.col -->
+      </div><!-- row -->
+    </div><!-- /.container -->
+
+    <div class="container">
+      <div class="row text-center dotted-top">
+        <div class="col-12">
+          <!--
+<p class="lead mt-4"><span class="text-secondary" id="percentage">48%</span> <span id="subject">of Californians</span> <br>
+<span class="fs-6" id="fact">Claim to have seen an UFO at least once</span></p>
+-->
+        </div><!-- /.col -->
+      </div><!-- row -->
+    </div><!-- /.container -->
+    <FooterSurvey />
+  </div>
+</Layout>
+<script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
+<script>
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      window.location.href = "/p1/profiling/intro";
+    }, 5000);
+  });
+</script>
+
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+  .container-full-height {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+
+  /* loading dots */
+  .loading-dots:after {
+    content: ".";
+    animation: dots 1s steps(5, end) infinite;
+    color: #02103f;
+  }
+
+  @keyframes dots {
+    0%,
+    20% {
+      color: rgba(0, 0, 0, 0);
+      text-shadow:
+        0.25em 0 0 rgba(0, 0, 0, 0),
+        0.5em 0 0 rgba(0, 0, 0, 0);
+    }
+    40% {
+      color: #02103f;
+      text-shadow:
+        0.25em 0 0 rgba(0, 0, 0, 0),
+        0.5em 0 0 rgba(0, 0, 0, 0);
+    }
+    60% {
+      text-shadow:
+        0.25em 0 0 #02103f,
+        0.5em 0 0 rgba(0, 0, 0, 0);
+    }
+    80%,
+    100% {
+      text-shadow:
+        0.25em 0 0 #02103f,
+        0.5em 0 0 #02103f;
+    }
+  }
+</style>
