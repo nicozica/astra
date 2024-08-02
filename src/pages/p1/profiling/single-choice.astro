@@ -1,0 +1,122 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import HeaderSurvey from "../../../components/survey/HeaderSurvey.astro";
+import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
+
+import { Image } from 'astro:assets';
+import iconId from '../../../assets/images/icons/fa-id.svg';
+
+// CSS to be optimized
+import '../../../assets/styles/p1/survey-flow.css';
+---
+
+<Layout title="Survey Experience">
+  <div class="container-fluid container-full-height px-0">
+    <HeaderSurvey />
+    <!-- Main Content -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-10 col-md-8 mx-auto">
+      <div class="d-flex align-items-center">
+        <Image src={iconId} class="img-fluid me-1" alt="Ipsos iSay" />
+        <span class="ml-2">Consumer Information <i class="fa-solid fa-arrow-right"></i> <span class="text-secondary">Beverages</span></span>
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <div class= "sem-container-progress">
+            <div class="progress-pill completed-past"></div>
+            <div class="progress-pill completed"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill"></div>
+            <div class="progress-pill last"></div>
+          </div><!-- /.container-progress -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container content">
+      <div class="row">
+        <div class="col-12 col-sm-10 col-md-8 mx-auto">
+          <div class="panel">
+            <div class="row">
+              <div class="col">
+
+                <h1 class="h2 mt-2 fw-light">How many cars are there in your household (including leasing or company cars)?</h1> 
+                
+                <div class="mt-4">       
+
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label pt-1" for="inlineCheckbox1">0</label>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label pt-1" for="inlineCheckbox2">1</label>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label pt-1" for="inlineCheckbox3">2</label>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                    <label class="form-check-label pt-1" for="inlineCheckbox4">3 or more</label>
+                  </div>
+
+                </div>
+
+              </div>
+            </div><!-- row -->
+
+            <div class="mt-2 dotted-top">
+              <a class="btn btn-secondary mt-3" data-callback="onSubmit" href="/p1/profiling/single-choice">Next</a>
+            </div>
+          </div><!-- panel -->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <FooterSurvey />
+  </div><!-- /.container-fluid -->
+</Layout>
+
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+
+  .container-full-height {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+
+  
+</style>

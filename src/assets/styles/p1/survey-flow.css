@@ -29,13 +29,16 @@
 
 
 /*Multiple Choices*/
-
 .form-check {
     border-radius: 6px;
-    padding: 5px 24px 8px 32px;
+    padding: 5px 16px 8px 32px;
     border: 2px solid transparent;
     transition: border 300ms ease-out;
     cursor: pointer;
+}
+
+.form-check-inline {
+    margin-right: 0.2em;
 }
 
 .form-check-input {
@@ -61,11 +64,17 @@
     border: 2px solid var(--cprimary-lighter);
 }
 
-.form-check:checked {
-    background-color: var(--cprimary-lighter);
-}
-
 .form-check .form-check-input:checked {
     background-color: var(--cprimary);
+    border: 2px solid var(--cprimary-lighter);
+}
+
+/* Asegura que los estilos de hover también se apliquen al estado checked */
+.form-check:has(.form-check-input:checked) {
+    border: 2px solid var(--cprimary-lighter);
+    background-color: var(--cprimary-lightest);
+}
+
+.form-check:has(.form-check-input:checked) .form-check-input {
     border: 2px solid var(--cprimary-lighter);
 }
