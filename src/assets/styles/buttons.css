@@ -9,39 +9,39 @@ button, a.btn {
 }
 
 a.btn-primary, button.btn-primary {
-    background: var(--cprimary) !important;
-    color: #FFF !important;
-    border-color: var(--cprimary-darker) !important;
+    background: var(--bg-primary-default) !important;
+    color: var(--text-foreground) !important;
+    background: var(--stroke-primary-plus-1) !important;
 }
 
 a.btn-primary:hover, button.btn-primary:hover {
-    background: var(--cprimary-darker) !important;
-    color: #FFF !important;
+    background: var(--bg-primary-plus-1) !important;
+    color: var(--text-foreground) !important;
 }
 
 a.btn-secondary {
-    background: var(--csecondary);
-    color: #FFF !important;
+    background: var(--bg-secondary-default);
+    color: var(--text-foreground) !important;
 }
 
 a.btn-secondary:hover {
-    background: #641978;
-    color: #FFF !important;
+    background: var(--bg-secondary-plus-1);
+    color: var(--text-foreground) !important;
 }
 
 a {
     font-weight: 700;
-    color: var(--cprimary) !important;
+    color: var(--text-primary-default) !important;
     text-decoration: none !important;
 }
 
 a:hover {
-    color: #4e5aa4 !important;
+    color: var(--text-primary-plus-2) !important;
 }
 
 a.btn.btn-outline-primary:hover {
-    background-color: var(--cprimary);
-    color: #FFF !important;
+    background-color: var(--bg-primary-default);
+    color: var(--text-foreground) !important;
 }
 
 
@@ -84,7 +84,7 @@ a.btn.btn-outline-primary:hover {
     content: '';
 
     display: inline-block; position: absolute;
-    background: transparent; border: 1px solid #fff;
+    background: transparent; border: 1px solid var(--white);
     border-top-color: transparent; border-bottom-color: transparent; border-radius: 50%; box-sizing: border-box;
 
     top: 50%; left: 50%;

@@ -16,14 +16,14 @@
 html, body {
     /*background: #fcfcf9;*/
     font-family: 'Inter', Arial, sans-serif;
-    color: #3A405F;
+    color: var(--text-main);
 }
 
 
 .h1, h1, .h2, h2, .h3, h3, .h4, .h5, .h6, h4, h5, h6, strong { 
     font-family: 'Inter', Arial, sans-serif;
     font-weight: 700 !important;
-    color: #3A405F !important;
+    color: var(--text-main) !important;
 }
 
 h2 {
@@ -43,8 +43,12 @@ h2 {
     font-weight: 400 !important;
 }
 
+.text-primary {
+    color: var(--text-primary-default) !important;
+}
+
 .text-secondary {
-    color: var(--csecondary) !important;
+    color: var(--text-secondary-default) !important;
 }
 
 /*  Panels
@@ -55,43 +59,52 @@ h2 {
 }
 
 .panel .panel-primary {
-    background: #FFF;
+    background: var(--white);
     border: 1px solid #DEE2E6 !important;
     border-left: none;
     border-right: none;
 }
 
 .panel-default {
-    background-color: #FFF;
-    border: 1px solid #E0E0E0;
+    background: var(--white);
+    border: 1px solid var(--stroke-default-minus-2);
     border-radius: 12px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
 }
 
 @media (min-width: 992px) {
     .panel.panel-primary {
-        background: #FFF;
+        background: var(--white);
         border: none !important;
         border-radius: 0.5rem !important;
         box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
     }
 }
 
-.panel-white           { background: #fff; }
+.panel-white           { background: var(--white);}
 .panel-gray            { background: #fafafa; }
 .panel-gray .panel-header,
 .panel-gray .panel-footer { background:#fafafa; }
 
-.panel-primary      { background-color: var(--cprimary); }
-.panel-secondary    { background-color: var(--csecondary); }
+.panel-primary      { background-color: var(--bg-primary-default); }
+.panel-secondary    { background-color: var(--bg-secondary-default); }
 .panel-success      { background-color: var(--csuccess); }
 .panel-warning      { background-color: var(--cwarning); }
 .panel-danger       { background-color: var(--cdanger); }
 
 .dotted, ul.dotted {
-    padding: 10px 0 !important; border-top: 1px dotted var(--cborder-dotted); border-bottom: 1px dotted var(--cborder-dotted);
+    padding: 10px 0 !important; border-top: 1px dotted var(--stroke-default-minus-2); border-bottom: 1px dotted var(--stroke-default-minus-2);
 }
 
 .dotted-top {
-    padding-top: 10px !important; border-top: 1px dotted var(--cborder-dotted);
+    padding-top: 10px !important; border-top: 1px dotted var(--stroke-default-minus-2);
+}
+
+
+/*  Alerts
+// ============================================================== */
+
+.alert.alert-success {
+    background: var(--bg-success-minus-2);
+    border: none;
 }

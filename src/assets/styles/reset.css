@@ -1,0 +1,120 @@
+:root,
+[data-bs-theme=light] {
+  --bs-blue: var(--indigo-500);
+  --bs-indigo: var(--indigo-500);
+  --bs-purple: var(--purple-500);
+  --bs-pink: var(--red-500);
+  --bs-red: var(--red-500);
+  --bs-orange: var(--orange-500);
+  --bs-yellow: var(--yellow-500); /* Define the yellow color in your file if necessary */
+  --bs-green: var(--green-500);
+  --bs-teal: var(--teal-500); /* Define the teal color in your file if necessary */
+  --bs-cyan: var(--cyan-500); /* Define the cyan color in your file if necessary */
+  --bs-black: var(--black);
+  --bs-white: var(--white);
+  --bs-gray: var(--gray-500);
+  --bs-gray-dark: var(--gray-900);
+  --bs-gray-100: var(--gray-100);
+  --bs-gray-200: var(--gray-200);
+  --bs-gray-300: var(--gray-300);
+  --bs-gray-400: var(--gray-400);
+  --bs-gray-500: var(--gray-500);
+  --bs-gray-600: var(--gray-600);
+  --bs-gray-700: var(--gray-700);
+  --bs-gray-800: var(--gray-800);
+  --bs-gray-900: var(--gray-900);
+  --bs-primary: var(--indigo-500);
+  --bs-secondary: var(--gray-500);
+  --bs-success: var(--green-500);
+  --bs-info: var(--cyan-500); /* Define the cyan color in your file if necessary */
+  --bs-warning: var(--orange-500);
+  --bs-danger: var(--red-500);
+  --bs-light: var(--gray-100);
+  --bs-dark: var(--gray-900);
+  --bs-primary-rgb: 47, 70, 156; /* RGB values of var(--indigo-500) */
+  --bs-secondary-rgb: 118, 114, 121; /* RGB values of var(--gray-500) */
+  --bs-success-rgb: 40, 125, 95; /* RGB values of var(--green-500) */
+  --bs-info-rgb: 13, 202, 240; /* Define the cyan color in your file if necessary */
+  --bs-warning-rgb: 211, 104, 27; /* RGB values of var(--orange-500) */
+  --bs-danger-rgb: 207, 44, 83; /* RGB values of var(--red-500) */
+  --bs-light-rgb: 246, 246, 246; /* RGB values of var(--gray-100) */
+  --bs-dark-rgb: 27, 22, 30; /* RGB values of var(--gray-900) */
+  --bs-primary-text-emphasis: var(--indigo-900);
+  --bs-secondary-text-emphasis: var(--gray-700);
+  --bs-success-text-emphasis: var(--green-700);
+  --bs-info-text-emphasis: var(--cyan-700); /* Define the cyan color in your file if necessary */
+  --bs-warning-text-emphasis: var(--orange-700);
+  --bs-danger-text-emphasis: var(--red-700);
+  --bs-light-text-emphasis: var(--gray-500);
+  --bs-dark-text-emphasis: var(--gray-500);
+  --bs-primary-bg-subtle: var(--indigo-100);
+  --bs-secondary-bg-subtle: var(--purple-100);
+  --bs-success-bg-subtle: var(--green-100);
+  --bs-info-bg-subtle: var(--cyan-100); /* Define the cyan color in your file if necessary */
+  --bs-warning-bg-subtle: var(--orange-100);
+  --bs-danger-bg-subtle: var(--red-100);
+  --bs-light-bg-subtle: var(--gray-50);
+  --bs-dark-bg-subtle: var(--gray-800);
+  --bs-primary-border-subtle: var(--indigo-200);
+  --bs-secondary-border-subtle: var(--purple-200);
+  --bs-success-border-subtle: var(--green-200);
+  --bs-info-border-subtle: var(--cyan-200); /* Define the cyan color in your file if necessary */
+  --bs-warning-border-subtle: var(--orange-200);
+  --bs-danger-border-subtle: var(--red-200);
+  --bs-light-border-subtle: var(--gray-200);
+  --bs-dark-border-subtle: var(--gray-500);
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: var(--text-main);
+  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-bg: var(--white);
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-emphasis-color: var(--black);
+  --bs-emphasis-color-rgb: 0, 0, 0;
+  --bs-secondary-color: var(--gray-500);
+  --bs-secondary-color-rgb: 118, 114, 121;
+  --bs-secondary-bg: var(--gray-200);
+  --bs-secondary-bg-rgb: 224, 224, 224;
+  --bs-tertiary-color: var(--gray-400);
+  --bs-tertiary-color-rgb: 147, 144, 150;
+  --bs-tertiary-bg: var(--gray-100);
+  --bs-tertiary-bg-rgb: 246, 246, 246;
+  --bs-heading-color: inherit;
+  --bs-link-color: var(--indigo-500);
+  --bs-link-color-rgb: 47, 70, 156;
+  --bs-link-decoration: underline;
+  --bs-link-hover-color: var(--indigo-700);
+  --bs-link-hover-color-rgb: 17, 37, 114;
+  --bs-code-color: var(--red-500);
+  --bs-highlight-color: var(--gray-900);
+  --bs-highlight-bg: var(--orange-50);
+  --bs-border-width: 1px;
+  --bs-border-style: solid;
+  --bs-border-color: var(--gray-200);
+  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --bs-border-radius: var(--border-radius-md);
+  --bs-border-radius-sm: var(--border-radius-sm);
+  --bs-border-radius-lg: var(--border-radius-lg);
+  --bs-border-radius-xl: var(--border-radius-xl);
+  --bs-border-radius-xxl: var(--border-radius-xxl); /* Define the value if necessary */
+  --bs-border-radius-2xl: var(--bs-border-radius-xxl); /* Define the value if necessary */
+  --bs-border-radius-pill: 50rem;
+  --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  --bs-focus-ring-width: 0.25rem;
+  --bs-focus-ring-opacity: 0.25;
+  --bs-focus-ring-color: rgba(47, 70, 156, 0.25); /* RGBA values of var(--indigo-500) */
+  --bs-form-valid-color: var(--green-500);
+  --bs-form-valid-border-color: var(--green-500);
+  --bs-form-invalid-color: var(--red-500);
+  --bs-form-invalid-border-color: var(--red-500);
+}

@@ -59,26 +59,31 @@ import '../../../assets/styles/p1/survey-flow.css';
 
                 <h1 class="h2 mt-2 fw-light">How many cars are there in your household (including leasing or company cars)?</h1> 
                 
-                <div class="mt-4">       
+                <div class="mt-4">
 
                   <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label pt-1" for="inlineCheckbox1">0</label>
+                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio0">
+                    <label class="form-check-label" for="flexRadio0">
+                      0
+                    </label>
                   </div>
-
                   <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label pt-1" for="inlineCheckbox2">1</label>
+                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio1">
+                    <label class="form-check-label" for="flexRadio1">
+                      1
+                    </label>
                   </div>
-
                   <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                    <label class="form-check-label pt-1" for="inlineCheckbox3">2</label>
+                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio2">
+                    <label class="form-check-label" for="flexRadio2">
+                      2
+                    </label>
                   </div>
-
                   <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                    <label class="form-check-label pt-1" for="inlineCheckbox4">3 or more</label>
+                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio3">
+                    <label class="form-check-label" for="flexRadio3">
+                      3 or more
+                    </label>
                   </div>
 
                 </div>
@@ -87,7 +92,7 @@ import '../../../assets/styles/p1/survey-flow.css';
             </div><!-- row -->
 
             <div class="mt-2 dotted-top">
-              <a class="btn btn-secondary mt-3" data-callback="onSubmit" href="/p1/profiling/single-choice">Next</a>
+              <a class="btn btn-light mt-3 me-2" data-callback="onSubmit" href="/p1/profiling/multi-choice"><i class="fa-solid fa-arrow-left"></i></a><a class="btn btn-secondary mt-3" data-callback="onSubmit" href="/p1/profiling/complete">Next</a>
             </div>
           </div><!-- panel -->
         </div><!-- /.col -->

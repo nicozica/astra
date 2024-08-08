@@ -1,6 +1,7 @@
 /* styles.css */
 
 /* Imported stylesheets */
+/* @import url('reset.css'); */
 @import url('global.css');
 @import url('variables.css');
 @import url('buttons.css');

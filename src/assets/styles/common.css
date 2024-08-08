@@ -6,4 +6,14 @@ img.img-200px {
     height: auto;
 }
 
+.badge.badge-over-gray {
+    color: var(--text-gray-default);
+    background-color: var(--white);
+    border: 2px solid var(--stroke-default-default);
+    border-radius: var(--border-radius-xxs) !important;
+}
 
+.dotted-line {
+    border: none; border-top: 2px dotted var(--stroke-default-default);
+    margin: 24px 0
+}
