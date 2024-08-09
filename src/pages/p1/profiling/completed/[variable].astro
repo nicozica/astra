@@ -1,0 +1,135 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+
+import HeaderSurvey from "../../../../components/survey/HeaderSurvey.astro";
+import FooterSurvey from "../../../../components/survey/FooterSurvey.astro";
+
+import { Image } from 'astro:assets';
+import iconBadgeCheck from '../../../../assets/images/icons/fa-badge-check.svg';
+import animConfetti from '../../../../assets/images/p1/survey/anim-confetti.gif';
+
+// Modules
+import SurveyProfiling from "../../../../components/profiling/SurveyProfiling.astro";
+import Profiling from "../../../../components/profiling/Profiling.astro";
+import Survey from "../../../../components/profiling/Survey.astro";
+import NoSurveyNoProfiling from "../../../../components/profiling/NoSurveyNoProfiling.astro";
+
+export async function getStaticPaths() {
+  // Definir las posibles rutas con sus respectivos parámetros
+  return [
+    { params: { variable: 'survey_profiling' } },
+    { params: { variable: 'profiling' } },
+    { params: { variable: 'survey' } },
+    { params: { variable: 'no_survey_no_profiling' } },
+  ];
+}
+
+
+const { params } = Astro;
+const { variable } = params;
+
+let ModuleComponent;
+
+switch(variable) {
+  case 'survey_profiling':
+    ModuleComponent = SurveyProfiling;
+    break;
+  case 'profiling':
+    ModuleComponent = Profiling;
+    break;
+  case 'survey':
+    ModuleComponent = Survey;
+    break;
+  case 'no_survey_no_profiling':
+    ModuleComponent = NoSurveyNoProfiling;
+    break;
+  default:
+    ModuleComponent = null;
+}
+
+---
+
+<Layout title="Survey Experience">
+  <div class="container-fluid container-full-height px-0">
+    <HeaderSurvey />
+    <!-- Main Content -->
+    <div class="container content">
+      <div class="row">
+        <div class="col-12">
+          <div class="panel pt-0">
+            <div class="row">
+              <div class="col">
+
+                <div class="d-flex align-items-center">
+                  <Image src={iconBadgeCheck} class="img-fluid me-1" alt="Ipsos iSay" />
+                  <h1 class="h2 mt-2">Congratulations! You’ve made it</h1> 
+                </div>
+                
+                <div class="alert alert-success mt-2 text-center">
+                  <p class="fs-5 mb-0"><i class="fa-solid fa-star text-warning"></i> You earned <strong>15 points</strong>!</p>
+                </div>
+                <Image src={animConfetti} class="img-fluid" style="margin-top: -120px; mix-blend-mode: multiply;" aria-hidden="true" alt="" />
+
+                {ModuleComponent ? <ModuleComponent /> : null}
+                
+              </div>
+            </div><!-- row -->
+          </div><!-- panel -->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <FooterSurvey />
+  </div><!-- /.container-fluid -->
+</Layout>
+
+<button type="button" class="btn btn-sm btn-primary btn-variants" data-bs-toggle="modal" data-bs-target="#variantsModal">
+  + Variants
+</button>
+
+<!-- JUST FOR THE PROTOTYPE: Not used in production -->
+<!-- Modal -->
+<div class="modal fade" id="variantsModal" tabindex="-1" aria-labelledby="variantsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="variantsModalLabel">More variants</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <ul>
+                  <li><a class="dropdown-item" href="/p1/profiling/completed/survey_profiling">Survey and Profiling</a></li>
+                  <li><a class="dropdown-item" href="/p1/profiling/completed/profiling">Profiling only</a></li>
+                  <li><a class="dropdown-item" href="/p1/profiling/completed/survey">Survey only</a></li>
+                  <li><a class="dropdown-item" href="/p1/profiling/completed/no_survey_no_profiling">No Survey and No Profiling</a></li>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+</Layout>
+
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+
+  .container-full-height {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+  
+</style>

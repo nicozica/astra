@@ -108,3 +108,10 @@ h2 {
     background: var(--bg-success-minus-2);
     border: none;
 }
+
+/*  Progress bars
+// ============================================================== */
+
+.progress-bar {
+    background: var(--stroke-primary-default);
+}

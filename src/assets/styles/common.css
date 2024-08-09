@@ -17,3 +17,12 @@ img.img-200px {
     border: none; border-top: 2px dotted var(--stroke-default-default);
     margin: 24px 0
 }
+
+
+/****************** JUST FOR THE PROTOTYPE: Not used in production ******************/
+.btn-variants {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border: 1px solid #FAFAFA;
+}

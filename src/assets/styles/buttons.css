@@ -3,6 +3,7 @@
 
 button, a.btn {
     border-radius: 6px;
+    border: 1px solid transparent;
     font-weight: 700 !important;
     padding: 9px 16px;
 
@@ -11,7 +12,6 @@ button, a.btn {
 a.btn-primary, button.btn-primary {
     background: var(--bg-primary-default) !important;
     color: var(--text-foreground) !important;
-    background: var(--stroke-primary-plus-1) !important;
 }
 
 a.btn-primary:hover, button.btn-primary:hover {

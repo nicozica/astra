@@ -57,11 +57,3 @@ a.choice img {
 .panel.panel-results-red {
     background: linear-gradient(to bottom right, #C31421, #FE2F3E);
 }
-
-/****************** JUST FOR THE PROTOTYPE: Not used in production ******************/
-.btn-results {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    border: 1px solid #FAFAFA;
-}
