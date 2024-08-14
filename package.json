@@ -4,13 +4,14 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro preview",
+    "start": "astro build && node ./dist/server/entry.mjs",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.9",
+    "@astrojs/node": "^8.3.3",
     "astro": "^4.5.4",
     "bootstrap": "^5.3.3",
     "typescript": "^5.4.2"
