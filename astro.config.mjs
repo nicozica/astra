@@ -6,5 +6,5 @@ export default defineConfig({
   adapter: node({
     mode: 'standalone', 
   }),
-  site: '/',
+  site: process.env.SITE_URL || 'https://uxipsos-astra.herokuapp.com',  // Usar variable de entorno si está disponible
 });
