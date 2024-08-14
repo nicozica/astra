@@ -13,7 +13,7 @@ import iconId from '../../../assets/images/icons/fa-id.svg';
     <HeaderSurvey />
     <!-- Main Content -->
     <div class="container content">
-      <div class="row">
+      <div class="row" transition:name="fadeAnimate" transition:animate="fade">
         <div class="col-12 col-sm-10 col-md-8 mx-auto">
           <div class="panel pt-0">
             <div class="row">
@@ -94,5 +94,9 @@ import iconId from '../../../assets/images/icons/fa-id.svg';
     align-items: center;
     width: 100% !important;
   }
+
+  @view-transition {
+    navigation: auto; 
+  } 
   
 </style>

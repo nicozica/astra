@@ -51,7 +51,7 @@ import '../../../assets/styles/p1/survey-flow.css';
 
 
     <div class="container content">
-      <div class="row">
+      <div class="row" transition:name="fadeAnimate" transition:animate="fade">
         <div class="col-12 col-sm-10 col-md-8 mx-auto">
           <div class="panel">
             <div class="row">
@@ -123,5 +123,8 @@ import '../../../assets/styles/p1/survey-flow.css';
     width: 100% !important;
   }
 
+  @view-transition {
+    navigation: auto; 
+  }
   
 </style>
