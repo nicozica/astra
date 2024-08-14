@@ -2,13 +2,28 @@
 import { Image } from 'astro:assets';
 import headerLogo from '../../assets/images/logo.svg';
 ---
+
 <header>
     <!-- Main Nav -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light mb-5" role="navigation">
         <div class="container">
             <a class="navbar-brand" href="?"><Image src={headerLogo} class="img-fluid" alt="Ipsos iSay" /></a>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav fw-bold">
+                <ul class="navbar-nav fw-bold align-items-center">
+
+                    <!-- "New!" Account Balance (conditionally visible) -->
+                    <li id="account-balance" class="nav-item d-flex align-items-center me-2 text-end" style="display: none;">
+                        <span class="badge rounded-pill text-bg-success fs-7 px-3 py-2 me-2">New!</span>
+                        <div class="d-flex flex-column align-items-start text-right">
+                            <span class="fs-7 fw-normal">Account <br>Balance</span>
+                        </div>
+                        <span class="ms-2">😎</span>
+                        <span class="ms-2 border-end pe-3">
+                            <i class="fa-solid fa-star text-warning"></i> 255
+                        </span>
+                    </li>
+
+                    <!-- Username -->
                     <li class="nav-item">
                         <a class="nav-link language-selection" href="">
                             <i class="fa-solid fa-circle-user text-secondary"></i> John
@@ -19,3 +34,15 @@ import headerLogo from '../../assets/images/logo.svg';
         </div><!-- /.container -->
     </nav><!-- /.navbar -->
 </header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pathname = window.location.pathname;
+        const accountBalanceElement = document.getElementById('account-balance');
+
+        // Check if the current path matches the required URL pattern
+        if (accountBalanceElement && pathname.startsWith('/p1/profiling/completed')) {
+            accountBalanceElement.style.display = 'flex';
+        }
+    });
+</script>
