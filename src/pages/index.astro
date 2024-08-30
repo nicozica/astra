@@ -2,11 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
 
-// Images
-import { Image } from 'astro:assets';
-import iconPanelone from '../assets/images/prototype/panelone.svg';
-import iconProjects from '../assets/images/prototype/projects.svg';
-import iconPages from '../assets/images/prototype/pages.svg';
 ---
 
 <Layout title="Welcome to Astro">
@@ -19,12 +14,10 @@ import iconPages from '../assets/images/prototype/pages.svg';
 			<li>
 				<div class="card py-2 px-2">
 					<div class="row g-0">
-						<div class="col-2 text-center">
-							<Image src={iconPanelone} class="img-fluid" alt="PanelOne" />
-						</div><!-- /.col-2 -->
-						<div class="col-10">
+						<div class="col">
 							<div class="card-body">
-								<h2 class="card-title h3 mb-2">PanelOne & Survey Experience</h2>
+								<h2 class="h4 card-title fw-light mb-2">PanelOne & Survey Experience</h2>
+								<hr class="dotted-line mt-3 mb-4">
 								<ul class="col fs-6">
 									<li><a href="p1/recruitment/default" class="text-decoration-none">Recruitment landing page</a></li>
 									<li><a href="p1/pollpredictor/intro" class="text-decoration-none">Poll Predictor</a></li>
@@ -41,12 +34,10 @@ import iconPages from '../assets/images/prototype/pages.svg';
 			<li>
 				<div class="card py-2 px-2 mt-4">
 					<div class="row g-0">
-						<div class="col-2 text-center">
-							<Image src={iconProjects} class="img-fluid" alt="PanelOne" />
-						</div><!-- /.col-2 -->
-						<div class="col-10">
+						<div class="col">
 							<div class="card-body">
-								<h2 class="card-title h3 mb-2">Projects</h2>
+								<h2 class="card-title h4 fw-light mb-2">Projects</h2>
+								<hr class="dotted-line mt-3 mb-4">
 								<ul class="fs-6">
 									<li><a href="projects/censydiam/" class="text-decoration-none">Censydiam ⚡</a></li>
 								</ul>
@@ -59,12 +50,10 @@ import iconPages from '../assets/images/prototype/pages.svg';
 			<li>
 				<div class="card py-2 px-2 mt-4">
 					<div class="row g-0">
-						<div class="col-2 text-center">
-							<Image src={iconPages} class="img-fluid" alt="PanelOne" />
-						</div><!-- /.col-2 -->
-						<div class="col-10">
+						<div class="col">
 							<div class="card-body">
-								<h2 class="card-title h3 mb-2">Standalone pages</h2>
+								<h2 class="card-title h4 fw-light mb-2">Standalone pages</h2>
+								<hr class="dotted-line mt-3 mb-4">
 								<ul class="fs-6">
 									<li><a href="standalone/about-us" class="text-decoration-none">About us</a></li>
 									<li><a href="standalone/partner-us" class="text-decoration-none">Partner us</a></li>

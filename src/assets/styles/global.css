@@ -26,8 +26,28 @@ html, body {
     color: var(--text-main) !important;
 }
 
-h2 {
+h1, .h1 {
+    font-size: 48px !important;
+}
+
+h2, .h2 {
+    font-size: 40px !important;
+}
+
+h3, .h3 {
     font-size: 32px !important;
+}
+
+h4, .h4 {
+    font-size: 24px !important;
+}
+
+h5, .h5 {
+    font-size: 20px !important;
+}
+
+h6, .h6 {
+    font-size: 16px !important;
 }
 
 .lead {
