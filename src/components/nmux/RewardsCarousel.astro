@@ -1,0 +1,71 @@
+---
+// Images
+import { Image } from 'astro:assets';
+
+import imgCarouselReward01 from '../../assets/images/p1/recruitment/organic/carousel-card-visa.png';
+import imgCarouselReward02 from '../../assets/images/p1/recruitment/organic/carousel-card-amazon.png';
+import imgCarouselReward03 from '../../assets/images/p1/recruitment/organic/carousel-card-paypal.png';
+import imgCarouselReward04 from '../../assets/images/p1/recruitment/organic/carousel-card-starbucks.png';
+import imgCarouselReward05 from '../../assets/images/p1/recruitment/organic/carousel-card-apple.png';
+
+---
+
+<div id="rewardCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row text-center">
+          <div class="col">
+            <Image src={imgCarouselReward01} class="d-block" alt="Gift Card 1" aria-hidden="true" />
+            <p><i class="fa-solid fa-star text-warning"></i> <strong>500</strong></p>
+          </div>
+          <div class="col">
+            <Image src={imgCarouselReward02} class="d-block" alt="Gift Card 1" aria-hidden="true" />
+            <p><i class="fa-solid fa-star text-warning"></i> <strong>2000</strong></p>
+          </div>
+          <div class="col">
+            <Image src={imgCarouselReward03} class="d-block" alt="Gift Card 1" aria-hidden="true" />
+            <p><i class="fa-solid fa-star text-warning"></i> <strong>2500</strong></p>
+          </div>
+          <div class="col">
+            <Image src={imgCarouselReward04} class="d-block" alt="Gift Card 1" aria-hidden="true" />
+            <p><i class="fa-solid fa-star text-warning"></i> <strong>1500</strong></p>
+          </div>
+          <div class="col">
+            <Image src={imgCarouselReward05} class="d-block" alt="Gift Card 1" aria-hidden="true" />
+            <p><i class="fa-solid fa-star text-warning"></i> <strong>2500</strong></p>
+          </div>
+        </div>
+      </div>
+      <!-- Agregar más carousel-item si se tienen más imágenes -->
+    </div>
+    <a class="carousel-control-prev" href="#rewardCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#rewardCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div> 
+
+  <style>
+  .carousel-item {
+    padding: 20px;
+  }
+
+  .carousel-inner .col {
+    flex: 0 0 auto;
+    width: 20%; /* Cada columna ocupa el 20% del carrusel */
+  }
+
+  .carousel-inner img {
+    max-height: 150px;
+    object-fit: contain;
+  }
+
+  .carousel-inner p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  </style>
