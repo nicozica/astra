@@ -15,6 +15,7 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
 ---
 
 <div id="carouselExampleIndicators" class="carousel slide">
+
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -24,44 +25,59 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
 
   <div class="carousel-inner">
 
-    
     <div class="carousel-item active">
       <div class="row align-items-center">
-        <div class="col-lg-6">
-          <Image src={imgCarouselPromo01} class="img-fluid rounded" alt="" />
+        <div class="col">
+          <Image src={imgCarouselPromo01} class="img-fluid" alt="" aria-hidden="true" />
         </div>
-        <div class="col-lg-6 text-start">
-          <Image src={iconCarouselPromo01} class="mb-3" alt="" />
-          <h2 class="h5 fw-bold">Live studies</h2>
-          <p class="fs-6 text-muted">Collaborate in real-time with fellow Ipsos iSay members. In these scheduled sessions, you'll complete interactive surveys to share your insights on various topics and shape future products and services.</p>
+        <div class="col text-start">
+          <Image src={iconCarouselPromo01} class="mb-3" alt="" aria-hidden="true" />
+          <h2 class="h5 mb-1">Live studies</h2>
+          <p class="fs-7">Collaborate in real-time with fellow Ipsos iSay members. In these scheduled sessions, you'll complete interactive surveys to share your insights on various topics and shape future products and services.</p>
         </div>
       </div>
     </div>
 
-
-
-
-
-
-
-
+    <div class="carousel-item">
+      <div class="align-items-center">
+        <div class="float-left">
+          <Image src={imgCarouselPromo02} class="img-fluid" alt="" aria-hidden="true" />
+        </div>
+        <div class="text-start">
+          <Image src={iconCarouselPromo02} class="mb-3" alt="" aria-hidden="true" />
+          <h2 class="h5 mb-1">Product testing</h2>
+          <p class="fs-7">Try new or redesigned products before they hit the market and take follow-up surveys to share your feedback. It's a fun way to make an impact while discovering innovative products.</p>
+        </div>
+      </div>
+    </div>
 
     <div class="carousel-item">
       <div class="row align-items-center">
-        <div class="col-lg-6">
-          <Image src={imgCarouselPromo02} class="img-fluid rounded" alt="" />
+        <div class="col">
+          <Image src={imgCarouselPromo03} class="img-fluid" alt="" aria-hidden="true" />
         </div>
-        <div class="col-lg-6 text-start">
-          <Image src={iconCarouselPromo02} class="mb-3" alt="" />
-          <h2 class="h5 fw-bold">Product testing</h2>
-          <p class="fs-6 text-muted">Try new or redesigned products before they hit the market and take follow-up surveys to share your feedback. It's a fun way to make an impact while discovering innovative products.</p>
+        <div class="col text-start">
+          <Image src={iconCarouselPromo03} class="mb-3" alt="" aria-hidden="true" />
+          <h2 class="h5 mb-1">Special communities</h2>
+          <p class="fs-7">Join a topic-based research group and take part in ongoing surveys, engaging discussion boards, and other interesting activities. You’ll make your voice heard on a continual basis in a vibrant and influential community.</p>
         </div>
       </div>
     </div>
 
-    <!-- Similar structure for other slides -->
-  </div>
+    <div class="carousel-item">
+      <div class="row align-items-center">
+        <div class="col">
+          <Image src={imgCarouselPromo04} class="img-fluid" alt="" aria-hidden="true" />
+        </div>
+        <div class="col text-start">
+          <Image src={iconCarouselPromo04} class="mb-3" alt="" aria-hidden="true" />
+          <h2 class="h5 mb-1">Activity Journals</h2>
+          <p class="fs-7">Offers a quick and convenient way to share your opinions on a variety of topics through short surveys. This is perfect for those who want to make a meaningful impact without spending too much time.</p>
+        </div>
+      </div>
+    </div>
 
+  </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -71,7 +87,6 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
 
 <style>
   .carousel-control-prev-icon {
