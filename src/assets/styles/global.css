@@ -54,6 +54,10 @@ h6, .h6 {
     font-weight: 400 !important;
 }
 
+p {
+    color: var(--text-muted) !important;
+}
+
 .fs-7 {
     font-size: 12px;
     color: #666;
@@ -69,6 +73,10 @@ h6, .h6 {
 
 .text-secondary {
     color: var(--text-secondary-default) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
 }
 
 /*  Panels

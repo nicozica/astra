@@ -180,7 +180,7 @@
     --text-foreground: var(--white);
     --text-link: var(--indigo-500);
     --text-main: var(--indigo-900);
-    --text-muted: var(--gray-500);
+    --text-muted: #767279;
     --text-placeholder: var(--gray-400);
 
     --text-danger-plus-1: var(--red-600);

@@ -10,93 +10,100 @@ import imgCarouselReward05 from '../../assets/images/p1/recruitment/organic/caro
 
 ---
 
-<!-- <div id="rewardCarousel" class="rewards__cards--marquee" data-bs-ride="carousel"> -->
-  <div class="rewards | container">
-  <div class="rewards-cards">
-    <div id="scroller" class="rewards-cards--marquee">
+<div class="rewards">
+  <div class="rewards-slide">
+    <div class="card-reward text-center">
+      <Image src={imgCarouselReward01} class="img-fluid" alt="Gift Card 1" aria-hidden="true" />
+      <p><i class="fa-solid fa-star text-warning"></i> <strong>500</strong></p>
+    </div>
+    <div class="card-reward text-center">
+      <Image src={imgCarouselReward02} class="img-fluid" alt="Gift Card 1" aria-hidden="true" />
+      <p><i class="fa-solid fa-star text-warning"></i> <strong>2000</strong></p>
+    </div>
+    <div class="card-reward text-center">
+      <Image src={imgCarouselReward03} class="img-fluid" alt="Gift Card 1" aria-hidden="true" />
+      <p><i class="fa-solid fa-star text-warning"></i> <strong>2500</strong></p>
+    </div>
+    <div class="card-reward text-center">
+      <Image src={imgCarouselReward04} class="img-fluid" alt="Gift Card 1" aria-hidden="true" />
+      <p><i class="fa-solid fa-star text-warning"></i> <strong>1500</strong></p>
+    </div>
+    <div class="card-reward text-center">
+      <Image src={imgCarouselReward05} class="img-fluid" alt="Gift Card 1" aria-hidden="true" />
+      <p><i class="fa-solid fa-star text-warning"></i> <strong>2500</strong></p>
+    </div>
+  </div>
+</div>
 
-          <div class="card-reward text-center">
-            <Image src={imgCarouselReward01} class="img-fluid" alt="Gift Card 1" aria-hidden="true" />
-            <p><i class="fa-solid fa-star text-warning"></i> <strong>500</strong></p>
-          </div>
-          <div class="card-reward text-center">
-            <Image src={imgCarouselReward02} class="img-fluid" alt="Gift Card 1" aria-hidden="true" />
-            <p><i class="fa-solid fa-star text-warning"></i> <strong>2000</strong></p>
-          </div>
-          <div class="card-reward text-center">
-            <Image src={imgCarouselReward03} class="img-fluid" alt="Gift Card 1" aria-hidden="true" />
-            <p><i class="fa-solid fa-star text-warning"></i> <strong>2500</strong></p>
-          </div>
-          <div class="card-reward text-center">
-            <Image src={imgCarouselReward04} class="img-fluid" alt="Gift Card 1" aria-hidden="true" />
-            <p><i class="fa-solid fa-star text-warning"></i> <strong>1500</strong></p>
-          </div>
-          <div class="card-reward text-center">
-            <Image src={imgCarouselReward05} class="img-fluid" alt="Gift Card 1" aria-hidden="true" />
-            <p><i class="fa-solid fa-star text-warning"></i> <strong>2500</strong></p>
-          </div>
 
-  </div>   </div> 
+<style>
 
-  <style>
- .card-reward {
-    border-radius: 24px;
-    border: 1px solid #282828;
-    display: flex;
-    width: 225px;
-    height: auto;
-    padding: 24px;
-    flex-direction: column;
-    gap: 24px;
-    transition: all 0.2s ease-in-out;
+@keyframes slide {
+  from {
+    transform: translateX(0);
   }
-
-
-  .rewards-cards--marquee {
-    --gap: 48px;
-    display: flex;
-    padding: 72px 36px 72px 36px;
-    gap: var(--gap);
-    opacity: 0px;
-    overflow: hidden;
-    max-width: 1280px;
-    margin: 0 auto;
+  to {
+    transform: translateX(-100%);
   }
+}
 
-  .rewards-cards--marquee:hover {
-    animation-play-state: paused;
+@keyframes slide {
+  from {
+    transform: translateX(0);
   }
-
-  .rewards-cards--marquee {
-    --animation-duration: 50s;
-
-    width: max-content;
-    display: flex;
-    gap: var(--gap);
-    animation: scroll var(--animation-duration) linear infinite;
+  to {
+    transform: translateX(-100%);
   }
+}
 
-  @media (max-width: 1000px) {
-    .rewards {
-      flex-direction: column;
-      align-items: center;
-      gap: var(--gap);
-    }
-  }
+.rewards {
+  overflow: hidden;
+  padding: 20px 0 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
 
-  @keyframes scroll {
-    to {
-      transform: translate(calc(-50% - calc(var(--gap) / 2)));
-    }
-  }
+.rewards:before,
+.rewards:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.rewards:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.rewards:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.rewards:hover .rewards-slide {
+  animation-play-state: paused;
+}
+
+.rewards-slide {
+  display: inline-flex;
+  animation: 55s slide infinite linear;
+}
+
+.card-reward {
+  height: auto;
+  min-width: 180px;
+  margin: 0 40px;
+  float: left;
+  overflow: hidden;
+}
+
 </style>
 
 <script>
-  const scroller = document.querySelector('#scroller');
-  const cardReward = document.querySelectorAll('.card-reward');
-
-  cardReward.forEach((reward) => {
-    const duplicateContent = reward.cloneNode(true);
-    scroller?.appendChild(duplicateContent);
-  });
+  var copy = (document.querySelector(".rewards-slide") as Node)?.cloneNode(true);
+  document.querySelector(".rewards")?.appendChild(copy);
 </script>

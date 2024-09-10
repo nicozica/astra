@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: #192f5d;
+      }
+
+      .cls-5 {
+        fill: #bd3d44;
+      }
+
+      .cls-6 {
+        fill: #2f469c;
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-3 {
+        stroke: #fff;
+        stroke-width: 1.7px;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" x=".7" width="29.3" height="22" rx="2.2" ry="2.2"/>
+    </clipPath>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Layer_1">
+      <g class="cls-7">
+        <g>
+          <path class="cls-5" d="M.7,0h29.3v22H.7"/>
+          <path class="cls-6" d="M.7,2.5h29.3H.7ZM.7,5.9h29.3H.7ZM.7,9.3h29.3H.7ZM.7,12.7h29.3H.7ZM.7,16.1h29.3H.7ZM.7,19.5h29.3H.7Z"/>
+          <path class="cls-3" d="M.7,2.5h29.3M.7,5.9h29.3M.7,9.3h29.3M.7,12.7h29.3M.7,16.1h29.3M.7,19.5h29.3"/>
+          <path class="cls-4" d="M.7,0h16.7v11.8H.7"/>
+        </g>
+      </g>
+      <g>
+        <g id="s18">
+          <g id="s9">
+            <g id="s5">
+              <g id="s4">
+                <path id="s" class="cls-1" d="M2.1.5l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+                <path id="s-2" data-name="s" class="cls-1" d="M2.1,2.9l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+                <path id="s-3" data-name="s" class="cls-1" d="M2.1,5.2l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+                <path id="s-4" data-name="s" class="cls-1" d="M2.1,7.6l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              </g>
+              <path id="s-5" data-name="s" class="cls-1" d="M2.1,9.9l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            </g>
+            <g id="s4-2" data-name="s4">
+              <path id="s-6" data-name="s" class="cls-1" d="M3.4,1.7l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-7" data-name="s" class="cls-1" d="M3.4,4l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-8" data-name="s" class="cls-1" d="M3.4,6.4l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-9" data-name="s" class="cls-1" d="M3.4,8.8l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            </g>
+          </g>
+          <g id="s9-2" data-name="s9">
+            <g id="s5-2" data-name="s5">
+              <g id="s4-3" data-name="s4">
+                <path id="s-10" data-name="s" class="cls-1" d="M4.8.5l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+                <path id="s-11" data-name="s" class="cls-1" d="M4.8,2.9l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+                <path id="s-12" data-name="s" class="cls-1" d="M4.8,5.2l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+                <path id="s-13" data-name="s" class="cls-1" d="M4.8,7.6l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              </g>
+              <path id="s-14" data-name="s" class="cls-1" d="M4.8,9.9l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            </g>
+            <g id="s4-4" data-name="s4">
+              <path id="s-15" data-name="s" class="cls-1" d="M6.2,1.7l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-16" data-name="s" class="cls-1" d="M6.2,4l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-17" data-name="s" class="cls-1" d="M6.2,6.4l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-18" data-name="s" class="cls-1" d="M6.2,8.8l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="s18-2" data-name="s18">
+          <g id="s9-3" data-name="s9">
+            <g id="s5-3" data-name="s5">
+              <g id="s4-5" data-name="s4">
+                <path id="s-19" data-name="s" class="cls-1" d="M7.6.5l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+                <path id="s-20" data-name="s" class="cls-1" d="M7.6,2.9l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+                <path id="s-21" data-name="s" class="cls-1" d="M7.6,5.2l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+                <path id="s-22" data-name="s" class="cls-1" d="M7.6,7.6l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              </g>
+              <path id="s-23" data-name="s" class="cls-1" d="M7.6,9.9l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            </g>
+            <g id="s4-6" data-name="s4">
+              <path id="s-24" data-name="s" class="cls-1" d="M9,1.7l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-25" data-name="s" class="cls-1" d="M9,4l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-26" data-name="s" class="cls-1" d="M9,6.4l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-27" data-name="s" class="cls-1" d="M9,8.8l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            </g>
+          </g>
+          <g id="s9-4" data-name="s9">
+            <g id="s5-4" data-name="s5">
+              <g id="s4-7" data-name="s4">
+                <path id="s-28" data-name="s" class="cls-1" d="M10.4.5l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+                <path id="s-29" data-name="s" class="cls-1" d="M10.4,2.9l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+                <path id="s-30" data-name="s" class="cls-1" d="M10.4,5.2l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+                <path id="s-31" data-name="s" class="cls-1" d="M10.4,7.6l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              </g>
+              <path id="s-32" data-name="s" class="cls-1" d="M10.4,9.9l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            </g>
+            <g id="s4-8" data-name="s4">
+              <path id="s-33" data-name="s" class="cls-1" d="M11.8,1.7l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-34" data-name="s" class="cls-1" d="M11.8,4l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-35" data-name="s" class="cls-1" d="M11.8,6.4l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-36" data-name="s" class="cls-1" d="M11.8,8.8l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="s9-5" data-name="s9">
+          <g id="s5-5" data-name="s5">
+            <g id="s4-9" data-name="s4">
+              <path id="s-37" data-name="s" class="cls-1" d="M13.1.5l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-38" data-name="s" class="cls-1" d="M13.1,2.9l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-39" data-name="s" class="cls-1" d="M13.1,5.2l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+              <path id="s-40" data-name="s" class="cls-1" d="M13.1,7.6l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            </g>
+            <path id="s-41" data-name="s" class="cls-1" d="M13.1,9.9l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+          </g>
+          <g id="s4-10" data-name="s4">
+            <path id="s-42" data-name="s" class="cls-1" d="M14.5,1.7l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            <path id="s-43" data-name="s" class="cls-1" d="M14.5,4l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            <path id="s-44" data-name="s" class="cls-1" d="M14.5,6.4l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            <path id="s-45" data-name="s" class="cls-1" d="M14.5,8.8l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+          </g>
+        </g>
+        <g id="s5-6" data-name="s5">
+          <g id="s4-11" data-name="s4">
+            <path id="s-46" data-name="s" class="cls-1" d="M15.9.5l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            <path id="s-47" data-name="s" class="cls-1" d="M15.9,2.9l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            <path id="s-48" data-name="s" class="cls-1" d="M15.9,5.2l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+            <path id="s-49" data-name="s" class="cls-1" d="M15.9,7.6l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+          </g>
+          <path id="s-50" data-name="s" class="cls-1" d="M15.9,9.9l.4,1.2-1-.8h1.3l-1,.8.4-1.2Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

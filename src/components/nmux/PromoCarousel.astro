@@ -27,7 +27,7 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
 
     <div class="carousel-item active">
       <div class="row">
-        <div class="col-md-9 mx-auto">
+        <div class="col-12 col-lg-9 mx-auto">
           <div class="row align-items-center">
             <div class="col-md-4">
               <Image src={imgCarouselPromo01} class="img-fluid" alt="" aria-hidden="true" />
@@ -46,7 +46,7 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
 
     <div class="carousel-item">
       <div class="row">
-        <div class="col-md-9 mx-auto">
+        <div class="col-12 col-lg-9 mx-auto">
           <div class="row align-items-center">
             <div class="col-md-4">
               <Image src={imgCarouselPromo02} class="img-fluid" alt="" aria-hidden="true" />
@@ -63,12 +63,12 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
 
     <div class="carousel-item">
       <div class="row">
-        <div class="col-md-9 mx-auto">
+        <div class="col-12 col-lg-9 mx-auto">
           <div class="row align-items-center">
-            <div class="col-md-4">
+            <div class="col-lg-4">
               <Image src={imgCarouselPromo03} class="img-fluid" alt="" aria-hidden="true" />
             </div>
-            <div class="col-md-8 text-start">
+            <div class="col-lg-8 text-start">
               <Image src={iconCarouselPromo03} class="d-none d-lg-block mb-3" alt="" aria-hidden="true" />
               <h2 class="h5 mb-1">Special communities</h2>
               <p class="fs-7">Join a topic-based research group and take part in ongoing surveys, engaging discussion boards, and other interesting activities. You’ll make your voice heard on a continual basis in a vibrant and influential community.</p>
@@ -80,7 +80,7 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
 
     <div class="carousel-item">
       <div class="row">
-        <div class="col-md-9 mx-auto">
+        <div class="col-12 col-lg-9 mx-auto">
           <div class="row align-items-center">
             <div class="col-md-4">
               <Image src={imgCarouselPromo04} class="img-fluid" alt="" aria-hidden="true" />
@@ -107,6 +107,14 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
 </div>
 
 <style>
+  .carousel {
+    height: 220px;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    bottom: 70px;
+  }
+
   .carousel-control-prev-icon {
     background-image: url('../../assets/images/icons/carousel-arrow-left.svg');
   }
@@ -115,8 +123,16 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
     background-image: url('../../assets/images/icons/carousel-arrow-right.svg');
   }
 
+  .carousel-indicators  {
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+
   .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
     background-color: var(--bg-secondary-default);
+    border-radius: 50%;
   }
 
 

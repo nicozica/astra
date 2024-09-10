@@ -2,6 +2,7 @@
 
 import { Image } from 'astro:assets';
 import headerLogo from '../assets/images/logo.svg';
+import headerFlag from '../assets/images/icons/flags/US.svg';
 
 ---
 <header>
@@ -12,12 +13,13 @@ import headerLogo from '../assets/images/logo.svg';
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav fw-bold">
                     <li class="nav-item">
-                        <a class="nav-link language-selection" href="index.php?page=frank/language_selection">
-                            United Kingdom&nbsp;<i class="fas fa-globe"></i>
-                        </a>
+                        <a class="nav-link me-3" href="javascript:void(0);">Log in</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?page=frank/login">Log in</a>
+                        <a class="nav-link language-selection d-flex" href="javascript:void(0);">
+                            <Image src={headerFlag} class="img-fluid me-2" alt="Ipsos iSay" /> 
+                            United States (English)
+                        </a>
                     </li>
                 </ul>
             </div>
