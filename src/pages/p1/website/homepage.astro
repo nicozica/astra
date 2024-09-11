@@ -2,7 +2,7 @@
 import Layout from "../../../layouts/Layout.astro";
 
 import HeaderVisitor from "../../../components/HeaderVisitor.astro";
-import RecruitmentFormOrganic from '../../../components/nmux/RecruitmentFormOrganic.astro';
+import RecruitmentFormOrganic from "../../../components/nmux/RecruitmentFormOrganic.astro";
 import Footer from "../../../components/Footer.astro";
 
 import RewardsCarousel from "../../../components/nmux/RewardsCarousel.astro";
@@ -10,21 +10,19 @@ import PromoCarousel from "../../../components/nmux/PromoCarousel.astro";
 import MediaLogosCarousel from "../../../components/nmux/MediaLogosCarousel.astro";
 
 // Images
-import { Image } from 'astro:assets';
-import imgMain from '../../../assets/images/p1/recruitment/organic/main-composition.png';
+import { Image } from "astro:assets";
+import imgMain from "../../../assets/images/p1/recruitment/organic/main-composition.png";
 
-import iconHowItWorks01 from '../../../assets/images/icons/icon-people-rp.svg';
-import iconHowItWorks02 from '../../../assets/images/icons/icon-survey-rp.svg';
-import iconHowItWorks03 from '../../../assets/images/icons/icon-gift-rp.svg';
+import iconHowItWorks01 from "../../../assets/images/icons/icon-people-rp.svg";
+import iconHowItWorks02 from "../../../assets/images/icons/icon-survey-rp.svg";
+import iconHowItWorks03 from "../../../assets/images/icons/icon-gift-rp.svg";
 
+import imgWomanPhone from "../../../assets/images/p1/recruitment/organic/woman-phone.png";
 
-import imgWomanPhone from '../../../assets/images/p1/recruitment/organic/woman-phone.png';
-
-import iconPrivacy01 from '../../../assets/images/icons/icon-fingerprint-rg.svg';
-import iconPrivacy02 from '../../../assets/images/icons/fa-shield-alt.svg';
-import iconPrivacy03 from '../../../assets/images/icons/fa-handshake.svg';
-import iconPrivacy04 from '../../../assets/images/icons/fa-chart-bar.svg';
-
+import iconPrivacy01 from "../../../assets/images/icons/icon-fingerprint-rg.svg";
+import iconPrivacy02 from "../../../assets/images/icons/fa-shield-alt.svg";
+import iconPrivacy03 from "../../../assets/images/icons/fa-handshake.svg";
+import iconPrivacy04 from "../../../assets/images/icons/fa-chart-bar.svg";
 ---
 
 <Layout title="Homepage | Ipsos iSay">
@@ -45,7 +43,7 @@ import iconPrivacy04 from '../../../assets/images/icons/fa-chart-bar.svg';
         </div>
         <div class="col-lg-6">
           <h1 class="fs-3 mb-3">Sign up for Ipsos iSay</h1>
-          <RecruitmentFormOrganic/>
+          <RecruitmentFormOrganic />
         </div>
       </div><!-- /.row -->
     </div><!-- /.container -->
@@ -61,7 +59,6 @@ import iconPrivacy04 from '../../../assets/images/icons/fa-chart-bar.svg';
         </div>
       </div><!-- /.row -->
       <div class="row text-center mt-4 mb-5">
-
         <div class="col-md-4 mb-4">
           <div class="panel panel-bg-primary-plus-2 rounded py-4">
             <Image src={iconHowItWorks01} class="img-fluid mt-3" alt="" aria-hidden="true" />
@@ -85,157 +82,148 @@ import iconPrivacy04 from '../../../assets/images/icons/fa-chart-bar.svg';
             <p>Earn points with every survey, then redeem for your choice of gift cards and more.</p>
           </div>
         </div>
-
-    </div><!-- /.row -->
-    <div class="row">
-      <div class="col">
-        <a class="btn btn-primary btn-lg" href="javascript:void(0);" target="_blank">Join now!</a>
-      </div>
-    </div><!-- /.row -->
-  </div><!-- /.panel -->
-
-  <!-- REWARDS WITH CAROUSEL -->
-  <div class="panel border-0 pb-0 text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col col-lg-8 mx-auto">
-          <h2 class="mb-1">Choose the perfect reward</h2>
-          <p>Participate in surveys to earn points and redeem them for a variety of exciting rewards! Choose from popular gift cards or convenient prepaid cards. You’re sure to find a reward that’s just right for you.</p>
-          
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </div><!-- /.panel -->
-  <RewardsCarousel/>
-
-  <!-- PROMO CAROUSEL -->
-  <div class="panel border-0 text-center">
-    <div class="container">
-      <div class="row mb-4">
-        <div class="col col-lg-8 mx-auto">
-          <h2 class="mb-1">Take part in unique studies</h2>
-          <p>You’ll have the chance to participate in an exciting variety of exclusive research opportunities that you won’t find anywhere else.</p>
-          
-        </div>
       </div><!-- /.row -->
       <div class="row">
-        <div class="col-md-9 mx-auto">
-          <PromoCarousel />
-        </div>
-      </div>
-      <div class="row mt-4">
         <div class="col">
           <a class="btn btn-primary btn-lg" href="javascript:void(0);" target="_blank">Join now!</a>
         </div>
       </div><!-- /.row -->
+    </div><!-- /.panel -->
 
-    </div><!-- /.container -->
-  </div><!-- /.panel -->
+    <!-- REWARDS WITH CAROUSEL -->
+    <div class="panel border-0 pb-0 text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-8 mx-auto">
+            <h2 class="mb-1">Choose the perfect reward</h2>
+            <p>
+              Participate in surveys to earn points and redeem them for a variety of exciting rewards! Choose from popular gift cards or convenient prepaid cards. You’re sure to find a reward that’s
+              just right for you.
+            </p>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.panel -->
+    <RewardsCarousel />
 
+    <!-- PROMO CAROUSEL -->
+    <div class="panel border-0 text-center">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col col-lg-8 mx-auto">
+            <h2 class="mb-1">Take part in unique studies</h2>
+            <p>You’ll have the chance to participate in an exciting variety of exclusive research opportunities that you won’t find anywhere else.</p>
+          </div>
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-md-10 col-xl-9 mx-auto">
+            <PromoCarousel />
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col">
+            <a class="btn btn-primary btn-lg" href="javascript:void(0);" target="_blank">Join now!</a>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.panel -->
 
-  <!-- PANEL: Powered by Ipsos -->
-  <div class="panel border-0">
-    <div class="container">
-      <div class="row">
-        <div class="col col-lg-10 mx-auto">
-          <div class="row align-items-center">
-            <div class="col-xs-12 col-lg-6">
-              <Image src={imgWomanPhone} class="img-fluid mt-3" alt="" aria-hidden="true" />
-            </div>
-            <div class="col-xs-12 col-lg-6 text-start">
-              <h2 class="my-4">Powered by <span class="text-secondary">Ipsos</span>, experts in market research and public opinion.</h2>
-              <p>Ipsos is relied upon in over 100 countries to conduct surveys for brands, government agencies, media outlets, and more. This includes political polls, where our surveys reflect the voice of the people and measure public opinion, influencing social movements and government policies.</p>
-              <p>Ipsos has been owned and managed by market research professionals for decades. It is now one of the largest market research companies in the world.</p>
+    <!-- PANEL: Powered by Ipsos -->
+    <div class="panel border-0">
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-10 mx-auto">
+            <div class="row align-items-center">
+              <div class="col-xs-12 col-lg-6">
+                <Image src={imgWomanPhone} class="img-fluid mt-3" alt="" aria-hidden="true" />
+              </div>
+              <div class="col-xs-12 col-lg-6 text-start">
+                <h2 class="my-4">Powered by <span class="text-secondary">Ipsos</span>, experts in market research and public opinion.</h2>
+                <p>
+                  Ipsos is relied upon in over 100 countries to conduct surveys for brands, government agencies, media outlets, and more. This includes political polls, where our surveys reflect the
+                  voice of the people and measure public opinion, influencing social movements and government policies.
+                </p>
+                <p>Ipsos has been owned and managed by market research professionals for decades. It is now one of the largest market research companies in the world.</p>
+              </div>
             </div>
           </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.panel -->
+    <h3 class="h6 mt-4">See Ipsos research featured in:</h3>
+    <MediaLogosCarousel />
 
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </div><!-- /.panel -->
-  <h3 class="h6 mt-4">See Ipsos research featured in:</h3>
-  <MediaLogosCarousel/>
-
-
-  <!-- PANEL: PRIVACY -->
-  <div class="container">
-    <div class="panel panel-bg-primary-success-2 rounded pt-5 pb-4 border-0">
-    
-
-      <div class="row">
-        <div class="col col-lg-8 mx-auto">
-          <Image src={iconPrivacy01} class="img-fluid mb-3" alt="" aria-hidden="true" />
-          <h2 class="h4 mb-1">Your privacy is our priority</h2>
-          <p>We follow the strictest of privacy and data protection policies so that your data remains confidential and safe. Trust is fundamental to our community, and we’re dedicated to preserving it.</p>
-        </div>
-      </div><!-- /.row -->
-
-      <div class="row mt-4 justify-content-center">
-        <div class="col-md-4 col-lg-3">
-          <Image src={iconPrivacy02} class="img-fluid mb-3" alt="" aria-hidden="true" />
-          <h2 class="h5 mb-1">High standards</h2>
-          <p class="fs-7">We comply with international privacy standards and adhere to the most up-to-date market research guidelines.</p>
-        </div>
-        <div class="col-md-4 col-lg-3">
-          <Image src={iconPrivacy03} class="img-fluid mb-3" alt="" aria-hidden="true" />
-          <h2 class="h5 mb-1">Opt out at any time</h2>
-          <p class="fs-7">Your participation is voluntary and you can request the deletion of your information at any time.</p>
-        </div>
-        <div class="col-md-4 col-lg-3">
-          <Image src={iconPrivacy04} class="img-fluid mb-3" alt="" aria-hidden="true" />
-          <h2 class="h5 mb-1">Statistical purposes</h2>
-          <p class="fs-7">Information is analyzed and used to make inferences about a larger population based on a smaller sample, not specific individuals.</p>
-        </div>
-      </div><!-- /.row -->
-
-
-    </div><!-- /.container -->
-  </div><!-- /.panel -->
-
-
-  <!-- REWARDS WITH CAROUSEL -->
-  <div class="panel border-0 pb-0 text-center">
+    <!-- PANEL: PRIVACY -->
     <div class="container">
-      <div class="row">
-        <div class="col col-lg-8 mx-auto">
-          <h2 class="mb-1">Trusted by millions of members</h2>
-          <p>See what the Ipsos iSay community has to say about the experience</p>
-          
+      <div class="panel panel-bg-primary-success-2 rounded pt-5 pb-4 border-0">
+        <div class="row">
+          <div class="col col-lg-8 mx-auto">
+            <Image src={iconPrivacy01} class="img-fluid mb-3" alt="" aria-hidden="true" />
+            <h2 class="h4 mb-1">Your privacy is our priority</h2>
+            <p>
+              We follow the strictest of privacy and data protection policies so that your data remains confidential and safe. Trust is fundamental to our community, and we’re dedicated to preserving
+              it.
+            </p>
+          </div>
+        </div><!-- /.row -->
+
+        <div class="row mt-4 justify-content-center">
+          <div class="col-md-4 col-lg-3">
+            <Image src={iconPrivacy02} class="img-fluid mb-3" alt="" aria-hidden="true" />
+            <h2 class="h5 mb-1">High standards</h2>
+            <p class="fs-7">We comply with international privacy standards and adhere to the most up-to-date market research guidelines.</p>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <Image src={iconPrivacy03} class="img-fluid mb-3" alt="" aria-hidden="true" />
+            <h2 class="h5 mb-1">Opt out at any time</h2>
+            <p class="fs-7">Your participation is voluntary and you can request the deletion of your information at any time.</p>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <Image src={iconPrivacy04} class="img-fluid mb-3" alt="" aria-hidden="true" />
+            <h2 class="h5 mb-1">Statistical purposes</h2>
+            <p class="fs-7">Information is analyzed and used to make inferences about a larger population based on a smaller sample, not specific individuals.</p>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.panel -->
+
+    <!-- REWARDS WITH CAROUSEL -->
+    <div class="panel border-0 pb-0 text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-8 mx-auto">
+            <h2 class="mb-1">Trusted by millions of members</h2>
+            <p>See what the Ipsos iSay community has to say about the experience</p>
+          </div>
+        </div><!-- /.row -->
+
+        <div class="row">
+          <div class="col mx-auto">TRUSTPILOT PLUGIN</div>
         </div>
-      </div><!-- /.row -->
+        <div class="row mt-4">
+          <div class="col">
+            <a class="btn btn-primary btn-lg" href="javascript:void(0);" target="_blank">Join now!</a>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.panel -->
 
-      <div class="row">
-        <div class="col mx-auto">
-          TRUSTPILOT PLUGIN
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col">
-          <a class="btn btn-primary btn-lg" href="javascript:void(0);" target="_blank">Join now!</a>
-        </div>
-      </div><!-- /.row -->
+    <Footer />
+  </div>
 
-    </div><!-- /.container -->
-  </div><!-- /.panel -->
+  <script src="https://astra.nico.ar/trustpilot-widget" async="" type="text/javascript"></script>
+  <style>
+    .panel.panel-default.padding-md img {
+      width: 175px;
+      height: 175px;
+    }
 
- 
+    .panel .panel-bg-primary-plus-2 {
+      background: var(--bg-primary-minus-2);
+    }
 
-  <Footer />
+    .panel .panel-bg-primary-success-2 {
+      background: var(--bg-success-minus-2);
+    }
+  </style>
 </Layout>
-
-<script src="https://astra.nico.ar/trustpilot-widget" async="" type="text/javascript"></script>
-<style>
-  .panel.panel-default.padding-md img {
-    width: 175px;
-    height: 175px;
-  }
-
-  .panel .panel-bg-primary-plus-2 {
-    background: var(--bg-primary-minus-2);
-  }
-  
-  .panel .panel-bg-primary-success-2 {
-    background: var(--bg-success-minus-2);
-  }
-
-</style>
