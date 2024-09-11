@@ -91,6 +91,10 @@ import imgLogoCarouselWashingtonpost from '../../assets/images/p1/homepage/logos
 </style>
 
 <script>
- var copy = (document.querySelector(".logos-slide") as Node)?.cloneNode(true);
- document.querySelector(".logos")?.appendChild(copy);
+  document.addEventListener("DOMContentLoaded", function() {
+    const copy = document.querySelector(".logos-slide")?.cloneNode(true) as HTMLElement | null;
+    if (copy) {
+      document.querySelector(".logos")?.appendChild(copy);
+    }
+  });
 </script>
