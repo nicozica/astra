@@ -68,10 +68,17 @@ import imgCarouselReward05 from '../../assets/images/p1/recruitment/organic/caro
 .rewards:after {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 80px;
   height: 100%;
   content: "";
   z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .rewards:before,
+  .rewards:after {
+    width: 250px;
+  }
 }
 
 .rewards:before {

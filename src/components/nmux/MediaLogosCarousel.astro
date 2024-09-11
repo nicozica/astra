@@ -1,0 +1,96 @@
+---
+// Images
+import { Image } from 'astro:assets';
+
+import imgLogoCarouselNytimes from '../../assets/images/p1/homepage/logos-slide/nytimes.png';
+import imgLogoCarouselAbc from '../../assets/images/p1/homepage/logos-slide/abc.png';
+import imgLogoCarouselNpr from '../../assets/images/p1/homepage/logos-slide/npr.png';
+import imgLogoCarouselYahoo from '../../assets/images/p1/homepage/logos-slide/yahoo.png';
+import imgLogoCarouselFox from '../../assets/images/p1/homepage/logos-slide/fox.png';
+import imgLogoCarouselWsj from '../../assets/images/p1/homepage/logos-slide/wsj.png';
+import imgLogoCarouselCnn from '../../assets/images/p1/homepage/logos-slide/cnn.png';
+import imgLogoCarouselBloomberg from '../../assets/images/p1/homepage/logos-slide/bloomberg.png';
+import imgLogoCarouselToday from '../../assets/images/p1/homepage/logos-slide/today.png';
+import imgLogoCarouselWashingtonpost from '../../assets/images/p1/homepage/logos-slide/washingtonpost.png';
+
+---
+
+<div class="logos">
+  <div class="logos-slide">
+    <Image src={imgLogoCarouselNytimes} class="img-fluid" alt="The New York Times" aria-hidden="true" />
+    <Image src={imgLogoCarouselAbc} class="img-fluid" alt="ABC News" aria-hidden="true" />
+    <Image src={imgLogoCarouselNpr} class="img-fluid" alt="NPR" aria-hidden="true" />
+    <Image src={imgLogoCarouselYahoo} class="img-fluid" alt="Yahoo! Finance" aria-hidden="true" />
+    <Image src={imgLogoCarouselFox} class="img-fluid" alt="Fox" aria-hidden="true" />
+    <Image src={imgLogoCarouselWsj} class="img-fluid" alt="The Wall Street Journal" aria-hidden="true" />
+    <Image src={imgLogoCarouselCnn} class="img-fluid" alt="CNN" aria-hidden="true" />
+    <Image src={imgLogoCarouselBloomberg} class="img-fluid" alt="Bloomberg" aria-hidden="true" />
+    <Image src={imgLogoCarouselToday} class="img-fluid" alt="USA Today" aria-hidden="true" />
+    <Image src={imgLogoCarouselWashingtonpost} class="img-fluid" alt="The Washington Post" aria-hidden="true" />
+  </div>
+</div>
+
+<style>
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 30px 0 60px 0;
+  margin-bottom: 30px;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .logos:before,
+  .logos:after {
+    width: 250px;
+  }
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  margin: 0 40px;
+  opacity: .4;
+}
+
+
+</style>
+
+<script>
+ var copy = (document.querySelector(".logos-slide") as Node)?.cloneNode(true);
+ document.querySelector(".logos")?.appendChild(copy);
+</script>
