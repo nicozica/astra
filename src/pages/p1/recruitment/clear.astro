@@ -1,7 +1,6 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 
-import HamburgerMenu from "../../../components/HamburgerMenu.astro";
 import HeaderClear from "../../../components/HeaderClear.astro";
 import FooterClear from "../../../components/FooterClear.astro";
 
@@ -11,73 +10,40 @@ import imgRewards from "../../../assets/images/p1/recruitment/landingMain.png";
 
 <Layout title="Survey Experience">
   <HeaderClear />
-  <HamburgerMenu />
   <!-- Main Content -->
   <div class="custom-container container-fluid vh-80">
     <div class="row h-100">
       <!-- Left Side - Large Image -->
-      <div
-        class="col-md-6 d-flex justify-content-center align-items-center p-0"
-      >
+      <div class="col-md-6 d-flex justify-content-center align-items-center p-0">
         <div class="image-container">
-          <Image
-            src={imgRewards}
-            class="img-fluid"
-            alt="Large Landing Image"
-            aria-hidden="true"
-            class="img-fluid w-100 h-100 object-fit-cover curved-image"
-          />
+          <Image src={imgRewards} class="img-fluid" alt="Woman holding a phone and a coffee cup" aria-hidden="true" class="img-fluid w-100 h-100 object-fit-cover curved-image" />
         </div>
       </div>
       <!-- Right Side - Form with custom container -->
-      <div
-        class="mb-4 col-md-6 d-flex justify-content-center align-items-start right-side"
-      >
+      <div class="mb-4 col-md-6 d-flex justify-content-center align-items-start right-side">
         <div>
           <h2 class="mb-4"></h2>
-          <p class="mb-1" id="signup-text">Sign up</p>
-          <p class="mb-4" id="signup-description">And have your say</p>
+          <h1 class="h3 mb-1">Sign up</h1>
+          <p class="mb-4">And have your say</p>
           <form>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="insert your email.."
-              />
+              <input type="email" class="form-control" id="email" placeholder="Insert your email.." />
             </div>
             <div class="mb-3 position-relative">
               <label for="password" class="form-label">Password</label>
               <div class="password-container">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Create a password.."
-                />
+                <input type="password" class="form-control" id="password" placeholder="Create a password.." />
                 <div id="togglePassword">
-                  <i
-                    class="fa fa-eye password-toggle"
-                    id="eye"
-                    style="cursor: pointer;"></i>
-                  <i
-                    class="fa fa-eye-slash password-toggle"
-                    id="eyeslash"
-                    style="cursor: pointer;"></i>
+                  <i class="fa fa-eye password-toggle" id="eye" style="cursor: pointer;"></i>
+                  <i class="fa fa-eye-slash password-toggle" id="eyeslash" style="cursor: pointer;"></i>
                 </div>
               </div>
             </div>
             <div class="mb-1">
               <ul>
-                <li>
-                  Passwords are case-sensitive and must be at least 10
-                  characters long.
-                </li>
-                <li>
-                  They must include 1 uppercase letter, 1 lowercase letter, 1
-                  special character, and 1 number.
-                </li>
+                <li>Passwords are case-sensitive and must be at least 10 characters long.</li>
+                <li>They must include 1 uppercase letter, 1 lowercase letter, 1 special character, and 1 number.</li>
               </ul>
             </div>
             <div class="mt-4 mb-4">
@@ -85,36 +51,21 @@ import imgRewards from "../../../assets/images/p1/recruitment/landingMain.png";
             </div>
             <div class="customCheckBoxWrapper">
               <div class="customCheckBox">
-                <input
-                  type="checkbox"
-                  name="optionsRadios"
-                  id="checkOther"
-                  value="other"
-                />
+                <input type="checkbox" name="optionsRadios" id="checkOther" value="other" />
                 <label for="checkOther"></label>
               </div>
               <p class="tncText">
                 I have read and accept the
-                <strong
-                  ><a href="terms.html" target="_blank">Terms and Conditions</a
-                  ></strong
-                >
+                <strong><a href="terms.html" target="_blank">Terms and Conditions</a></strong>
                 and
-                <strong
-                  ><a href="privacy.html" target="_blank">Privacy Policy</a
-                  ></strong
-                >.
+                <strong><a href="privacy.html" target="_blank">Privacy Policy</a></strong>.
               </p>
             </div>
-            <button type="submit" class="btn btn-primary w-100"
-              >Create an account</button
-            >
-            <div class="signIn">
+            <a type="submit" class="btn btn-primary w-100 mt-2">Create an account</a>
+            <div class="signIn text-center mt-3">
               <p class="tncText">
-                Already an user?
-                <strong
-                  ><a href="signin.html" target="_blank">Sign in</a></strong
-                >
+                Already a user?
+                <strong><a href="signin.html" target="_blank">Sign in</a></strong>
               </p>
             </div>
           </form>
@@ -125,17 +76,6 @@ import imgRewards from "../../../assets/images/p1/recruitment/landingMain.png";
   </div>
 </Layout>
 
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-/>
-<script
-  src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"
-></script>
-<script
-  src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
-  async=""
-  type="text/javascript"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const togglePassword = document.getElementById("togglePassword");
@@ -144,10 +84,7 @@ import imgRewards from "../../../assets/images/p1/recruitment/landingMain.png";
     if (togglePassword && passwordInput) {
       togglePassword.addEventListener("click", function () {
         // Toggle the type attribute of the password field
-        const type =
-          passwordInput.getAttribute("type") === "password"
-            ? "text"
-            : "password";
+        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
         passwordInput.setAttribute("type", type);
 
         // Toggle the eye icon
@@ -247,45 +184,12 @@ import imgRewards from "../../../assets/images/p1/recruitment/landingMain.png";
     margin-top: 3px;
   }
 
-  strong {
-    font-family: "Inter";
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 18px;
-    text-align: left;
-  }
-
-  .signIn {
-    padding-top: 16px;
-    display: flex;
-    justify-content: center;
-  }
-
   #togglePassword {
     position: absolute;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
     cursor: pointer;
-  }
-
-  #signup-text {
-    font-family: "Inter";
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 40px;
-    text-align: left;
-    color: #02103f;
-  }
-
-  #signup-description {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #767279;
-    align-self: stretch;
   }
 
   .form-label {
@@ -382,8 +286,7 @@ import imgRewards from "../../../assets/images/p1/recruitment/landingMain.png";
     position: relative;
     width: 100%;
     height: 100%;
-    background: url("../../../assets/images/p1/recruitment/Gradient.png")
-      no-repeat center center;
+    background: url("../../../assets/images/p1/recruitment/Gradient.png") no-repeat center center;
     background-size: cover;
     border-radius: 20px;
   }
