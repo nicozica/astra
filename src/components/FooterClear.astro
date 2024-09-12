@@ -1,0 +1,153 @@
+
+<script>
+</script>
+    
+<footer class="container mt-2 mb-4 text-dark pt-3 container-xxl pb-0">
+    <div class="d-flex flex-column flex-lg-row justify-content-between gap-3">
+        <div class="copyright block order-lg-0 order-4 text-center text-lg-start dektop-mode">
+            <div class="ipsos_logo"><img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/logos/ipsos_logo.svg" alt="Ipsos" /></div>
+            <div class="gap"></div>
+            <p class="mt-2 fs-7 footerLink">©{new Date().getFullYear()}</p>
+            <div class="gap"></div>
+            <a class="footerLink" href="privacy.html" target="_blank">Privacy Policy</a>
+            <div class="gap"></div>
+            <a class="footerLink" href="help.html" target="_blank">help</a>
+        </div>
+        <div class="copyright block order-lg-0 order-4 text-center text-lg-start mobile-mode">
+            <div class="linkGroup">
+                <a class="footerLink" href="help.html" target="_blank">FAQ/Contact us</a>
+                <div class="gap"></div>
+                <a class="footerLink" href="help.html" target="_blank">About us</a>
+                <div class="gap"></div>
+                <a class="footerLink" href="help.html" target="_blank">Cookies policy</a>
+            </div>          
+            <div class="linkGroup">
+                <a class="footerLink" href="help.html" target="_blank">Do not sell my info</a>
+                <div class="gap"></div>
+                <a class="footerLink" href="help.html" target="_blank">Privacy policy</a>
+            </div>   
+            <div class="linkGroup">
+                <a class="footerLink" href="help.html" target="_blank">Terms & Conditions</a>
+                <div class="gap"></div>
+                <a class="footerLink" href="help.html" target="_blank">Partner with us</a>
+            </div>       
+            <hr class="custom-line">
+            <div class="logo-wrapper">
+            
+                <div class="ipsos_logo"><img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/logos/ipsos_logo.svg" alt="Ipsos" /></div>
+                <div class="gap"></div>
+                <p class="mt-2 fs-7">©{new Date().getFullYear()}</p>
+            </div>
+        </div>
+    </div>
+</footer>
+ 
+<style>
+    footer .nav-item a {
+        font-size: 12px !important;
+    }
+
+    footer ul.social-icons li:first-child {
+        list-style: none;
+        margin-left: 0;
+    }
+
+    footer ul.social-icons li {
+        list-style: none;
+        margin: 8px 4px;
+    }
+
+    footer .social-icons a {
+        padding: 0;
+    }
+
+    footer .app-badge.googleplay {
+        max-width: 143px;
+    }
+
+    footer .app-badge.ios {
+        max-width: 125px;
+    }
+
+    footer ul.nav.navbar-nav {
+        display: block;
+        column-count: 2 !important;
+        column-gap: 2em;
+    }
+
+    @media (min-width: 768px) {
+        footer ul.nav.navbar-nav {
+            column-count: 3 !important;
+        }
+    }
+
+    #block-footeripsos h2 {
+        display: none;
+    }
+
+    .copyright {
+        display: flex;
+    }
+
+    .gap {
+        width: 50px;
+    }
+
+    .gap-vertical {
+        height: 50px;
+    }
+
+    .footerLink {
+        font-family: "Inter" !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        line-height: 18px !important;
+        text-align: center !important;
+        margin-top: 0.5rem !important;
+        color: #767279 !important;
+    }
+
+    .custom-line {
+        opacity: 1;
+        border: none;
+        border-top: 3px dotted #e0e0e0;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 100%; /* Full width */
+    }
+
+    /* css for dektop mode */
+    @media screen and (min-width: 768px) {
+        .mobile-mode {
+            display: none;
+        }
+    }
+
+    /* css for mobile mode */
+    @media screen and (max-width: 768px) {
+        .dektop-mode {
+            display: none;
+        }
+
+        .mobile-mode {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .linkGroup {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 3rem !important;
+        }
+    }
+</style>
