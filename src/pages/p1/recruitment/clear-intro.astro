@@ -1,0 +1,93 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import HeaderClear from "../../../components/HeaderClear.astro";
+import FooterClear from "../../../components/FooterClear.astro";
+
+import { Image } from "astro:assets";
+import iconEmailConfirmed from "../../../assets/images/icons/fa-envelope-circle-check-g.svg";
+
+import imgClearIntro from "../../../assets/images/p1/recruitment/man-woman-chatting.jpg";
+
+import logoClear from "../../../assets/images/p1/recruitment/logo-clear.svg";
+---
+
+<Layout title="CLEAR Intro">
+  <HeaderClear />
+  <div class="panel panel-bg-primary-success-2 py-2 mt-3 mb-5 border-0 text-center">
+    <Image src={iconEmailConfirmed} class="img-fluid" alt="" aria-hidden="true" />
+    Your email account was successfully confirmed!
+  </div>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="row mb-5">
+          <!-- Left Side - Large Image -->
+          <div class="col-md-5">
+              <Image src={imgClearIntro} class="img-fluid" alt="Woman holding a phone and a coffee cup" aria-hidden="true" />
+          </div>
+          <!-- Right Side - Form with custom container -->
+          <div class="col-md-7">
+            <h1 class="h3 mb-4">We value credibility and authenticity</h1>
+            <p class="mb-4">Ipsos has been at the forefront of understanding the world’s pulse and empowering global decision-makers with insights since 1975.</p>
+            <p class="mb-4">To ensure the authenticity of Ipsos iSay’s platform, <strong>it’s important for us to confirm that every voice we hear represents a real, authentic individual.</strong></p>
+          
+            <h2 class="h4 mb-2">Verify your identity</h1>
+            <p class="mb-4">In the next steps, you'll be redirected to a quick and simple process to verify your ID.</p>
+            
+            <div class="panel panel-bg-primary-success-2 py-2 mt-3 mb-5 border-0 text-center">
+              <p class="fs-7 mt-3 mb-2">
+                You’ll earn your first reward for completing your ID verification! <br>
+                <span class="fs-5 fw-bold d-block mt-1">100 points <span class="text-success">(a $5 value)</span></span>
+              </p>
+            </div>
+
+            <p class="fs-7 mt-4">To complete the ID verification process, you will need a mobile device with a camera and a government-issued photo ID, such as a passport or driver’s license.</p>
+          
+            <a type="submit" class="btn btn-primary px5 mt-2">Verify your ID</a>
+          </div>
+        </div>
+        
+      </div>
+      <FooterClear />
+    </div>
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordInput = document.getElementById("password");
+
+    if (togglePassword && passwordInput) {
+      togglePassword.addEventListener("click", function () {
+        // Toggle the type attribute of the password field
+        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+        passwordInput.setAttribute("type", type);
+
+        // Toggle the eye icon
+        const eyeOpen = document.getElementById("eye");
+        const eyeSlash = document.getElementById("eyeslash");
+
+        if (type === "password" && eyeOpen && eyeSlash) {
+          eyeOpen.style.visibility = "hidden";
+          eyeSlash.style.visibility = "visible";
+        }
+
+        if (type === "text" && eyeOpen && eyeSlash) {
+          eyeOpen.style.visibility = "visible";
+          eyeSlash.style.visibility = "hidden";
+        }
+      });
+    }
+  });
+</script>
+
+<style>
+ .panel.panel-bg-primary-success-2 {
+    background: var(--bg-success-minus-2);
+  }
+</style>
