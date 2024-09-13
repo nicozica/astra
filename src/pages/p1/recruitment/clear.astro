@@ -286,7 +286,8 @@ import imgRewards from "../../../assets/images/p1/recruitment/landingMain.png";
     position: relative;
     width: 100%;
     height: 100%;
-    background: url("../../../assets/images/p1/recruitment/Gradient.png") no-repeat center center;
+    background: url("../../../assets/images/p1/recruitment/Gradient.png")
+      no-repeat top center;
     background-size: cover;
     border-radius: 20px;
   }
@@ -307,14 +308,11 @@ import imgRewards from "../../../assets/images/p1/recruitment/landingMain.png";
   /* Ensure the image maintains some height on mobile */
   @media (max-width: 768px) {
     .image-container {
-      height: auto;
+      width: 500px;
+      height: 100%;
       min-height: 350px;
     }
 
-    .curved-image {
-      height: auto;
-      min-height: 350px;
-    }
 
     /* Adjust padding for smaller screens */
     .custom-container {
@@ -353,6 +351,10 @@ import imgRewards from "../../../assets/images/p1/recruitment/landingMain.png";
     .right-side {
       padding-left: 16px;
       padding-right: 16px;
+    }
+
+    .customCheckBoxWrapper {
+      align-items: baseline;
     }
   }
 </style>
