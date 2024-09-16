@@ -9,16 +9,20 @@ import iconEmailConfirmed from "../../../assets/images/icons/fa-envelope-circle-
 
 import imgClearIntro from "../../../assets/images/p1/recruitment/man-woman-chatting.jpg";
 
-import logoClear from "../../../assets/images/p1/recruitment/logo-clear.svg";
+import videoPlayer from "../../../assets/images/p1/recruitment/video-player.png";
+import logoClear from "../../../assets/images/p1/recruitment/logo-clear.png";
+
+import bulletListNumer01 from "../../../assets/images/p1/recruitment/square-1.svg";
+import bulletListNumer02 from "../../../assets/images/p1/recruitment/square-2.svg";
+import bulletListNumer03 from "../../../assets/images/p1/recruitment/square-3.svg";
 ---
 
 <Layout title="CLEAR Intro">
   <HeaderClear />
-  <div class="panel panel-bg-primary-success-2 py-2 mt-3 mb-5 border-0 text-center">
+  <div class="panel panel-bg-success-minus-2 py-2 mt-3 mb-5 border-0 text-center text-success">
     <Image src={iconEmailConfirmed} class="img-fluid" alt="" aria-hidden="true" />
     Your email account was successfully confirmed!
   </div>
-
 
   <!-- Main Content -->
   <div class="container">
@@ -27,67 +31,78 @@ import logoClear from "../../../assets/images/p1/recruitment/logo-clear.svg";
         <div class="row mb-5">
           <!-- Left Side - Large Image -->
           <div class="col-md-5">
-              <Image src={imgClearIntro} class="img-fluid" alt="Woman holding a phone and a coffee cup" aria-hidden="true" />
+            <Image src={imgClearIntro} class="img-fluid" alt="Woman holding a phone and a coffee cup" aria-hidden="true" />
           </div>
           <!-- Right Side - Form with custom container -->
           <div class="col-md-7">
-            <h1 class="h3 mb-4">We value credibility and authenticity</h1>
+            <h1 class="h3 mt-3 mt-sm-none mb-4">We value credibility and authenticity</h1>
             <p class="mb-4">Ipsos has been at the forefront of understanding the world’s pulse and empowering global decision-makers with insights since 1975.</p>
             <p class="mb-4">To ensure the authenticity of Ipsos iSay’s platform, <strong>it’s important for us to confirm that every voice we hear represents a real, authentic individual.</strong></p>
-          
-            <h2 class="h4 mb-2">Verify your identity</h1>
+
+            <h2 class="h4 mb-2">Verify your identity</h2>
             <p class="mb-4">In the next steps, you'll be redirected to a quick and simple process to verify your ID.</p>
-            
-            <div class="panel panel-bg-primary-success-2 py-2 mt-3 mb-5 border-0 text-center">
-              <p class="fs-7 mt-3 mb-2">
-                You’ll earn your first reward for completing your ID verification! <br>
-                <span class="fs-5 fw-bold d-block mt-1">100 points <span class="text-success">(a $5 value)</span></span>
+
+            <div class="panel panel-bg-primary-minus-2 py-2 mt-3 mb-3 border-0 rounded text-center">
+              <p class="fs-7 mt-3 mb-2 text-main">
+                You’ll earn your first reward for completing your ID verification! <br />
+                <span class="fs-5 fw-bold text-primary d-block mt-1"><i class="fa-solid fa-star text-warning"></i> 100 points <span class="text-success">(a $5 value)</span></span>
               </p>
             </div>
 
             <p class="fs-7 mt-4">To complete the ID verification process, you will need a mobile device with a camera and a government-issued photo ID, such as a passport or driver’s license.</p>
-          
-            <a type="submit" class="btn btn-primary px5 mt-2">Verify your ID</a>
+
+            <a type="submit" class="btn btn-primary px-5 mt-3">Verify your ID</a>
           </div>
         </div>
-        
+
+        <div class="row mb-5 align-items-center">
+          <!-- Left Side - Large Image -->
+          <div class="col-md-7">
+            <Image src={videoPlayer} class="img-fluid" alt="" aria-hidden="true" />
+          </div>
+          <!-- Right Side - Form with custom container -->
+          <div class="col-md-5">
+            <Image src={logoClear} class="img-fluid d-block mt-3 mt-md-none mb-3" alt="Clear" aria-hidden="true" />
+            <p class="mb-4">We’ve partnered with CLEAR, a trusted leader in secure identity verification that you might recognize from airports. </p>
+
+            <a type="submit" class="btn btn-sm btn-outline-primary mt-3">Why verify your identity?</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-lg-8 mx-auto">
+            <ol class="list-unstyled">
+              <li class="d-flex align-items-start mb-3">
+                <Image src={bulletListNumer01} class="mt-1 me-2" alt="1" aria-hidden="true" />
+                <p class="mb-1">Create a free CLEAR account.</p>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <Image src={bulletListNumer02} class="mt-1 me-2" alt="2" aria-hidden="true" />
+                <div>
+                  <p class="mb-1">Complete the identity verification process.</p>
+                  <p class="mb-0 fs-7">You'll be asked to provide your phone number and email, take a selfie, and upload a photo of your driver's license, ID card, or passport.</p>
+                </div>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <Image src={bulletListNumer03} class="mt-1 me-2" alt="3" aria-hidden="true" />
+                <p>Become a verified Ipsos iSay member and start earning rewards!</p>
+              </li>
+            </ol>
+            
+          </div>
+        </div>
+
       </div>
-      <FooterClear />
     </div>
   </div>
+  <FooterClear />
 </Layout>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const togglePassword = document.getElementById("togglePassword");
-    const passwordInput = document.getElementById("password");
-
-    if (togglePassword && passwordInput) {
-      togglePassword.addEventListener("click", function () {
-        // Toggle the type attribute of the password field
-        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-        passwordInput.setAttribute("type", type);
-
-        // Toggle the eye icon
-        const eyeOpen = document.getElementById("eye");
-        const eyeSlash = document.getElementById("eyeslash");
-
-        if (type === "password" && eyeOpen && eyeSlash) {
-          eyeOpen.style.visibility = "hidden";
-          eyeSlash.style.visibility = "visible";
-        }
-
-        if (type === "text" && eyeOpen && eyeSlash) {
-          eyeOpen.style.visibility = "visible";
-          eyeSlash.style.visibility = "hidden";
-        }
-      });
-    }
-  });
-</script>
-
 <style>
- .panel.panel-bg-primary-success-2 {
+  .panel.panel-bg-success-minus-2 {
     background: var(--bg-success-minus-2);
+  }
+  .panel.panel-bg-primary-minus-2 {
+    background: var(--bg-primary-minus-2);
   }
 </style>

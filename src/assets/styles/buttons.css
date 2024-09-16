@@ -39,6 +39,11 @@ a:hover {
     color: var(--text-primary-plus-2) !important;
 }
 
+a.btn.btn-outline-primary {
+    border: 2px solid var(--bg-primary-default) !important;
+    color: var(--bg-primary-default) !important;
+}
+
 a.btn.btn-outline-primary:hover {
     background-color: var(--bg-primary-default);
     color: var(--text-foreground) !important;
