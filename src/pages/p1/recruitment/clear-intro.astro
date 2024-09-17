@@ -7,7 +7,8 @@ import FooterClear from "../../../components/FooterClear.astro";
 import { Image } from "astro:assets";
 import iconEmailConfirmed from "../../../assets/images/icons/fa-envelope-circle-check-g.svg";
 
-import imgClearIntro from "../../../assets/images/p1/recruitment/man-woman-chatting.jpg";
+import imgClearIntroMobile from "../../../assets/images/p1/recruitment/man-woman-chatting-mobile.jpg";
+import imgClearIntroDesktop from "../../../assets/images/p1/recruitment/man-woman-chatting-desktop.jpg";
 
 import videoPlayer from "../../../assets/images/p1/recruitment/video-player.png";
 import logoClear from "../../../assets/images/p1/recruitment/logo-clear.png";
@@ -31,15 +32,16 @@ import bulletListNumer03 from "../../../assets/images/p1/recruitment/square-3.sv
         <div class="row mb-5">
           <!-- Left Side - Large Image -->
           <div class="col-md-5">
-            <Image src={imgClearIntro} class="img-fluid" alt="Woman holding a phone and a coffee cup" aria-hidden="true" />
+            <Image src={imgClearIntroMobile} class="d-md-none img-fluid rounded" alt="" aria-hidden="true"  />
+            <Image src={imgClearIntroDesktop} class="img-fluid d-none d-md-block rounded" alt="" aria-hidden="true" />
           </div>
           <!-- Right Side - Form with custom container -->
           <div class="col-md-7">
             <h1 class="h3 mt-3 mt-sm-none mb-4">We value credibility and authenticity</h1>
             <p class="mb-4">Ipsos has been at the forefront of understanding the world’s pulse and empowering global decision-makers with insights since 1975.</p>
-            <p class="mb-4">To ensure the authenticity of Ipsos iSay’s platform, <strong>it’s important for us to confirm that every voice we hear represents a real, authentic individual.</strong></p>
+            <p class="mb-4">To ensure the authenticity of Ipsos iSay’s platform, <span class="text-main">it’s important for us to confirm that every voice we hear represents a real, authentic individual.</span></p>
 
-            <h2 class="h4 mb-2">Verify your identity</h2>
+            <h2 class="h4 mt-5 mb-2">Verify your identity</h2>
             <p class="mb-4">In the next steps, you'll be redirected to a quick and simple process to verify your ID.</p>
 
             <div class="panel panel-bg-primary-minus-2 py-2 mt-3 mb-3 border-0 rounded text-center">
@@ -51,7 +53,7 @@ import bulletListNumer03 from "../../../assets/images/p1/recruitment/square-3.sv
 
             <p class="fs-7 mt-4">To complete the ID verification process, you will need a mobile device with a camera and a government-issued photo ID, such as a passport or driver’s license.</p>
 
-            <a type="submit" class="btn btn-primary px-5 mt-3">Verify your ID</a>
+            <a type="submit" class="btn btn-primary btn-lg px-5 mt-3">Verify your ID</a>
           </div>
         </div>
 
