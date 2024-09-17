@@ -34,7 +34,7 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
             </div>
             <div class="col-md-7 text-start px-4">
               <Image src={iconCarouselPromo01} class="d-none d-lg-block mb-3" alt="" aria-hidden="true" />
-              <h2 class="h5 mb-1">Live studies</h2>
+              <h2 class="h5 mt-2 mb-1 pt-1 mt-md-0 pt-md-0">Live studies</h2>
               <p class="fs-7">Collaborate in real-time with fellow Ipsos iSay members. In these scheduled sessions, you'll complete interactive surveys to share your insights on various topics and shape future products and services.</p>
             </div>
           </div>
@@ -53,7 +53,7 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
             </div>
             <div class="col-md-7 text-start px-4">
               <Image src={iconCarouselPromo02} class="d-none d-lg-block mb-3" alt="" aria-hidden="true" />
-              <h2 class="h5 mb-1">Product testing</h2>
+              <h2 class="h5 mt-2 mb-1 pt-1 mt-md-0 pt-md-0">Product testing</h2>
               <p class="fs-7">Try new or redesigned products before they hit the market and take follow-up surveys to share your feedback. It's a fun way to make an impact while discovering innovative products.</p>
             </div>
           </div>
@@ -70,7 +70,7 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
             </div>
             <div class="col-md-7 text-start px-4">
               <Image src={iconCarouselPromo03} class="d-none d-lg-block mb-3" alt="" aria-hidden="true" />
-              <h2 class="h5 mb-1">Special communities</h2>
+              <h2 class="h5 mt-2 mb-1 pt-1 mt-md-0 pt-md-0">Special communities</h2>
               <p class="fs-7">Join a topic-based research group and take part in ongoing surveys, engaging discussion boards, and other interesting activities. You’ll make your voice heard on a continual basis in a vibrant and influential community.</p>
             </div>
           </div>
@@ -87,7 +87,7 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
             </div>
             <div class="col-md-7 text-start px-4">
               <Image src={iconCarouselPromo04} class="d-none d-lg-block mb-3" alt="" aria-hidden="true" />
-              <h2 class="h5 mb-1">Activity Journals</h2>
+              <h2 class="h5 mt-2 mb-1 pt-1 mt-md-0 pt-md-0">Activity Journals</h2>
               <p class="fs-7">Offers a quick and convenient way to share your opinions on a variety of topics through short surveys. This is perfect for those who want to make a meaningful impact without spending too much time.</p>
             </div>
           </div>
@@ -124,40 +124,6 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
     right: -45px !important;
   }
 
-  @media (min-width: 576px) and (max-width: 992px) {
-    .carousel {
-      height: 220px;
-      margin-bottom: 40px !important;
-    }
-    .carousel-control-prev {
-      left: -90px !important;
-      bottom: 55px !important;
-    }
-    .carousel-control-next {
-      right: -75px !important;
-      bottom: 55px !important;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .carousel {
-      height: 220px;
-      margin-bottom: 40px !important;
-    }
-
-    .carousel-control-prev, .carousel-control-next {
-      bottom: 25px;
-    }
-  }
-
-  .carousel-control-prev-icon {
-    background-image: url('../../assets/images/icons/carousel-arrow-left.svg');
-  }
-
-  .carousel-control-next-icon {
-    background-image: url('../../assets/images/icons/carousel-arrow-right.svg');
-  }
-
   .carousel-indicators  {
     padding-bottom: 0 !important;
     margin-top: 0 !important;
@@ -171,6 +137,82 @@ import iconCarouselPromo04 from '../../assets/images/icons/icon-survey.svg';
     background-color: var(--bg-secondary-default);
     border-radius: 50%;
   }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    .carousel {
+      height: 320px;
+      margin-bottom: 110px !important;
+    }
+    .carousel-control-prev {
+      left: -60px !important;
+      bottom: 55px !important;
+    }
+    .carousel-control-next {
+      right: -45px !important;
+      bottom: 55px !important;
+    }
+    .carousel-indicators  {
+      margin-bottom: -70px !important;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    .carousel {
+      height: 200px;
+      margin-bottom: 80px !important;
+    }
+    .carousel-indicators  {
+      margin-bottom: -40px !important;
+    }
+    .carousel-control-prev {
+      left: -80px !important;
+    }
+    .carousel-control-next {
+      right: -52px !important;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .carousel {
+      height: 200px;
+      margin-bottom: 80px !important;
+    }
+    .carousel-control-prev {
+      left: -60px !important;
+    }
+    .carousel-control-next {
+      right: -45px !important;
+    }
+    .carousel-indicators  {
+      margin-bottom: -40px !important;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .carousel {
+      height: 250px;
+      margin-bottom: 90px !important;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+      bottom: 25px;
+    }
+
+    .carousel-indicators  {
+      margin-bottom: -50px !important;
+    }
+  }
+
+
+  .carousel-control-prev-icon {
+    background-image: url('../../assets/images/icons/carousel-arrow-left.svg');
+  }
+
+  .carousel-control-next-icon {
+    background-image: url('../../assets/images/icons/carousel-arrow-right.svg');
+  }
+
+
 
 
 
