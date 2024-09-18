@@ -57,7 +57,7 @@ import bulletListNumer03 from "../../../assets/images/p1/recruitment/square-3.sv
           </div>
         </div>
 
-        <div class="panel panel-gray-plus-2 rounded py-4 text-center text-md-start">
+        <div class="panel panel-gray-minus-2 rounded py-4 text-center text-md-start">
           <div class="row align-items-center">
             <!-- Left Side - Large Image -->
             <div class="col-md-7">
@@ -65,37 +65,53 @@ import bulletListNumer03 from "../../../assets/images/p1/recruitment/square-3.sv
             </div>
             <!-- Right Side - Form with custom container -->
             <div class="col-md-5">
-              <Image src={logoClear} class="img-fluid mt-3 mt-md-none mb-3" alt="Clear" aria-hidden="true" />
+              <Image src={logoClear} class="img-fluid mt-4 mt-md-none mb-3" alt="Clear" aria-hidden="true" />
               <p class="mb-4">We’ve partnered with CLEAR, a trusted leader in secure identity verification that you might recognize from airports. </p>
 
-              <a type="submit" class="btn btn-sm btn-outline-primary mt-3">Why verify your identity?</a>
+              <a type="submit" class="btn btn-sm btn-outline-primary mt-1">Why verify your identity?</a>
             </div>
           </div>
         </div>
 
-        <div class="row mt-4 pt-2 mb-4">
-          <div class="col col-lg-8 mx-auto">
-            <ol class="list-unstyled">
-              <li class="d-flex align-items-start mb-3">
-                <Image src={bulletListNumer01} class="mt-1 me-2" alt="1" aria-hidden="true" />
-                <p class="mb-1">Create a free CLEAR account.</p>
-              </li>
-              <li class="d-flex align-items-start mb-3">
-                <Image src={bulletListNumer02} class="mt-1 me-2" alt="2" aria-hidden="true" />
-                <div>
-                  <p class="mb-1">Complete the identity verification process.</p>
-                  <p class="mb-0 fs-7">You'll be asked to provide your phone number and email, take a selfie, and upload a photo of your driver's license, ID card, or passport.</p>
-                </div>
-              </li>
-              <li class="d-flex align-items-start mb-3">
-                <Image src={bulletListNumer03} class="mt-1 me-2" alt="3" aria-hidden="true" />
-                <p>Become a verified Ipsos iSay member and start earning rewards!</p>
-              </li>
-            </ol>
-            
+
+        <div class="panel panel-bg-primary-minus-2 rounded py-4 mt-5">
+          <div class="row">
+            <div class="col">
+              <h2 class="h5 mb-2 text-center">Get verified in 3 easy steps</h2>
+            </div>
           </div>
+
+          <ol class="row list-unstyled fs-7 mt-3">
+            <li class="col-12 col-md-4 d-flex align-items-start mb-3 mb-md-0">
+              <Image src={bulletListNumer01} class="mt-1 me-2" alt="1" aria-hidden="true" />
+              <p class="mt-1 mb-0">Create a free CLEAR account.</p>
+            </li>
+            <li class="col-12 col-md-4 d-flex align-items-start mb-3 mb-md-0">
+              <Image src={bulletListNumer02} class="mt-1 me-2" alt="2" aria-hidden="true" />
+              <div>
+                <p class="mt-1 mb-0">Complete the identity verification process.</p>
+              </div>
+            </li>
+            <li class="col-12 col-md-4 d-flex align-items-start mb-3 mb-md-0">
+              <Image src={bulletListNumer03} class="mt-1 me-2" alt="3" aria-hidden="true" />
+              <p class="mt-1 mb-0">Become a verified Ipsos iSay member and start earning rewards!</p>
+            </li>
+          </ol>
+
+          <div class="row">
+            <div class="col">
+              <p class="mt-1 mb-0 text-center">You'll be asked to provide your phone number and email, take a selfie, and upload a photo of your driver's license, ID card, or passport.</p>
+            </div>
+          </div>
+
         </div>
 
+        <div class="row text-center mt-3">
+          <div class="col">
+            <a type="submit" class="btn btn-primary btn-lg px-5 mt-3">Verify your ID</a>
+          </div>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -110,7 +126,7 @@ import bulletListNumer03 from "../../../assets/images/p1/recruitment/square-3.sv
     background: var(--bg-primary-minus-2);
   }
 
-  .panel.panel-gray-plus-2 {
+  .panel.panel-gray-minus-2 {
     background: var(--bg-gray-minus-2);
   }
 </style>

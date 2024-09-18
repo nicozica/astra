@@ -11,8 +11,7 @@ import MediaLogosCarousel from "../../../components/nmux/MediaLogosCarousel.astr
 
 // Images
 import { Image } from "astro:assets";
-import imgMain from "../../../assets/images/p1/recruitment/organic/main-composition.png";
-
+import imgMain from "../../../assets/images/p1/homepage/homepage-main.png";
 import iconHowItWorks01 from "../../../assets/images/icons/icon-people-rp.svg";
 import iconHowItWorks02 from "../../../assets/images/icons/icon-survey-rp.svg";
 import iconHowItWorks03 from "../../../assets/images/icons/icon-gift-rp.svg";
@@ -30,20 +29,21 @@ import iconPrivacy04 from "../../../assets/images/icons/fa-chart-bar.svg";
   <!-- Main Content -->
   <div class="panel banner-top-reg py-5 mb-0">
     <div class="container">
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-lg-6">
           <h1>Take surveys, have your say, and <span class="text-success">earn rewards</span>.</h1>
           <p class="lead mt-4">Become a part of Ipsos, a leading global market research company trusted since 1975. Your input can influence decision makers and shape future trends.</p>
           <p class="lead">Your voice matters and you’ll be rewarded for it!</p>
-          <div class="row mt-5">
-            <div class="col-12 text-center">
-              <Image src={imgMain} class="img-fluid" alt="" aria-hidden="true" />
+
+          <div class="row">
+            <div class="col">
+              <a class="btn btn-primary btn-lg px-5 mt-4" href="javascript:void(0);" target="_blank">Join now!</a>
             </div>
-          </div>
+          </div><!-- /.row -->
+          
         </div>
         <div class="col-lg-6">
-          <h1 class="fs-3 mb-3">Sign up for Ipsos iSay</h1>
-          <RecruitmentFormOrganic />
+          <Image src={imgMain} class="img-fluid" alt="" aria-hidden="true" />
         </div>
       </div><!-- /.row -->
     </div><!-- /.container -->
