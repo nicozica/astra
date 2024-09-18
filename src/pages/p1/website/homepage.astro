@@ -31,7 +31,12 @@ import iconPrivacy04 from "../../../assets/images/icons/fa-chart-bar.svg";
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
-          <h1>Take surveys, have your say, and <span class="text-success">earn rewards</span>.</h1>
+          <!-- TrustBox widget - Micro Combo -->
+          <div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6ffb0d04a076446a9af" data-businessunit-id="618c353f8da731d4b18a79ae" data-style-height="20px" data-style-width="100%">
+            <a href="https://www.trustpilot.com/review/www.ipsosisay.com" target="_blank" rel="noopener">Trustpilot</a>
+          </div>
+          <!-- End TrustBox widget -->
+          <h1 class="mt-4">Take surveys, have your say, and <span class="text-success">earn rewards</span>.</h1>
           <p class="lead mt-4">Become a part of Ipsos, a leading global market research company trusted since 1975. Your input can influence decision makers and shape future trends.</p>
           <p class="lead">Your voice matters and you’ll be rewarded for it!</p>
 
@@ -197,10 +202,16 @@ import iconPrivacy04 from "../../../assets/images/icons/fa-chart-bar.svg";
           </div>
         </div><!-- /.row -->
 
-        <div class="row">
-          <div class="col mx-auto">TRUSTPILOT PLUGIN</div>
+        <div class="row mt-5">
+          <div class="col mx-auto">
+            <!-- TrustBox widget - Carousel -->
+            <div class="trustpilot-widget" data-locale="en-US" data-template-id="53aa8912dec7e10d38f59f36" data-businessunit-id="618c353f8da731d4b18a79ae" data-style-height="140px" data-style-width="100%" data-stars="4,5" data-review-languages="en">
+              <a href="https://www.trustpilot.com/review/www.ipsosisay.com" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+            <!-- End TrustBox widget -->
+          </div>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-5">
           <div class="col">
             <a class="btn btn-primary btn-lg" href="javascript:void(0);" target="_blank">Join now!</a>
           </div>
@@ -211,7 +222,9 @@ import iconPrivacy04 from "../../../assets/images/icons/fa-chart-bar.svg";
     <Footer />
   </div>
 
-  <script src="https://astra.nico.ar/trustpilot-widget" async="" type="text/javascript"></script>
+  <!-- TrustBox script -->
+  <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+  <!-- End TrustBox script -->
   <style>
     .panel.panel-default.padding-md img {
       width: 175px;
