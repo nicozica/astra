@@ -1,0 +1,67 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+
+import HeaderClear from "../../../../components/HeaderClear.astro";
+import FooterClear from "../../../../components/FooterClear.astro";
+
+// Images
+import { Image } from "astro:assets";
+import iconEnvelope from "../../../../assets/images/icons/icon-envelope-rb.svg";
+---
+
+<Layout title="Survey Experience · Ipsos iSay">
+  <div class="container-fluid container-full-height px-0">
+    <HeaderClear />
+    <!-- Main Content -->
+    <div class="container content py-3">
+      <div class="row">
+
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto">
+
+          <div class="row text-center">
+            <div class="col-12">
+              <Image src={iconEnvelope} class="img-fluid" alt="" height="100" width="100" aria-hidden="true" />
+            </div>
+            <div class="col-12">
+              <h1 class="h4 mt-3 mb-3">Please verify your email address</h1>
+              <p class="mt-1">We sent you an email to <span class="text-secondary">uxipsos@gmail.com</span> with a link to confirm and activate your account. Please check your inbox.</p>
+              <p class="mt-1 mb-3">We look forward to having you in our community!</p>
+            </div><!-- /.col -->
+          </div><!-- row -->
+
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12">
+          <p>That’s not your email? <a href="javascript:void(0);">Update it</a></p>
+        </div><!-- /.col -->
+      </div><!-- row -->
+    </div><!-- /.container -->
+    <FooterClear />
+  </div>
+</Layout>
+<script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
+
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+  .container-full-height {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+
+</style>
