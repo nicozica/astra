@@ -5,120 +5,112 @@ import HeaderClear from "../../../../components/HeaderClear.astro";
 import FooterClear from "../../../../components/FooterClear.astro";
 
 import { Image } from "astro:assets";
-import iconEmailConfirmed from "../../../../assets/images/icons/fa-envelope-circle-check-g.svg";
+import iconBadgeCheck from '../../../../assets/images/icons/fa-badge-check.svg';
+import animConfetti from '../../../../assets/images/p1/survey/anim-confetti.gif';
 
-import imgClearIntroMobile from "../../../../assets/images/p1/recruitment/man-woman-chatting-mobile.jpg";
-import imgClearIntroDesktop from "../../../../assets/images/p1/recruitment/man-woman-chatting-desktop.jpg";
-
-import videoPlayer from "../../../../assets/images/p1/recruitment/video-player.png";
-import logoClear from "../../../../assets/images/p1/recruitment/logo-clear.png";
-
-import bulletListNumer01 from "../../../../assets/images/p1/recruitment/square-1.svg";
-import bulletListNumer02 from "../../../../assets/images/p1/recruitment/square-2.svg";
-import bulletListNumer03 from "../../../../assets/images/p1/recruitment/square-3.svg";
+import iconMemo from "../../../../assets/images/icons/fa-memo.svg";
+import iconGift from "../../../../assets/images/icons/fa-gift.svg";
+import iconMobileAlt from "../../../../assets/images/icons/fa-mobile-alt.svg";
 ---
 
-<Layout title="CLEAR Intro">
-  <HeaderClear />
-  <div class="panel panel-bg-success-minus-2 py-2 mt-3 mb-5 border-0 text-center text-success">
-    <Image src={iconEmailConfirmed} class="img-fluid" alt="" aria-hidden="true" />
-    Your email account was successfully confirmed!
-  </div>
+<Layout title="Recruitment Exit">
+  <div class="container-fluid container-full-height px-0">
+    <HeaderClear />
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <div class="row mb-5">
-          <!-- Left Side - Large Image -->
-          <div class="col-md-5">
-            <Image src={imgClearIntroMobile} class="d-md-none img-fluid rounded" alt="" aria-hidden="true"  />
-            <Image src={imgClearIntroDesktop} class="img-fluid d-none d-md-block rounded" alt="" aria-hidden="true" />
-          </div>
-          <!-- Right Side - Form with custom container -->
-          <div class="col-md-7">
-            <h1 class="h2 mt-3 mt-sm-none mb-4">We're real. Let's make sure you are too</h1>
-            <p class="mb-4">Ipsos has been at the forefront of understanding the world’s pulse and empowering global decision-makers with insights since 1975.</p>
-            <p class="mb-4">To ensure the authenticity of Ipsos iSay’s platform, <span class="text-main">it’s important for us to confirm that every voice we hear represents a real, authentic individual.</span></p>
-
-            <h2 class="h4 mt-5 mb-2">Verify your identity</h2>
-            <p class="mb-4">In the next steps, you'll be redirected to a quick and simple process to verify your ID.</p>
-
-            <div class="panel panel-bg-primary-minus-2 py-2 mt-3 mb-3 border-0 rounded text-center">
-              <p class="fs-7 mt-3 mb-2 text-main">
-                You’ll earn your first reward for completing your ID verification! <br />
-                <span class="fs-5 fw-bold text-primary d-block mt-1"><i class="fa-solid fa-star text-warning"></i> 100 points <span class="text-success">(a $5 value)</span></span>
-              </p>
+    <!-- Main Content -->
+    <div class="container content py-3">
+      <div class="row">
+        <div class="col-12 mx-auto">
+          <div class="text-center">
+            <Image src={iconBadgeCheck} class="img-fluid me-1" alt="Ipsos iSay" />
+            <h1 class="h2 mt-2">Well done! You are almost there</h1>
+            <div class="alert alert-success mt-2 text-center">
+              <p class="fs-5 mb-0"><i class="fa-solid fa-star text-warning"></i> You earned your first <strong>100 points</strong>!</p>
             </div>
+            <Image src={animConfetti} class="img-fluid" style="margin-top: -120px; mix-blend-mode: multiply;" aria-hidden="true" alt="" />
 
-            <p class="fs-7 mt-4">To complete the ID verification process, you will need a mobile device with a camera and a government-issued photo ID, such as a passport or driver’s license.</p>
-
-            <a type="submit" class="btn btn-primary btn-lg px-5 mt-3 d-block d-sm-inline">Verify your ID</a>
-          </div>
-        </div>
-
-        <div class="panel panel-gray-minus-2 rounded py-4 text-center text-md-start">
-          <div class="row align-items-center">
-            <!-- Left Side - Large Image -->
-            <div class="col-md-7">
-              <Image src={videoPlayer} class="img-fluid" alt="" aria-hidden="true" />
-            </div>
-            <!-- Right Side - Form with custom container -->
-            <div class="col-md-5">
-              <Image src={logoClear} class="img-fluid mt-4 mt-md-none mb-3" alt="Clear" aria-hidden="true" />
-              <p class="mb-4">We’ve partnered with CLEAR, a trusted leader in secure identity verification that you might recognize from airports. </p>
-
-              <a type="submit" class="btn btn-sm btn-outline-primary mt-1">Why verify your identity?</a>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="panel panel-bg-primary-minus-2 rounded py-4 mt-5">
-          <div class="row">
-            <div class="col">
-              <h2 class="h5 mb-2 text-center">Get verified in 3 easy steps</h2>
-            </div>
-          </div>
-
-          <ol class="row list-unstyled fs-7 mt-3">
-            <li class="col-12 col-md-4 d-flex align-items-start mb-3 mb-md-0">
-              <Image src={bulletListNumer01} class="mt-1 me-2" alt="1" aria-hidden="true" />
-              <p class="mt-1 mb-0">Create a free CLEAR account.</p>
-            </li>
-            <li class="col-12 col-md-4 d-flex align-items-start mb-3 mb-md-0">
-              <Image src={bulletListNumer02} class="mt-1 me-2" alt="2" aria-hidden="true" />
-              <div>
-                <p class="mt-1 mb-0">Complete the identity verification process.</p>
+            <div class="row align-items-center mt-3">
+              <div class="col-12 col-sm-6 text-sm-end">
+                <a type="submit" class="btn btn-primary btn-md px-5 d-sm-inline">Next</a>
               </div>
-            </li>
-            <li class="col-12 col-md-4 d-flex align-items-start mb-3 mb-md-0">
-              <Image src={bulletListNumer03} class="mt-1 me-2" alt="3" aria-hidden="true" />
-              <p class="mt-1 mb-0">Become a verified Ipsos iSay member and start earning rewards!</p>
-            </li>
-          </ol>
-
-          <div class="row">
-            <div class="col">
-              <p class="mt-1 mb-0 text-center">You'll be asked to provide your phone number and email, take a selfie, and upload a photo of your driver's license, ID card, or passport.</p>
+              <div class="col-12 col-sm-6 text-sm-start">
+                <a href="#" class="text-muted small d-block" data-bs-toggle="modal" data-bs-target="#modalHelp">How do points work?</a>
+              </div>
             </div>
-          </div>
-
-        </div>
-
-        <div class="row text-center mt-3">
-          <div class="col">
-            <a type="submit" class="btn btn-primary btn-lg px-5 mt-3">Verify your ID</a>
+            
           </div>
         </div>
-        
       </div>
-    </div>
+    </div><!-- /.container -->
+
+    <FooterClear />
   </div>
-  <FooterClear />
 </Layout>
 
+<!-- Modal: How do points work? -->
+<div class="modal fade" id="modalHelp" tabindex="-1" aria-labelledby="modalHelpLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+       <!-- Close button (X) -->
+       <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <div class="modal-body">
+        <h2 class="h4 text-dark">How do points work?</h2>
+        
+        <!-- First section -->
+        <div class="d-flex align-items-start my-3">
+          <Image src={iconMemo} class="icon-modal me-3" aria-hidden="true" alt="" />
+          <div>
+            <h3 class="h5 text-dark">Earn points</h3>
+            <p class="mb-0">Take surveys to earn points. You’ll also get points when you participate in special research opportunities like product testing and live studies.</p>
+          </div>
+        </div>
+
+        <!-- Second section -->
+        <div class="d-flex align-items-start my-3">
+          <Image src={iconGift} class="icon-modal me-3" aria-hidden="true" alt="" />
+          <div>
+            <h3 class="h5 text-dark">Choose your rewards</h3>
+            <p class="mb-0">Visit our rewards catalog to redeem points for your choice of exciting gift cards, cash transfers, and more!</p>
+          </div>
+        </div>
+
+        <!-- Third section -->
+        <div class="d-flex align-items-start my-3">
+          <Image src={iconMobileAlt} class="icon-modal me-3" aria-hidden="true" alt="" />
+          <div>
+            <h3 class="h5 text-dark">Get our mobile app</h3>
+            <p class="mb-0">Download the Ipsos iSay mobile app to access exclusive surveys and earn even more points.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a type="button" class="btn btn-primary btn-block mb-1" data-bs-dismiss="modal">Got it</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+
 <style>
+  html,
+  body {
+    height: 100%;
+  }
+  .container-full-height {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+
   .panel.panel-bg-success-minus-2 {
     background: var(--bg-success-minus-2);
   }
@@ -128,5 +120,24 @@ import bulletListNumer03 from "../../../../assets/images/p1/recruitment/square-3
 
   .panel.panel-gray-minus-2 {
     background: var(--bg-gray-minus-2);
+  }
+
+  /* Modal: How do points work? */
+  .icon-modal {
+    width: 50px;
+    height: 50px;
+  }
+
+  .modal-body h3 {
+    font-weight: 600;
+  }
+
+  .modal-body p {
+    font-size: 0.95rem;
+  }
+
+  .modal-body img {
+    max-width: 100%;
+    height: auto;
   }
 </style>
