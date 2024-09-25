@@ -52,14 +52,14 @@ import iconMobileAlt from "../../../../assets/images/icons/fa-mobile-alt.svg";
   <div class="modal-dialog">
     <div class="modal-content">
 
-       <!-- Close button (X) -->
-       <button type="button" class="btn-close position-absolute top-0 end-0 m-3 mt-4" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-header mt-3 border-0">
+        <h5 class="modal-title h4">How do points work?</h5>
+        <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
 
       <div class="modal-body">
-        <h2 class="h4 text-dark mt-4">How do points work?</h2>
-        
-        <!-- First section -->
-        <div class="d-flex align-items-start mt-4 mb-3">
+
+        <div class="d-flex align-items-start mt-2 mb-3">
           <Image src={iconMemo} class="icon-modal me-3" aria-hidden="true" alt="" />
           <div>
             <h3 class="h5 text-dark">Earn points</h3>
@@ -67,7 +67,6 @@ import iconMobileAlt from "../../../../assets/images/icons/fa-mobile-alt.svg";
           </div>
         </div>
 
-        <!-- Second section -->
         <div class="d-flex align-items-start my-3">
           <Image src={iconGift} class="icon-modal me-3" aria-hidden="true" alt="" />
           <div>
@@ -76,7 +75,6 @@ import iconMobileAlt from "../../../../assets/images/icons/fa-mobile-alt.svg";
           </div>
         </div>
 
-        <!-- Third section -->
         <div class="d-flex align-items-start my-3">
           <Image src={iconMobileAlt} class="icon-modal me-3" aria-hidden="true" alt="" />
           <div>
@@ -92,6 +90,7 @@ import iconMobileAlt from "../../../../assets/images/icons/fa-mobile-alt.svg";
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
+
 
 <style>
   html,
@@ -123,6 +122,7 @@ import iconMobileAlt from "../../../../assets/images/icons/fa-mobile-alt.svg";
   }
 
   /* Modal: How do points work? */
+
   .icon-modal {
     width: 50px;
     height: 50px;
