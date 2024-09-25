@@ -28,7 +28,7 @@ import bulletListNumer03 from "../../../../assets/images/p1/recruitment/square-3
   <!-- Main Content -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto">
+      <div class="col-xl-10 col-xxl-8 mx-auto">
         <div class="row mb-5">
           <!-- Left Side - Large Image -->
           <div class="col-md-5">
@@ -61,7 +61,51 @@ import bulletListNumer03 from "../../../../assets/images/p1/recruitment/square-3
           <div class="row align-items-center">
             <!-- Left Side - Large Image -->
             <div class="col-md-7">
-              <Image src={videoPlayer} class="img-fluid" alt="" aria-hidden="true" />
+              <iframe class="video-clear" src="https://www.youtube.com/embed/4ICSlCZyQTg?si=0g1_s3clyHSjQHiJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <!-- <Image src={videoPlayer} class="img-fluid" alt="" aria-hidden="true" /> -->
+
+              <style>
+                .video-clear {
+                  width: 464px;
+                  height: 260px;
+                }
+
+                @media (min-width: 576px) and (max-width: 768px) {
+                  .video-clear {
+                    width: 464px;
+                    height: 260px;
+                  }
+                }
+
+                @media (min-width: 768px) and (max-width: 992px) {
+                  .video-clear {
+                    width: 464px;
+                    height: 260px;
+                  }
+                }
+
+                @media (min-width: 992px) and (max-width: 1200px) {
+                  .video-clear {
+                    width: 324px;
+                    height: 182px;
+                  }
+                }
+
+                @media (min-width: 1200px) {
+                  .video-clear {
+                    width: 394px;
+                    height: 222px;
+                  }
+                }
+
+                @media (min-width: 1400px) {
+                  .video-clear {
+                    width: 464px;
+                    height: 260px;
+                  }
+                }
+
+              </style>
             </div>
             <!-- Right Side - Form with custom container -->
             <div class="col-md-5">
