@@ -53,6 +53,7 @@ a.btn.btn-outline-primary:hover {
 a.btn-gray {
     background-color: var(--bg-gray-minus-2);
     color: var(--text-gray-plus-1) !important;
+    border: 2px solid transparent !important;
 }
 
 a.btn-gray:hover, a.btn-white:hover {
@@ -61,7 +62,7 @@ a.btn-gray:hover, a.btn-white:hover {
 
 a.btn-gray:focus, a.btn-white:focus {
     background-color: var(--bg-gray-minus-2);
-    /*border: 2px solid var(--bg-gray-minus-2) !important;*/
+    border: 2px solid var(--bg-gray-minus-2) !important;
 }
 
 a.btn-gray:active, a.btn-white:active {
@@ -78,6 +79,7 @@ a.btn-gray:disabled, a.btn-white:disabled {
 a.btn-white {
     background-color: var(--bg-default-default);
     color: var(--text-gray-plus-1) !important;
+    border: 2px solid transparent !important;
 }
 
 
