@@ -60,55 +60,12 @@ import bulletListNumer03 from "../../../../assets/images/p1/recruitment/square-3
         <div class="panel panel-gray-minus-2 rounded py-4 text-center text-md-start">
           <div class="row align-items-center">
             <!-- Left Side - Large Image -->
-            <div class="col-md-7">
-              <iframe class="video-clear" src="https://www.youtube.com/embed/4ICSlCZyQTg?si=0g1_s3clyHSjQHiJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="col-lg-7">
+              <iframe class="video-player" src="https://www.youtube.com/embed/4ICSlCZyQTg?si=0g1_s3clyHSjQHiJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               <!-- <Image src={videoPlayer} class="img-fluid" alt="" aria-hidden="true" /> -->
-
-              <style>
-                .video-clear {
-                  width: 464px;
-                  height: 260px;
-                }
-
-                @media (min-width: 576px) and (max-width: 768px) {
-                  .video-clear {
-                    width: 464px;
-                    height: 260px;
-                  }
-                }
-
-                @media (min-width: 768px) and (max-width: 992px) {
-                  .video-clear {
-                    width: 464px;
-                    height: 260px;
-                  }
-                }
-
-                @media (min-width: 992px) and (max-width: 1200px) {
-                  .video-clear {
-                    width: 324px;
-                    height: 182px;
-                  }
-                }
-
-                @media (min-width: 1200px) {
-                  .video-clear {
-                    width: 394px;
-                    height: 222px;
-                  }
-                }
-
-                @media (min-width: 1400px) {
-                  .video-clear {
-                    width: 464px;
-                    height: 260px;
-                  }
-                }
-
-              </style>
             </div>
             <!-- Right Side - Form with custom container -->
-            <div class="col-md-5">
+            <div class="col-lg-5">
               <Image src={logoClear} class="img-fluid mt-4 mt-md-none mb-3" alt="Clear" aria-hidden="true" />
               <p class="mb-4">We’ve partnered with CLEAR, a trusted leader in secure identity verification that you might recognize from airports. </p>
 
@@ -172,5 +129,41 @@ import bulletListNumer03 from "../../../../assets/images/p1/recruitment/square-3
 
   .panel.panel-gray-minus-2 {
     background: var(--bg-gray-minus-2);
+  }
+
+  
+  /* Video Player Styles */
+
+  .video-player {
+    width: 416px;
+    height: 234px;
+  }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    .video-player {
+      width: 464px;
+      height: 260px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    .video-player {
+      width: 652px;
+      height: 368px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .video-player {
+      width: 494px;
+      height: 278px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .video-player {
+      width: 464px;
+      height: 260px;
+    }
   }
 </style>

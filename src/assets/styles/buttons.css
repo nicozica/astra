@@ -55,23 +55,29 @@ a.btn-gray {
     color: var(--text-gray-plus-1) !important;
 }
 
-a.btn-gray:hover {
+a.btn-gray:hover, a.btn-white:hover {
     background-color: var(--bg-light-gray-plus-1);
 }
 
-a.btn-gray:focus {
+a.btn-gray:focus, a.btn-white:focus {
     background-color: var(--bg-gray-minus-2);
-    border: 2px solid var(--bg-gray-minus-2) !important;
+    /*border: 2px solid var(--bg-gray-minus-2) !important;*/
 }
 
-a.btn-gray:active {
+a.btn-gray:active, a.btn-white:active {
     background-color: var(--bg-gray-minus-2);
     border: none;
 }
 
-a.btn-gray:disabled {
+a.btn-gray:disabled, a.btn-white:disabled {
     background-color: var(--bg-gray-minus-2);
     color: var(--text-disabled) !important;
+}
+
+/*  White buttons */
+a.btn-white {
+    background-color: var(--bg-default-default);
+    color: var(--text-gray-plus-1) !important;
 }
 
 

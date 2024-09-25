@@ -71,13 +71,16 @@ p {
     color: var(--text-main) !important;
 }
 
-
 .text-primary {
     color: var(--text-primary-default) !important;
 }
 
 .text-secondary {
     color: var(--text-secondary-default) !important;
+}
+
+.text-success-plus-2 {
+    color: var(--text-success-plus-2) !important;
 }
 
 .text-muted {
