@@ -1,0 +1,60 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+
+import HeaderClear from "../../../../components/HeaderClear.astro";
+import FooterClear from "../../../../components/FooterClear.astro";
+---
+
+<Layout title="Recruitment Exit">
+  <div class="container-fluid container-full-height px-0">
+    <HeaderClear />
+
+    <!-- Main Content -->
+    <div class="container content py-3">
+      <div class="row">
+        <div class="col-12 mx-auto">
+          <div class="text-center">
+            <h1 class="h2 mt-2">Your first <span class="text-primary">survey</span> is ready!</h1>
+            <p class="fs-7">Help us get to know you better and earn up to star <i class="fa fa-star text-warning"></i> <span class="fw-bold text-main">200 points</span></p>
+
+            <div class="row mt-4">
+              <div class="col-12">
+                <a type="submit" class="btn btn-primary btn-lg px-5 d-sm-inline">Start Survey</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div><!-- /.container -->
+
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12">
+          <a href="javascript:void(0);" class="btn btn-sm btn-gray">Go to main page</a>
+        </div><!-- /.col -->
+      </div><!-- row -->
+    </div><!-- /.container -->
+
+    <FooterClear />
+  </div>
+</Layout>
+
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+  .container-full-height {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+</style>

@@ -49,6 +49,31 @@ a.btn.btn-outline-primary:hover {
     color: var(--text-foreground) !important;
 }
 
+/*  Gray buttons */
+a.btn-gray {
+    background-color: var(--bg-gray-minus-2);
+    color: var(--text-gray-plus-1) !important;
+}
+
+a.btn-gray:hover {
+    background-color: var(--bg-light-gray-plus-1);
+}
+
+a.btn-gray:focus {
+    background-color: var(--bg-gray-minus-2);
+    border: 2px solid var(--bg-gray-minus-2) !important;
+}
+
+a.btn-gray:active {
+    background-color: var(--bg-gray-minus-2);
+    border: none;
+}
+
+a.btn-gray:disabled {
+    background-color: var(--bg-gray-minus-2);
+    color: var(--text-disabled) !important;
+}
+
 
 /*  Loading button animation
 // ============================================================== */
