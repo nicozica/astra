@@ -29,6 +29,16 @@ a.btn-secondary:hover {
     color: var(--text-foreground) !important;
 }
 
+a.btn-danger {
+    background: var(--bg-danger-default);
+    color: var(--text-foreground) !important;
+}
+
+a.btn-danger:hover {
+    background: var(--bg-danger-plus-1);
+    color: var(--text-foreground) !important;
+}
+
 a {
     font-weight: 700;
     color: var(--text-primary-default) !important;

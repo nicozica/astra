@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+import Nav from "../../components/designSystem/Nav.astro";
+
+// Import the different components
+import BrandAllStylesContent from "../../components/designSystem/brand/BrandAllStylesContent.astro";
+import BrandFontsContent from "../../components/designSystem/brand/BrandFontsContent.astro";
+import BrandIconsContent from "../../components/designSystem/brand/BrandIconsContent.astro";
+import BrandColorContent from "../../components/designSystem/brand/BrandColorContent.astro";
+
+import ComponentsAllContent from "../../components/designSystem/components/ComponentsAllContent.astro";
+import ComponentsTypographyContent from "../../components/designSystem/components/ComponentsTypographyContent.astro";
+import ComponentsAlertsAndToastsContent from "../../components/designSystem/components/ComponentsAlertsAndToastsContent.astro";
+import ComponentsBadgesContent from "../../components/designSystem/components/ComponentsBadgesContent.astro";
+import ComponentsCardsContent from "../../components/designSystem/components/ComponentsCardsContent.astro";
+import ComponentsCarouselContent from "../../components/designSystem/components/ComponentsCarouselContent.astro";
+import ComponentsModalsContent from "../../components/designSystem/components/ComponentsModalsContent.astro";
+import ComponentsProgressBarsContent from "../../components/designSystem/components/ComponentsProgressBarsContent.astro";
+import ComponentsSpinnersContent from "../../components/designSystem/components/ComponentsSpinnersContent.astro";
+import ComponentsTooltipsAndPopoversContent from "../../components/designSystem/components/ComponentsTooltipsAndPopoversContent.astro";
+
+import TablesContent from "../../components/designSystem/tables/TablesContent.astro";
+
+import FormsAllContent from "../../components/designSystem/forms/FormsAllContent.astro";
+import FormsInputsContent from "../../components/designSystem/forms/FormsInputsContent.astro";
+import FormsButtonsContent from "../../components/designSystem/forms/FormsButtonsContent.astro";
+import FormsDropdownsContent from "../../components/designSystem/forms/FormsDropdownsContent.astro";
+import FormsChecksAndRadiosContent from "../../components/designSystem/forms/FormsChecksAndRadiosContent.astro";
+import FormsSelectsContent from "../../components/designSystem/forms/FormsSelectsContent.astro";
+import FormsSlidersContent from "../../components/designSystem/forms/FormsSlidersContent.astro";
+import FormsInputGroupsContent from "../../components/designSystem/forms/FormsInputGroupsContent.astro";
+import FormsExamplesContent from "../../components/designSystem/forms/FormsExamplesContent.astro";
+import FormsValidationsContent from "../../components/designSystem/forms/FormsValidationsContent.astro";
+
+import NavigationAllContent from "../../components/designSystem/navigation/NavigationAllContent.astro";
+import NavigationNavbarContent from "../../components/designSystem/navigation/NavigationNavbarContent.astro";
+import NavigationOffcanvasContent from "../../components/designSystem/navigation/NavigationOffcanvasContent.astro";
+import NavigationListGroupsContent from "../../components/designSystem/navigation/NavigationListGroupsContent.astro";
+import NavigationExpandCollapseContent from "../../components/designSystem/navigation/NavigationExpandCollapseContent.astro";
+import NavigationTabsContent from "../../components/designSystem/navigation/NavigationTabsContent.astro";
+import NavigationPaginationContent from "../../components/designSystem/navigation/NavigationPaginationContent.astro";
+import NavigationScrollSpyContent from "../../components/designSystem/navigation/NavigationScrollSpyContent.astro";
+
+import UtilitiesAllUtilitiesContent from "../../components/designSystem/utilities/UtilitiesAllUtilitiesContent.astro";
+import UtilitiesTextUtilitiesContent from "../../components/designSystem/utilities/UtilitiesTextUtilitiesContent.astro";
+import UtilitiesBackgroundUtilitiesContent from "../../components/designSystem/utilities/UtilitiesBackgroundUtilitiesContent.astro";
+import UtilitiesHelperClassesContent from "../../components/designSystem/utilities/UtilitiesHelperClassesContent.astro";
+import UtilitiesVisualClassesContent from "../../components/designSystem/utilities/UtilitiesVisualClassesContent.astro";
+
+// Obtenemos el parámetro `slug` de la URL
+const { slug } = Astro.params;
+
+// Función para determinar qué componente cargar
+ 
+---
+
+<!-- <Layout title={`${(slug ?? '').charAt(0).toUpperCase() + (slug ?? '').slice(1)} · Design System Docs`}>  -->
+<Layout title="Design Docs"> 
+  <Header />
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-3">
+        <Nav />
+      </div>
+
+      <div class="col-12 col-md-9 mt-3">
+        {getPageContent()} <!-- Cargamos el componente correspondiente -->
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>
