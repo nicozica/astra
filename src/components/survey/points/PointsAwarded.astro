@@ -1,0 +1,136 @@
+---
+export interface Props {
+  initialNumber: number;
+  steps: number;
+}
+
+const { initialNumber, steps } = Astro.props;
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <header>
+    <div class="container">
+      <section class="rotatingText-box">
+        <i class="fa-solid fa-star customStar"></i>
+        <div class="rotate-text">
+              <span id="rotatingTextBox" >
+              <!-- Dynamic numbers will be inserted here -->
+              </span>
+            </div>
+      </section>
+    </div>
+  </header>
+</body>
+</html>
+
+<!-- <script> -->
+<script lang="ts" define:vars={{ initialNumber, steps }}>
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    function createHTMLContent(initialNumber, steps) {
+      let htmlContent = '';
+      for (let i = 0; i <= steps; i++) {
+        const number = initialNumber + i;
+        htmlContent += `${number}<br>`;
+      }
+      return htmlContent.trim();
+    }
+
+    function createTickerKeyframes(steps) {
+      let keyframes = '@keyframes ticker {';
+      const stepPercentage = 100 / (steps * 2); // Adjust based on number of steps
+      for (let i = 0; i <= steps; i++) {
+        const bottomValue = i * 1.2; // Adjust based on your desired height (1.2em here)
+        const startPercentage = stepPercentage * (2 * i);
+        const endPercentage = startPercentage + stepPercentage;
+        keyframes += `
+          ${startPercentage}% { bottom: ${bottomValue}em; }
+          ${endPercentage}% { bottom: ${bottomValue}em; }
+        `;
+      }
+      keyframes += `100% { bottom: ${steps * 1.2}em; }`; // Keep at the final position
+      keyframes += '}';
+      return keyframes;
+    }
+
+    const container = document.getElementById('rotatingTextBox');
+    if (container) {
+      const theHTML = createHTMLContent(initialNumber, steps);
+      container.innerHTML = theHTML;
+    }
+
+    // Create and inject the dynamic keyframes
+    const tickerKeyframes = createTickerKeyframes(steps);
+    const styleElement = document.createElement('style');
+    styleElement.innerHTML = tickerKeyframes;
+    document.head.appendChild(styleElement);
+
+    const rotatingTextBox = document.getElementById('rotatingTextBox');
+    if (rotatingTextBox) {
+      // Listen for the end of the animation
+      rotatingTextBox.addEventListener('animationend', function() {
+        AnimationEnded();
+      });
+    }
+
+    //create a function to trigger when animation is ended
+    //you add you logic here, exapmle: update the points in the backend etc.
+    function AnimationEnded() {
+      console.log('Animation Ended.');
+    }
+
+  });
+
+</script>
+
+<!-- <style> -->
+<style>
+
+  .customStar {
+    font-size: 25px;
+    color: #D3681B;
+  }
+
+  .rotatingText-box {
+    width: 100px; 
+    height: 40px;
+    overflow: hidden; 
+    position: relative;
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rotate-text {
+      font: normal 2.5em/1.2 sans-serif;
+      color: #A4BB28;
+      height: 1.2em;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      padding: 0 0 .1em 0;
+  }
+
+  .rotate-text > span {
+      height: 1.2em;
+  }
+
+  .rotate-text > span:last-of-type {
+      font-weight: 700;
+      display: inline-block;
+      color: #5A8243;
+      position: relative;
+      white-space: nowrap;
+      bottom: 0;
+      left: 0;
+      animation: ticker 2s forwards; 
+      animation-iteration-count: 1; 
+      animation-delay: 1s;
+  }
+
+</style>
