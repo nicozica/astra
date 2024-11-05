@@ -91,13 +91,13 @@ const { initialNumber, steps } = Astro.props;
 <style>
 
   .customStar {
-    font-size: 25px;
-    color: #D3681B;
+    font-size: 20px;
+    color: var(--text-warning-default);
   }
 
   .rotatingText-box {
-    width: 100px; 
-    height: 40px;
+    width: 74px;
+    height: 1.4em;
     overflow: hidden; 
     position: relative;
     margin: 0 auto; 
@@ -107,23 +107,26 @@ const { initialNumber, steps } = Astro.props;
   }
   
   .rotate-text {
-      font: normal 2.5em/1.2 sans-serif;
-      color: #A4BB28;
-      height: 1.2em;
-      width: 100%;
+      font-size: 20px !important;
+      font-weight: 700;
+      color: var(--text-main) !important;
+      height: 1.4em;
+      /*width: 100%;*/
       position: relative;
       overflow: hidden;
       padding: 0 0 .1em 0;
   }
 
+  /*
   .rotate-text > span {
       height: 1.2em;
   }
+  */
 
   .rotate-text > span:last-of-type {
-      font-weight: 700;
+
       display: inline-block;
-      color: #5A8243;
+      /*color: #5A8243;*/
       position: relative;
       white-space: nowrap;
       bottom: 0;
