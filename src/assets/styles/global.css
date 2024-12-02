@@ -288,7 +288,11 @@ p {
 .panel-gray .panel-header,
 .panel-gray .panel-footer { background:#fafafa; }
 
-.panel-primary      { background-color: var(--bg-primary-default); }
+.panel-primary              { background-color: var(--bg-primary-default); }
+.panel-primary-minus-2      { background-color: var(--bg-primary-minus-2); }
+
+
+
 .panel-secondary    { background-color: var(--bg-secondary-default); }
 .panel-success      { background-color: var(--csuccess); }
 .panel-warning      { background-color: var(--cwarning); }
