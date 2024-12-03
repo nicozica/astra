@@ -6,6 +6,7 @@ import Footer from "../../components/Footer.astro";
 
 import RewardsCarousel from "../../components/nmux/RewardsCarousel.astro";
 import MediaLogosCarousel from "../../components/nmux/MediaLogosCarousel.astro";
+import FaqAccordion from "../../components/nmux/FaqAccordion.astro";
 ---
 
 <Layout title="Product Test | Ipsos iSay">
@@ -170,7 +171,7 @@ import MediaLogosCarousel from "../../components/nmux/MediaLogosCarousel.astro";
     <div class="container">
       <div class="row">
         <div class="col col-lg-10 mx-auto">
-          <div class="row align-items-center">
+          <div class="row">
             <div class="col-xs-12 col-lg-6">
               <p>Frequently Asked Questions</p>
               <h2>Do you have any question?</h2>
@@ -181,80 +182,17 @@ import MediaLogosCarousel from "../../components/nmux/MediaLogosCarousel.astro";
                 aria-hidden="true"
               />
             </div>
-            <div class="col-xs-12 col-lg-6 text-start">
-              <div class="accordion" id="faqAccordion">
-                <!-- Item 1 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      How can I join Product Testing?
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      To join Product Testing, sign up through our website and complete your profile.
-                    </div>
-                  </div>
-                </div>
-                <!-- Item 2 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      What products are tested with Ipsos iSay?
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Ipsos iSay tests a wide range of consumer goods, from electronics to household items.
-                    </div>
-                  </div>
-                </div>
-                <!-- Item 3 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      What happens if a product is defective?
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      If you receive a defective product, report it immediately for assessment and replacement. Our team ensures every participant is satisfied.
-                    </div>
-                  </div>
-                </div>
-                <!-- Item 4 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      How often are tests conducted?
-                    </button>
-                  </h2>
-                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Tests are conducted on a rolling basis, depending on the product type and demand.
-                    </div>
-                  </div>
-                </div>
-                <!-- Item 5 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      Can I test products outside my interests?
-                    </button>
-                  </h2>
-                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Yes, you may be invited to test products outside your interests to ensure diverse feedback.
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-xs-12 col-lg-6 text-start pt-lg-4">
+              
+              <FaqAccordion />
+
             </div>
           </div>
         </div>
       </div><!-- /.row -->
     </div><!-- /.container -->
   </div><!-- /.panel -->
+
 
   <h3 class="h6 mt-4 text-center">See <span class="text-primary">Ipsos</span> research featured in:</h3>
   <MediaLogosCarousel />
@@ -322,7 +260,7 @@ import MediaLogosCarousel from "../../components/nmux/MediaLogosCarousel.astro";
     </div>
   </div><!-- /.row -->
 
-  <!-- PANEL: Sneak Peek -->
+  <!-- PANEL: Your Voice Matters -->
   <div class="panel border-0">
     <div class="container">
       <div class="row">
