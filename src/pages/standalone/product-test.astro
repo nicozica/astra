@@ -60,7 +60,34 @@ import FaqAccordion from "../../components/nmux/FaqAccordion.astro";
 
       <div class="row pt-1 mt-5 video-container">
         <div class="col">
-            <iframe width="802" height="421" src="https://www.youtube.com/embed/0fcRa5Z6LmU?si=2Giw9-sHgrKpH01a" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <style>
+              .video-container iframe {
+                  width: 386px;
+                  height: 217px;
+                }
+
+            @media (min-width: 576px) and (max-width: 768px) {
+              .video-container iframe {
+                  width: 500px;
+                  height: 281px;
+                }
+              }
+
+              @media (min-width: 768px) and (max-width: 992px) {
+                .video-container iframe {
+                  width: 641px;
+                  height: 360px;
+                }
+              }
+
+              @media (min-width: 992px) {
+                .video-container iframe {
+                  width: 802px !important;
+                  height: 451px !important;
+                }
+              }
+            </style>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/mzJj5-lubeM?si=eT5FxJ-Miuq3Eg6l" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div><!-- /.row -->
     </div><!-- /.container -->
@@ -142,7 +169,7 @@ import FaqAccordion from "../../components/nmux/FaqAccordion.astro";
   </div><!-- /.panel -->
 
   <!-- REWARDS WITH CAROUSEL -->
-  <div class="panel border-0 pb-0 text-center">
+  <div class="panel border-0 py-0 text-center">
     <div class="container">
       <div class="row">
         <div class="col col-lg-8 mx-auto">
@@ -204,11 +231,11 @@ import FaqAccordion from "../../components/nmux/FaqAccordion.astro";
   </div><!-- /.panel -->
 
 
-  <h3 class="h6 mt-4 text-center">See <span class="text-primary">Ipsos</span> research featured in:</h3>
+  <h3 class="h6 pt-2 mt-4 text-center">See <span class="text-primary">Ipsos</span> research featured in:</h3>
   <MediaLogosCarousel />
 
   <!-- PANEL: Sneak Peek -->
-  <div class="panel border-0">
+  <div class="panel pt-0 border-0">
     <div class="container">
       <div class="row">
         <div class="col col-lg-10 mx-auto">
