@@ -18,6 +18,28 @@ img.img-200px {
     margin: 24px 0
 }
 
+.dotted-heading-container {
+    position: relative;
+    text-align: center;
+}
+
+.dotted-heading-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: repeating-linear-gradient(to right, #ccc 0, #ccc 2px, transparent 2px, transparent 6px);
+    z-index: -1;
+}
+
+.dotted-heading {
+    position: relative;
+    display: inline-block;
+    padding: 0 1rem;
+    background: white;
+}
 
 /****************** JUST FOR THE PROTOTYPE: Not used in production ******************/
 .btn-variants {
