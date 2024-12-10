@@ -44,7 +44,7 @@ const { initialNumber, steps } = Astro.props;
       let keyframes = '@keyframes ticker {';
       const stepPercentage = 100 / (steps * 2); // Adjust based on number of steps
       for (let i = 0; i <= steps; i++) {
-        const bottomValue = i * 1.2; // Adjust based on your desired height (1.2em here)
+        const bottomValue = i * 1.5; // Adjust based on your desired height (1.2em here)
         const startPercentage = stepPercentage * (2 * i);
         const endPercentage = startPercentage + stepPercentage;
         keyframes += `
@@ -52,7 +52,7 @@ const { initialNumber, steps } = Astro.props;
           ${endPercentage}% { bottom: ${bottomValue}em; }
         `;
       }
-      keyframes += `100% { bottom: ${steps * 1.2}em; }`; // Keep at the final position
+      keyframes += `100% { bottom: ${steps * 1.5}em; }`; // Keep at the final position
       keyframes += '}';
       return keyframes;
     }
