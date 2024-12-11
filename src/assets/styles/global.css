@@ -292,11 +292,67 @@ p {
 .panel-primary-minus-2      { background-color: var(--bg-primary-minus-2); }
 
 
-
 .panel-secondary    { background-color: var(--bg-secondary-default); }
 .panel-success      { background-color: var(--csuccess); }
 .panel-warning      { background-color: var(--cwarning); }
 .panel-danger       { background-color: var(--cdanger); }
+
+/* Danger Backgrounds */
+.panel-bg-danger-plus-1 { background: var(--bg-danger-plus-1); }
+.panel-bg-danger-plus-2 { background: var(--bg-danger-plus-2); }
+.panel-bg-danger-minus-1 { background: var(--bg-danger-minus-1); }
+.panel-bg-danger-minus-2 { background: var(--bg-danger-minus-2); }
+.panel-bg-danger-default { background: var(--bg-danger-default); }
+
+/* Default Backgrounds */
+.panel-bg-default-plus-1 { background: var(--bg-default-plus-1); }
+.panel-bg-default-plus-2 { background: var(--bg-default-plus-2); }
+.panel-bg-default-default { background: var(--bg-default-default); }
+
+/* Gray Backgrounds */
+.panel-bg-gray-plus-1 { background: var(--bg-gray-plus-1); }
+.panel-bg-gray-plus-2 { background: var(--bg-gray-plus-2); }
+.panel-bg-gray-minus-1 { background: var(--bg-gray-minus-1); }
+.panel-bg-gray-minus-2 { background: var(--bg-gray-minus-2); }
+.panel-bg-gray-default { background: var(--bg-gray-default); }
+
+/* Light Gray Backgrounds */
+.panel-bg-light-gray-plus-1 { background: var(--bg-light-gray-plus-1); }
+.panel-bg-light-gray-plus-2 { background: var(--bg-light-gray-plus-2); }
+.panel-bg-light-gray-minus-1 { background: var(--bg-light-gray-minus-1); }
+.panel-bg-light-gray-minus-2 { background: var(--bg-light-gray-minus-2); }
+.panel-bg-light-gray-default { background: var(--bg-light-gray-default); }
+
+/* Primary Backgrounds */
+.panel-bg-primary-plus-1 { background: var(--bg-primary-plus-1); }
+.panel-bg-primary-plus-2 { background: var(--bg-primary-plus-2); }
+.panel-bg-primary-minus-1 { background: var(--bg-primary-minus-1); }
+.panel-bg-primary-minus-2 { background: var(--bg-primary-minus-2); }
+.panel-bg-primary-default { background: var(--bg-primary-default); }
+
+/* Secondary Backgrounds */
+.panel-bg-secondary-plus-1 { background: var(--bg-secondary-plus-1); }
+.panel-bg-secondary-plus-2 { background: var(--bg-secondary-plus-2); }
+.panel-bg-secondary-minus-1 { background: var(--bg-secondary-minus-1); }
+.panel-bg-secondary-minus-2 { background: var(--bg-secondary-minus-2); }
+.panel-bg-secondary-default { background: var(--bg-secondary-default); }
+
+/* Success Backgrounds */
+.panel-bg-success-plus-1 { background: var(--bg-success-plus-1); }
+.panel-bg-success-plus-2 { background: var(--bg-success-plus-2); }
+.panel-bg-success-minus-1 { background: var(--bg-success-minus-1); }
+.panel-bg-success-minus-2 { background: var(--bg-success-minus-2); }
+.panel-bg-success-default { background: var(--bg-success-default); }
+
+/* Warning Backgrounds */
+.panel-bg-warning-plus-1 { background: var(--bg-warning-plus-1); }
+.panel-bg-warning-plus-2 { background: var(--bg-warning-plus-2); }
+.panel-bg-warning-minus-1 { background: var(--bg-warning-minus-1); }
+.panel-bg-warning-minus-2 { background: var(--bg-warning-minus-2); }
+.panel-bg-warning-default { background: var(--bg-warning-default); }
+
+
+
 
 .dotted, ul.dotted {
     padding: 10px 0 !important; border-top: 1px dotted var(--stroke-default-minus-2); border-bottom: 1px dotted var(--stroke-default-minus-2);
