@@ -351,6 +351,9 @@ p {
 .panel-bg-warning-minus-2 { background: var(--bg-warning-minus-2); }
 .panel-bg-warning-default { background: var(--bg-warning-default); }
 
+/* Gradient Backgrounds */
+.panel-gradient-primary { background: linear-gradient(182deg, #FFF -8.8%, #F7F8FF 115.85%, #DBE2FF 265.55%); }
+.panel-gradient-secondary { background: linear-gradient(180deg, #FFF 16.34%, #FDF4FF 100%); }
 
 
 
