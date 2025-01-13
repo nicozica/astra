@@ -1,142 +1,88 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import Layout from "../../../layouts/Layout.astro";
 
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
+import HeaderSurvey from "../../../components/survey/HeaderSurvey.astro";
+import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
 ---
 
-<Layout title="Poll Predictor">
-  <Header/>
-  <div class="container pollpredictor_intro">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <div class="panel panel-default py-3 text-center">
-          <div class="row">
-            <div class="col-12 text-center">
-              <div class="row">
-                <div class="col-12 col-sm-10 offset-sm-1">
-                  <h1 class="h2 mt-3 mb-1">Welcome to Poll Predictor!</h1>
-                  <p class="lead mt-0 mb-1">Can you predict the answer?</p>
-                  <p class="fs-lg fs-md text-muted">The closer you guess, the more draw entries you get to win prizes!</p>
-                </div><!-- col -->
-              </div><!-- row -->
-              <div class="row">
-                <div class="col-12">
-                  <lottie-player src="/public/pollpredictor/pp_intro.json" background="transparent" speed="1" class="block" style="margin: 0 auto;" autoplay loop></lottie-player>
+<Layout title="Survey Experience">
+  <div class="container-fluid container-full-height px-0">
+    <HeaderSurvey />
+    <!-- Main Content -->
+    <div class="container content">
+      <div class="row">
+        <div class="col-12">
+          <div class="panel pt-0">
+            <div class="row">
+              <div class="col">
+
+                <div class="d-flex align-items-center">
+                  <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/icons/fa-badge-percent.svg" class="img-fluid me-1" alt="Ipsos iSay" />
+                  <h1 class="h2 mt-2">Congratulations!</h1> 
                 </div>
+                
+                <div class="alert alert-success mt-2 text-center">
+                  <p class="fs-5 mb-0"><i class="fa-solid fa-star text-warning"></i> You earned <strong>15 points</strong>!</p>
+                </div>
+                <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/survey/anim-confetti.gif" class="img-fluid" style="margin-top: -120px; mix-blend-mode: multiply;" aria-hidden="true" alt="" />
+                
+                  <!-- Percentage Comparison Section -->
+                  <div class="row justify-content-center align-items-center text-center mb-5">
+                    <div class="col-4">
+                      <div class="display-3 text-purple">30%</div>
+                      <small class="text-muted">
+                        <i class="bi bi-arrow-up-circle-fill text-purple"></i>
+                        Your prediction
+                      </small>
+                    </div>
+                    <div class="col-2">
+                      <span class="text-muted fs-5">VS</span>
+                    </div>
+                    <div class="col-4">
+                      <div class="display-3 text-navy">45%</div>
+                      <small class="text-muted">Correct Answer (+15% diff)</small>
+                    </div>
+                  </div>
+                
+                <p>Complete all your available surveys and keep your profile updated for a daily chance of playing Poll Predictor! 😉</p>
+              
+                <div class="dotted-top mt-4">
+                  <a href="javascript:void(0)" class="btn btn-primary mt-3 mb-0">Go to main page</a>
+                </div>
+
               </div>
-              <div class="row my-4">
-                <div class="col-sm-10 offset-sm-1 text-center">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox"/> I agree with the <a href="#modalStatements" data-bs-toggle="modal">General Statements</a> and the <a href="index.php?page=frank/contest_rules&status=logged">draw rules</a>.
-                    <p class="validation-warn text-danger mt-1 d-none">You need to accept our Privacy policy.</p>
-                  </label>
-                </div><!-- col -->
-              </div><!-- row -->
-              <div class="col-12 text-center">
-                <div class="d-grid gap-2 mb-3 text-center">
-                  <button id="loadingBtn" style="display:none" class="btn btn-primary btn-block btn-lg m-progress disabled">&nbsp;</button>
-                  <button id="loadedBtn" onclick="loadSurvey()" class="btn btn-primary btn-block btn-lg">
-                      Play now!
-                  </button>
-                </div><!-- /.mt-1 mb-3 text-center -->
-              </div><!-- mt-1 text-muted text-center -->
-            </div><!-- mt-1 text-muted text-center -->
-            </div><!-- col -->
-          </div><!-- row -->
-        </div><!-- panel -->
-  
-        <div class="fs-xs text-center mt-3">
-          <a href="#modalHelp" data-bs-toggle="modalHelp" onclick="$('#modalHelp').modal();">What is Poll Predictor?</a>
-        </div>
-      </div><!-- col -->
-    </div><!-- row -->
-  </div><!-- container -->
-  
-  <!-- Modal -->
-  <div class="modal fade" id="modalHelp" tabindex="-1" role="dialog" aria-labelledby="modalHelpLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <h2 class="h4 text-dark">What is Poll Predictor?</h2>
-          <p>
-            The goal of Poll Predictor is to see how closely you can guess what percentage of respondents answered <strong class="text-secondary">&ldquo;YES&rdquo;</strong> to different poll questions. You&rsquo;re
-            awarded draw entries to win prizes depending on how close you are to the correct answer.
-          </p>
-  
-          <h2 class="h4 mt-3 text-dark">How do you play?</h2>
-          <ol class="list-unstyled">
-            <li class="mb-1">
-              You are shown with one random question. Then, you&rsquo;ll be asked to guess the percentage of respondents who answered <strong class="text-secondary">&ldquo;YES.&rdquo;</strong>
-            </li>
-            <li class="mb-1">
-              Use the sliding bar to submit your answer between <strong class="text-secondary">0% to 100%</strong>.
-            </li>
-            <li class="mb-1">The closer you are to the correct answer, the better.</li>
-          </ol>
-        </div>
-        <div class="modal-footer">
-          <a type="button" class="btn btn-primary btn-block mb-1" data-bs-dismiss="modal" href="javascript:void(0);">Got it</a>
-        </div>
-      </div><!-- modal-content -->
-    </div><!-- modal-dialog -->
-  </div><!-- modal -->
-  
-<Footer/>
+            </div><!-- row -->
+          </div><!-- panel -->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <FooterSurvey />
+  </div><!-- /.container-fluid -->
 </Layout>
-<script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
 
-<script>
-  // Wait for the DOM to be fully loaded
-  document.addEventListener('DOMContentLoaded', function() {
-      // Get references to the loaded button and the loading button
-      var loadedBtn = document.getElementById('loadedBtn');
-      var loadingBtn = document.getElementById('loadingBtn');
-      
-      // Add an event listener to the loaded button
-      loadedBtn!.addEventListener('click', function() {
-          // Hide the loaded button and show the loading button
-          loadedBtn!.style.display = 'none';
-          loadingBtn!.style.display = 'block';
-          
-          // Redirect after 2 seconds
-          setTimeout(function() {
-              window.location.href = "/p1/pollpredictor/slider";
-          }, 3500);
-      });
-  });
-  </script>
 <style>
+  html,
+  body {
+    height: 100%;
+  }
 
-.pollpredictor_intro .img-pp_intro,
-.pollpredictor_results .img-pp_results {
-    width: 250px;
-    height: 104px;
-    margin: 0 auto;
-}
+  .container-full-height {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
-.pollpredictor_results .img-pp_congrats {
-    width: 250px;
-    height: 152px;
-    margin: 0 auto;
-    background-size: 250px 152px;
-}
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
 
-.pollpredictor_results .img-pp_results {
-    background-size: 250px 104px;
-}
-
-@media (min-width: 768px) {
-    .pollpredictor_intro .img-pp_intro,
-    .pollpredictor_results .img-pp_results {
-        width: 360px;
-        height: 150px;
-        background-size: 360px 150px;
-    }
-    .pollpredictor_results .img-pp_results {
-        background-size: 360px 150px;
-    }
-}
-
+  @view-transition {
+    navigation: auto; 
+  }
+  
 </style>
-
