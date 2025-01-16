@@ -3,6 +3,8 @@ import Layout from "../../../layouts/Layout.astro";
 
 import HeaderSurvey from "../../../components/survey/HeaderSurvey.astro";
 import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
+
+import SliderComponent from "../../../components/p1/pollpredictor/SliderComponent.astro";
 ---
 
 <Layout title="Poll Predictor">
@@ -15,43 +17,25 @@ import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
           <div class="panel pt-0 text-center">
             <div class="row">
               <div class="col">
-                <h1 class="h4 mt-2 fw-light">Do you think the Earth is flat?</h1> 
+                <h1 class="h4 mt-2 fw-light">Do you think the Earth is flat?</h1>
                 <p>Ipsos iSay members in the United States who answered YES</p>
                 
-                <div class="mt-3 mb-4">
-
-                  <!-- Explanatory tooltip -->
-                  <div id="helpText" class="floating-tooltip animation">
-                      Drag the slider to predict
-                  </div>
-
-                  <!-- Percentage -->
-                  <span style="display:none;" id="userPredictionSliderValLabel" class="slider-value"><span id="userPredictionSliderVal">50</span><span class="percentage">%</span></span>
-
-                  <input id="userPredictionSlider" type="range" min="0" max="100" step="1" value="50" data-bs-toggle="tooltip" title="Hide" />
-
-                </div>
+                <SliderComponent />
 
                 <div class="col-12 text-center">
                   <div class="d-grid gap-2 mb-3 text-center">
-                    <button id="loadingBtn" style="display:none" class="btn btn-primary btn-block m-progress disabled">&nbsp;</button>
-                    <button id="loadedBtn" onclick="loadSurvey()" class="btn btn-primary btn-block">
-                        Place prediction
-                    </button>
-                  </div><!-- /.mt-1 mb-3 text-center -->
-              </div><!-- mt-1 text-muted text-center -->
-
+                    <a class="btn btn-primary btn-block" href="/p1/pollpredictor/interstitial">Place prediction</a>
+                  </div>
+                </div>
               </div>
-            </div><!-- row -->
-
-          </div><!-- panel -->
-        </div><!-- /.col -->
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <FooterSurvey />
-  </div><!-- /.container-fluid -->
+  </div>
 </Layout>
 
 <style>
@@ -73,9 +57,8 @@ import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
     align-items: center;
     width: 100% !important;
   }
-
-  @view-transition {
-    navigation: auto; 
-  } 
-  
 </style>
+
+<!-- Scripts -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js" defer></script>

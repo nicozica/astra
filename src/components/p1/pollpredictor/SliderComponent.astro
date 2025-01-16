@@ -1,0 +1,33 @@
+<div>
+  <input
+    id="ex8"
+    data-slider-id="ex1Slider"
+    type="text"
+    data-slider-min="0"
+    data-slider-max="20"
+    data-slider-step="1"
+    data-slider-value="14"
+  />
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slider = new Slider("#ex8", {
+      tooltip: "always",
+    });
+  });
+</script>
+
+<style>
+    .slider .tooltip {
+  background-color: #333 !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  padding: 5px !important;
+}
+.slider .tooltip-inner {
+  max-width: 50px; /* Ajusta el tamaño del tooltip */
+  text-align: center;
+}
+
+</style>

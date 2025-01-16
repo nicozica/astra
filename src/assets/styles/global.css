@@ -353,7 +353,7 @@ p {
 
 /* Gradient Backgrounds */
 .panel-gradient-primary { background: radial-gradient(41.83% 41.83% at 47.85% 58.17%, #DBE2FF 0%, #FFF 100%); }
-.panel-gradient-secondary { background: radial-gradient(41.83% 41.83% at 47.85% 58.17%, #FDF4FF 0%, #FFF 100%);  }
+.panel-gradient-secondary { background: radial-gradient(41.83% 41.83% at 47.85% 58.17%, #f7d9ff 0%, #FFF 100%);  }
 
 
 

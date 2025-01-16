@@ -16,7 +16,7 @@ import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
             <div class="row">
               <div class="col">
                 <h1 class="h2 mt-2">Welcome to <span class="text-secondary">Poll Predictor</span>!</h1> 
-                <p>Think you know what people think? 🧠 Guess the percentage of responses for each poll question and rack up points! The closer you are, the more points you earn.</p>
+                <p>Can you predict how other Ipsos iSay members answered our poll questions? Have fun seeing how close you can guess!</p>
                 <p class="fs-7">
                   <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-question"></i> What is Poll Predictor?</a>
                 </p>
@@ -34,7 +34,7 @@ import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
 
             <div class="row mt-3">
               <div class="col-md-6">
-                <a class="btn btn-primary px-4" data-callback="onSubmit" href="/p1/pollpredictor/slider">Play now!</a>
+                <a class="btn btn-primary px-4" href="/p1/pollpredictor/slider">Play now!</a>
               </div>
               <div class="col-md-6">
                 <p class="mt-2 pt-1 fs-7 text-md-end">or <a href="javascript:void(0);" class="d-inline-block pe-3">Go to Dashboard</a></p>
@@ -53,16 +53,17 @@ import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
         <div class="modal-content px-3 py-4">
           <div class="modal-body">
             <h2 class="h4">What is Poll Predictor?</h2>
-            <p>The goal of Poll Predictor is to see how closely you can guess what percentage of respondents answered <strong>“YES”</strong> to different poll questions. You’re awarded points depending on how close you are to the correct answer.</p>
+            <p>In Poll Predictor, your challenge is to guess the percentage of people who answered a question a certain way.
+            </p>
             <h2 class="h4">How do you play?</h2>
-            <ol class="list-unstyled">
+            <ol class="ordered-list">
               <li class="mb-1">
-                You are shown with one random question. Then, you’ll be asked to guess the percentage of respondents who answered <strong>“YES”</strong>.
+                You'll be shown a question, then you'll be asked to guess the percentage of Ipsos iSay members who responded with a certain answer.
               </li>
               <li class="mb-1">
-                Use the sliding bar to submit your answer between <strong>0% to 100%</strong>.
+                Use the sliding bar to select a percentage from 0% to 100%.
               </li>
-              <li class="mb-1">The closer you are to the correct answer, the better.</li>
+              <li class="mb-1">Place your prediction and see how close you get!</li>
             </ol>
             <div class="dotted-top mt-3">
               <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn btn-primary mt-2 mb-0">Got it</button>
@@ -107,6 +108,10 @@ import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
 
   @view-transition {
     navigation: auto; 
-  } 
+  }
+
+  ol.ordered-list {
+    padding-left: 1.2rem !important;
+  }
   
 </style>

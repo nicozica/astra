@@ -3,24 +3,19 @@ import Layout from "../../../layouts/Layout.astro";
 
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
-
-
-// Images
-import { Image } from "astro:assets";
-import imgBubbleLoading from "../../../assets/images/p1/survey/loading/bubble-loading.gif";
 ---
 
-<Layout title="Survey Experience · Ipsos iSay">
+<Layout title="Poll Predictor · Ipsos iSay">
   <div class="container-fluid container-full-height">
     <Header />
     <!-- Main Content -->
     <div class="container content py-3">
       <div class="row text-center">
         <div class="col-12">
-          <Image src={imgBubbleLoading} class="img-fluid" alt="" height="100" width="100" aria-hidden="true" />
+          <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/animations/preloaders/bubble-dots.gif" class="img-fluid" alt="" height="100" width="100" aria-hidden="true" />
         </div>
         <div class="col-12">
-          <h1 class="h3 mt-3 mb-3 loading-dots">Checking your prediction</h1>
+          <h1 class="h3 mt-3 mb-3 loading-dots">Calculating the awesomeness of your prediction</h1>
           <p class="lead mt-1 mb-3">Please wait a moment</p>
         </div><!-- /.col -->
       </div><!-- row -->
@@ -29,19 +24,17 @@ import imgBubbleLoading from "../../../assets/images/p1/survey/loading/bubble-lo
     <Footer />
   </div>
 </Layout>
-<script src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/scripts/lottie-player.js"></script>
+
 <script>
 
 
 // Wait for the DOM to be fully loaded
-/*
 document.addEventListener('DOMContentLoaded', function() {
     // Redirect after 2 seconds
     setTimeout(function() {
-            window.location.href = "/p1/survey/intro";
+            window.location.href = "/p1/pollpredictor/results";
         }, 2000);
 });
-*/
 </script>
 
 <style>
