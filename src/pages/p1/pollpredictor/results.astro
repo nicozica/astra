@@ -18,33 +18,28 @@ import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
 
                 <div class="d-flex align-items-center">
                   <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/icons/fa-badge-percent.svg" class="img-fluid me-1" alt="Ipsos iSay" />
-                  <h1 class="h2 mt-2">Congratulations!</h1> 
+                  <h1 class="h2 mt-2">Check out your prediction results!</h1> 
                 </div>
                 
-                <div class="alert alert-success mt-2 text-center">
-                  <p class="fs-5 mb-0"><i class="fa-solid fa-star text-warning"></i> You earned <strong>15 points</strong>!</p>
-                </div>
-                <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/survey/anim-confetti.gif" class="img-fluid" style="margin-top: -120px; mix-blend-mode: multiply;" aria-hidden="true" alt="" />
-                
-                  <!-- Percentage Comparison Section -->
-                  <div class="row justify-content-center align-items-center text-center mb-5">
-                    <div class="col-4">
-                      <div class="display-3 text-purple">30%</div>
-                      <small class="text-muted">
-                        <i class="bi bi-arrow-up-circle-fill text-purple"></i>
-                        Your prediction
-                      </small>
-                    </div>
-                    <div class="col-2">
-                      <span class="text-muted fs-5">VS</span>
-                    </div>
-                    <div class="col-4">
-                      <div class="display-3 text-navy">45%</div>
-                      <small class="text-muted">Correct Answer (+15% diff)</small>
-                    </div>
+                <!-- Percentage Comparison Section -->
+                <div class="row justify-content-center align-items-center text-center mb-5">
+                  <div class="col-4">
+                    <div class="display-3 text-purple">30%</div>
+                    <small class="text-muted">
+                      <i class="bi bi-arrow-up-circle-fill text-purple"></i>
+                      <i class="fa-solid fa-circle-arrow-up text-secondary"></i> Your prediction
+                    </small>
                   </div>
+                  <div class="col-2">
+                    <span class="text-muted fs-5">VS</span>
+                  </div>
+                  <div class="col-4">
+                    <div class="display-3 text-navy">45%</div>
+                    <small class="text-muted">Correct Answer (+15%)</small>
+                  </div>
+                </div>
                 
-                <p>Complete all your available surveys and keep your profile updated for a daily chance of playing Poll Predictor! 😉</p>
+                <p>Be sure to complete all your available surveys and keep your profile updated for your daily chance to play Poll Predictor! 😉</p>
               
                 <div class="dotted-top mt-4">
                   <a href="javascript:void(0)" class="btn btn-primary mt-3 mb-0">Go to main page</a>
@@ -79,6 +74,7 @@ import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
     justify-content: center;
     align-items: center;
     width: 100% !important;
+    max-width: 800px;
   }
 
   @view-transition {
