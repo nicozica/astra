@@ -1,0 +1,112 @@
+/*  Survey flow items
+// ============================================================== */
+
+/*Progress for SEM with Flexbox*/
+.sem-container-progress {
+    text-align:center;
+    margin:0px;
+    width:100%;
+    padding:0px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+}
+
+.progress-pill {
+    height:6px;
+    border-radius: 6px;
+    list-style-type:none;
+    width:inherit;
+    margin:2px;
+    background: var(--bg-default-plus-1);
+}
+
+.progress-pill.completed { background: var(--bg-secondary-default) !important; }
+
+.progress-pill.completed-past { background: var(--bg-secondary-minus-1) !important; }
+
+
+/*Multiple Choices*/
+.form-check {
+    border-radius: 6px;
+    padding-left: 32px;
+    padding-top: 8px;
+    /*padding: 5px 16px 8px 32px;*/
+    border: 2px solid transparent;
+    transition: border 300ms ease-out;
+    cursor: pointer;
+}
+
+.form-check-inline {
+    margin-right: 0.2em;
+}
+
+.form-check-input {
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 0.05em;
+
+    vertical-align: middle;
+    border: 2px solid var(--stroke-default-default);
+    transition: border 300ms ease-out;
+    cursor: pointer;
+}
+
+.form-check-label {
+    margin-left: 0.5em;
+    padding: 0px 16px 10px 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-check:hover {
+    border: 2px solid var(--stroke-primary-minus-1);
+}
+
+.form-check:hover .form-check-input {
+    border: 2px solid var(--stroke-primary-minus-1);
+}
+
+.form-check .form-check-input:checked {
+    background-color: var(--bg-primary-default);
+    border: 2px solid var(--stroke-primary-minus-1);
+}
+
+/* Ensure that hover styles are also applied to the checked state */
+.form-check:has(.form-check-input:checked) {
+    border: 2px solid var(--stroke-primary-minus-1);
+    background-color: var(--bg-primary-minus-2);
+}
+
+.form-check:has(.form-check-input:checked) .form-check-input {
+    border: 2px solid var(--stroke-primary-minus-1);
+}
+
+
+/*Complete screen*/
+
+.relative-container {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .overlay-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    pointer-events: none; /* Evita que el GIF interfiera con la interacción de los elementos debajo */
+    z-index: 1;
+  }
+  
+  .relative-container > *:not(.overlay-gif) {
+    position: relative;
+    z-index: 2;
+  }

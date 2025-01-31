@@ -11,24 +11,11 @@
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const slider = new Slider("#ex8", {
+  $(document).ready(function () {
+    $("#ex8").slider({
       tooltip: "always",
+      tooltip_position: "top", // Para ajustar la posición del tooltip
     });
   });
-</script>
-
-<!-- 
-<style>
-.slider .tooltip {
-  background-color: #333 !important;
-  color: #fff !important;
-  border-radius: 4px !important;
-  padding: 5px !important;
-}
-.slider .tooltip-inner {
-  max-width: 50px; 
-  text-align: center;
-}
-</style>
--->
+  
+  </script>
