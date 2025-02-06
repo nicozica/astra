@@ -1,0 +1,171 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+
+import HeaderSurvey from "../../../../components/survey/HeaderSurvey.astro";
+import FooterSurvey from "../../../../components/survey/FooterSurvey.astro";
+
+import { Image } from 'astro:assets';
+import animConfetti from '../../../../assets/images/p1/survey/anim-confetti.gif';
+
+export async function getStaticPaths() {
+  // Define the possible routes with their respective parameters
+  return [
+    { params: { variable: 'incentive_points' } },
+    { params: { variable: 'incentive_giftcard' } },
+    { params: { variable: 'no_incentive' } },
+  ];
+}
+
+
+const { params } = Astro;
+const { variable } = params;
+---
+
+<Layout title="Daily Prize Wheel">
+  <div class="container-fluid container-full-height px-0">
+    <HeaderSurvey />
+    <!-- Main Content -->
+    <div class="container content">
+      <div class="row"  transition:name="fadeAnimate" transition:animate="fade">
+        <div class="col-12">
+          <div class="panel pt-0">
+            <div class="row text-center">
+              <div class="col">
+
+                <!-- Conditional: incentive_points -->
+                {variable === 'incentive_points' && (
+                  <Fragment>
+                    <h1 class="h2 mt-2">😀 Congratulations!</h1>
+                    <div class="alert alert-success mt-4 text-center">
+                      <p class="fs-5 mb-0 text-success-plus-2">
+                        You earned <i class="fa-solid fa-star text-warning"></i>
+                        <strong class="text-success-plus-2">120 points</strong>!
+                      </p>
+                    </div>
+                    <Image
+                      src={animConfetti}
+                      class="img-fluid"
+                      style="margin-top: -120px; mix-blend-mode: multiply;"
+                      aria-hidden="true"
+                      alt=""
+                    />
+                    <p>
+                      Your prize has been added to your Ipsos iSay account. <br />
+                      Play again tomorrow for another chance to win!
+                    </p>
+                    <a class="btn btn-primary px-4 mt-4 me-3" href="/p1/spinningwheel/wheel">
+                      Go to main page
+                    </a>
+                  </Fragment>
+                )}
+                
+                {/* Conditional: incentive_giftcard */}
+                {variable === 'incentive_giftcard' && (
+                  <Fragment>
+                    <h1 class="h2 mt-2">😀 Congratulations!</h1>
+                    <div class="alert alert-success mt-4 text-center">
+                      <p class="fs-5 mb-0 text-success-plus-2">
+                        You won a <i class="fa-solid fa-ticket"></i>
+                        <strong class="text-success-plus-2">$5 Starbucks eGift Card</strong>!
+                      </p>
+                    </div>
+                    <Image
+                      src={animConfetti}
+                      class="img-fluid"
+                      style="margin-top: -120px; mix-blend-mode: multiply;"
+                      aria-hidden="true"
+                      alt=""
+                    />
+                    <p>
+                      Your prize has been added to your Ipsos iSay account. <br />
+                      Play again tomorrow for another chance to win!
+                    </p>
+                    <a class="btn btn-primary px-4 mt-4 me-3" href="/p1/spinningwheel/wheel">
+                      Go to main page
+                    </a>
+                  </Fragment>
+                )}
+
+                {variable === 'no_incentive' && (
+                  <Fragment>
+                    <h1 class="h2 mt-2">☹️ Ooops! That was close</h1>
+                    <div class="alert alert-success mt-4 text-center d-block">
+                      <p class="fs-5 mb-0 text-success-plus-2">
+                        Better luck next time!
+                      </p>
+                    </div>
+
+                    <p>
+                      You’re not a winner this time, but come back tomorrow <br />
+                      for another chance to spin the wheel.
+                    </p>
+                    <a class="btn btn-primary px-4 mt-4 me-3" href="/p1/spinningwheel/wheel">
+                      Go to main page
+                    </a>
+                  </Fragment>
+                )}
+                
+                
+              </div>
+            </div><!-- row -->
+          </div><!-- panel -->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <FooterSurvey />
+  </div><!-- /.container-fluid -->
+</Layout>
+
+<button type="button" class="btn btn-sm btn-primary btn-variants" data-bs-toggle="modal" data-bs-target="#variantsModal">
+  + Variants
+</button>
+
+<!-- JUST FOR THE PROTOTYPE: Not used in production -->
+<!-- Modal -->
+<div class="modal fade" id="variantsModal" tabindex="-1" aria-labelledby="variantsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="variantsModalLabel">More variants</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <ul>
+                  <li><a class="dropdown-item" href="/p1/spinningwheel/result/incentive_points">Incentive Points</a></li>
+                  <li><a class="dropdown-item" href="/p1/spinningwheel/result/incentive_giftcard">Incentive Gift Card</a></li>
+                  <li><a class="dropdown-item" href="/p1/spinningwheel/result/no_incentive">No incentive</a></li>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+</Layout>
+
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+
+  .container-full-height {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+
+  @view-transition {
+    navigation: auto; 
+  }
+</style>

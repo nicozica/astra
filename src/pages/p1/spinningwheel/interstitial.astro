@@ -1,0 +1,82 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+---
+
+<Layout title="Poll Predictor · Ipsos iSay">
+  <div class="container-fluid container-full-height">
+    <Header />
+    <!-- Main Content -->
+    <div class="container content py-3">
+      <div class="row text-center">
+        <div class="col-12">
+          <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/animations/preloaders/bubble-dots.gif" class="img-fluid" alt="" height="100" width="100" aria-hidden="true" />
+        </div>
+        <div class="col-12">
+          <h1 class="h3 mt-3 mb-3 loading-dots">Calculating the awesomeness of your prediction</h1>
+          <p class="lead mt-1 mb-3">Please wait a moment</p>
+        </div><!-- /.col -->
+      </div><!-- row -->
+    </div><!-- /.container -->
+
+    <Footer />
+  </div>
+</Layout>
+
+<script>
+
+
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Redirect after 2 seconds
+    setTimeout(function() {
+            window.location.href = "/p1/pollpredictor/results";
+        }, 2000);
+});
+</script>
+
+<style>
+html,
+body {
+  height: 100%;
+}
+.container-full-height {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  max-width: 800px;
+}
+
+/* loading dots */
+.loading-dots:after {
+    content: '.';
+    animation: dots 1s steps(5, end) infinite;
+    color: #02103F;
+  }
+
+  @keyframes dots {
+    0%, 20% {
+      color: rgba(0,0,0,0);
+      text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0);
+    }
+    40% {
+      color: #02103F;
+      text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0);
+    }
+    60% {
+      text-shadow: .25em 0 0 #02103F, .5em 0 0 rgba(0,0,0,0);
+    }
+    80%, 100% {
+      text-shadow: .25em 0 0 #02103F, .5em 0 0 #02103F;
+    }
+  }
+</style>
