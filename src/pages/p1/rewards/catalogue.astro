@@ -1,0 +1,106 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import HeaderVisitor from "../../../components/HeaderVisitor.astro";
+import RecruitmentFormOrganic from "../../../components/nmux/RecruitmentFormOrganic.astro";
+import Footer from "../../../components/Footer.astro";
+
+import RewardsCarousel from "../../../components/nmux/RewardsCarousel.astro";
+import PromoCarousel from "../../../components/nmux/PromoCarousel.astro";
+import MediaLogosCarousel from "../../../components/nmux/MediaLogosCarousel.astro";
+
+// Images
+import { Image } from "astro:assets";
+import reward01 from "../../../assets/images/p1/rewards/reward-01.webp";
+import reward02 from "../../../assets/images/p1/rewards/reward-02.webp";
+import reward03 from "../../../assets/images/p1/rewards/reward-03.webp";
+import reward04 from "../../../assets/images/p1/rewards/reward-04.webp";
+import reward05 from "../../../assets/images/p1/rewards/reward-05.webp";
+import reward06 from "../../../assets/images/p1/rewards/reward-06.webp";
+import reward07 from "../../../assets/images/p1/rewards/reward-07.webp";
+import reward08 from "../../../assets/images/p1/rewards/reward-08.webp";
+import reward09 from "../../../assets/images/p1/rewards/reward-09.webp";
+import reward10 from "../../../assets/images/p1/rewards/reward-10.webp";
+
+---
+
+<Layout title="Rewards Catalogue | Ipsos iSay">
+  <HeaderVisitor />
+  <!-- Main Content -->
+  <div class="panel banner-top-reg py-5 mb-0">
+    <div class="container py-5">
+      <h2 class="mb-3">Rewards</h2>
+      <p>You have <span class="fw-bold text-warning">★ 50 points</span></p>
+      
+      <div class="row mb-3">
+          <div class="col-md-6">
+              <select class="form-select">
+                  <option selected>All Categories</option>
+              </select>
+          </div>
+          <div class="col-md-6">
+              <select class="form-select">
+                  <option selected>Any Range of Points</option>
+              </select>
+          </div>
+      </div>
+      
+      <h4 class="mt-4">Easy Wins</h4>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+          <div class="col">
+              <div class="card">
+                  <div class="card-body">
+                    <Image src={reward01} class="img-reward img-fluid mb-3" alt="Ipsos Foundation" aria-hidden="true" />
+                    <p>200 Ipsos Foundation Points</p>
+                    <p class="fw-bold"><i class="fa fa-star text-warning"></i> 200</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card text-center">
+                  <div class="card-body">
+                    <Image src={reward02} class="img-reward img-fluid mb-3" alt="Ipsos iSay Market" aria-hidden="true" />
+                    <p>210 Ipsos iSay Market Points</p>
+                    <p class="fw-bold text-warning">★ 210</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card text-center">
+                  <div class="card-body">
+                    <Image src={reward03} class="img-reward img-fluid mb-3" alt="Burger King" aria-hidden="true" />
+                      <p>$5 Burger King®</p>
+                      <p class="fw-bold text-warning">★ 500</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card text-center">
+                  <div class="card-body">
+                    <Image src={reward04} class="img-reward img-fluid mb-3" alt="Amazon" aria-hidden="true" />
+                      <p>$5 Amazon.com Gift Card</p>
+                      <p class="fw-bold text-warning">★ 500</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <h4 class="mt-4">Featured Rewards</h4>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+          <!-- Repite el mismo patrón de tarjetas -->
+      </div>
+      
+      <h4 class="mt-4">Digital Rewards</h4>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+          <!-- Repite el mismo patrón de tarjetas -->
+      </div>
+  </div>
+
+  </div><!-- /.panel -->
+
+    <Footer />
+
+  <!-- TrustBox script -->
+  <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+  <!-- End TrustBox script -->
+</Layout>
