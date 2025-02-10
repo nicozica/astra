@@ -6,6 +6,22 @@ img.img-200px {
     height: auto;
 }
 
+.img-reward {
+    border: 1px solid #E7E7E7;
+    border-radius: 8px;
+}
+
+.badge.badge-transparent {
+    color: var(--text-muted);
+}
+
+.badge.badge-success {
+    color: var(--text-success-plus-2);
+    background-color: var(--bg-success-minus-2);
+    border: 2px solid var(--stroke-success-minus-2);
+    border-radius: var(--border-radius-sm) !important;
+}
+
 .badge.badge-over-gray {
     color: var(--text-gray-default);
     background-color: var(--white);

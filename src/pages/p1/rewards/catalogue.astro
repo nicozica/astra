@@ -29,60 +29,88 @@ import reward10 from "../../../assets/images/p1/rewards/reward-10.webp";
   <!-- Main Content -->
   <div class="panel banner-top-reg py-5 mb-0">
     <div class="container py-5">
-      <h2 class="mb-3">Rewards</h2>
-      <p>You have <span class="fw-bold text-warning">★ 50 points</span></p>
+    
+      <h1 class="h3 mb-3 fw-light">Rewards</h2>
       
-      <div class="row mb-3">
-          <div class="col-md-6">
-              <select class="form-select">
-                  <option selected>All Categories</option>
-              </select>
-          </div>
-          <div class="col-md-6">
-              <select class="form-select">
-                  <option selected>Any Range of Points</option>
-              </select>
-          </div>
-      </div>
+      <div class="p-3 bg-light d-flex align-items-center justify-content-between">
+        <p class="mb-0">
+            You have <span class="fw-bold text-main"><i class="fa fa-star text-warning"></i> 50 points</span>
+        </p>
+        <div class="d-flex gap-2 d-none d-md-flex">
+            <select class="form-select">
+                <option selected>All Categories</option>
+                <option>Featured Rewards</option>
+                <option>Digital Rewards</option>
+                <option>Money Transfers</option>
+                <option>Charity Donations</option>
+            </select>
+            <select class="form-select">
+                <option selected>Any Range of Points</option>
+                <option>Less than 500</option>
+                <option>500 - 999</option>
+                <option>1000 - 1999</option>
+                <option>2000 - 2499</option>
+                <option>2500 or more</option>
+                <option>In my Reach</option>
+            </select>
+        </div>
+    </div>
+    
       
       <h4 class="mt-4">Easy Wins</h4>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-          <div class="col">
-              <div class="card">
-                  <div class="card-body">
-                    <Image src={reward01} class="img-reward img-fluid mb-3" alt="Ipsos Foundation" aria-hidden="true" />
-                    <p>200 Ipsos Foundation Points</p>
-                    <p class="fw-bold"><i class="fa fa-star text-warning"></i> 200</p>
+          
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                  <Image src={reward01} class="img-reward rounded img-fluid mb-3" alt="Ipsos Foundation" aria-hidden="true" />
+                  <p class="text-main">200 Ipsos Foundation Points</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="fw-bold text-main mb-0"><i class="fa fa-star text-warning"></i> 200</p>
+                    <small class="badge badge-transparent"><i class="fa fa-star"></i> 480 needed</small>
                   </div>
-              </div>
-          </div>
-          <div class="col">
-              <div class="card text-center">
-                  <div class="card-body">
-                    <Image src={reward02} class="img-reward img-fluid mb-3" alt="Ipsos iSay Market" aria-hidden="true" />
-                    <p>210 Ipsos iSay Market Points</p>
-                    <p class="fw-bold text-warning">★ 210</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                  <Image src={reward02} class="img-reward rounded img-fluid mb-3" alt="Ipsos Foundation" aria-hidden="true" />
+                  <p class="text-main">210 Ipsos iSay Market Points</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="fw-bold text-main mb-0"><i class="fa fa-star text-warning"></i> 210</p>
+                    <span class="badge badge-success">Redeem now!</span>
                   </div>
-              </div>
-          </div>
-          <div class="col">
-              <div class="card text-center">
-                  <div class="card-body">
-                    <Image src={reward03} class="img-reward img-fluid mb-3" alt="Burger King" aria-hidden="true" />
-                      <p>$5 Burger King®</p>
-                      <p class="fw-bold text-warning">★ 500</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                  <Image src={reward03} class="img-reward rounded img-fluid mb-3" alt="Ipsos Foundation" aria-hidden="true" />
+                  <p class="text-main">$5 Burger King®</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="fw-bold text-main mb-0"><i class="fa fa-star text-warning"></i> 500</p>
+                    <span class="badge badge-success">Redeem now!</span>
                   </div>
-              </div>
-          </div>
-          <div class="col">
-              <div class="card text-center">
-                  <div class="card-body">
-                    <Image src={reward04} class="img-reward img-fluid mb-3" alt="Amazon" aria-hidden="true" />
-                      <p>$5 Amazon.com Gift Card</p>
-                      <p class="fw-bold text-warning">★ 500</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                  <Image src={reward04} class="img-reward rounded img-fluid mb-3" alt="Ipsos Foundation" aria-hidden="true" />
+                  <p class="text-main">$5 Amazon.com Gift Card</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="fw-bold text-main mb-0"><i class="fa fa-star text-warning"></i> 500</p>
+                    <span class="badge badge-success">Redeem now!</span>
                   </div>
-              </div>
-          </div>
+                </div>
+            </div>
+        </div>
       </div>
       
       <h4 class="mt-4">Featured Rewards</h4>
