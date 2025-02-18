@@ -1,0 +1,14 @@
+---
+
+import { Image } from 'astro:assets';
+import headerLogo from '../assets/images/logo.svg';
+import headerFlag from '../assets/images/icons/flags/US.svg';
+
+---
+<header>
+    <nav id="navbar" class="navbar navbar-light" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="?"><Image src={headerLogo} class="img-fluid" alt="Ipsos iSay" /></a>
+        </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+</header>

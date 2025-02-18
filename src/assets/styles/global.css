@@ -374,6 +374,11 @@ p {
     border: none;
 }
 
+.alert.alert-primary {
+    background: var(--bg-primary-minus-2);
+    border: none;
+}
+
 /*  Progress bars
 // ============================================================== */
 

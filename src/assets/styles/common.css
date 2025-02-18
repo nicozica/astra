@@ -29,6 +29,22 @@ img.img-200px {
     border-radius: var(--border-radius-xxs) !important;
 }
 
+.truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+}
+  
+@media (max-width: 575.98px) {
+    .truncate-text {
+        /* font-size: 12px; */
+    }
+}
+  
+  
+
 .dotted-line {
     border: none; border-top: 2px dotted var(--stroke-default-default);
     margin: 24px 0

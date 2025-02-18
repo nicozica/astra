@@ -1,7 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 
-import HeaderSurvey from "../../../components/survey/HeaderSurvey.astro";
+import HeaderLogoOnly from "../../../components/HeaderLogoOnly.astro";
 import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
 
 // CSS to be optimized
@@ -10,23 +10,21 @@ import '../../../assets/styles/p1/bootstrap-slider.css';
 
 <Layout title="Daily Prize Wheel">
   <div class="container-fluid container-full-height px-0">
-    <HeaderSurvey />
+    <HeaderLogoOnly />
     <!-- Main Content -->
     <div class="container content">
-      <div class="row">
+      <div class="row text-center">
         <div class="col">
-          <div class="panel pt-0 text-center">
-            <div class="row">
-              <div class="col">
-                <h1 class="h2 mt-2">Daily Prize Wheel</h1>
-                <p>Press the center of the wheel to spin. Good luck!</p>
-                <!-- Spinin Wheel -->
-                <div class="row wheel-container mt-4 pt-4">
-                  <div class="col">
-                    <a href="/p1/spinningwheel/result/incentive_points"><img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/spinning-wheel/wheel.webp" class="wheel img-fluid"></a>
-                  </div>
-                </div><!-- /.row -->
-              </div>
+          <div class="row">
+            <div class="col">
+              <h1 class="h2 mt-2">Daily Prize Wheel</h1>
+              <p>Press the center of the wheel to spin. Good luck!</p>
+              <!-- Spinin Wheel -->
+              <div class="row wheel-container mt-4 pt-4">
+                <div class="col">
+                  <a href="/p1/spinningwheel/result/incentive_points"><img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/spinning-wheel/wheel.webp" class="wheel img-fluid"></a>
+                </div>
+              </div><!-- /.row -->
             </div>
           </div>
         </div>
@@ -60,13 +58,21 @@ import '../../../assets/styles/p1/bootstrap-slider.css';
   }
 
   .wheel-container {
-    width: 798px;
-    height: 386px;
-    background-image: url('https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/spinning-wheel/bg-wheel.webp');
+    width: 327px;
+    height: 295px;
+    background-image: url('https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/spinning-wheel/bg-wheel-m.webp');
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat; 
   }
+
+  @media (min-width: 768px) {
+  .wheel-container {
+    width: 798px;
+    height: 386px;
+    background-image: url('https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/spinning-wheel/bg-wheel.webp');
+  }
+}
 
   .wheel {
     max-width: 325px;

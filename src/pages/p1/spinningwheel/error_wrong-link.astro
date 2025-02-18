@@ -1,33 +1,30 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 
-import HeaderSurvey from "../../../components/survey/HeaderSurvey.astro";
+import HeaderLogoOnly from "../../../components/HeaderLogoOnly.astro";
 import FooterSurvey from "../../../components/survey/FooterSurvey.astro";
 ---
 
 <Layout title="Daily Prize Wheel">
   <div class="container-fluid container-full-height px-0">
-    <HeaderSurvey />
+    <HeaderLogoOnly />
     <!-- Main Content -->
     <div class="container content">
-      <div class="row">
+      <div class="row text-center">
         <div class="col-12">
 
           <!-- Error: Already played -->
-          <div class="panel pt-0 text-center">
-            <div class="row">
-              <div class="col">
-                <h1 class="h2 mt-2">☹️ We are sorry</h1> 
-                <p class="mt-3">Something went wrong on our end.</p>
-              </div>
-            </div><!-- row -->
-            <div class="row mt-3">
-              <div class="col">
-                <a class="btn btn-primary px-4 me-3" href="/p1/spinningwheel/wheel">Go to main page</a>
-              </div>              
-            </div><!-- row -->
-          </div><!-- panel -->
-
+          <div class="row">
+            <div class="col">
+              <h1 class="h2 mt-2">☹️ We are sorry</h1> 
+              <p class="mt-3">Something went wrong on our end.</p>
+            </div>
+          </div><!-- row -->
+          <div class="row mt-3">
+            <div class="col">
+              <a class="btn btn-primary px-4 me-3" href="/p1/spinningwheel/wheel">Go to main page</a>
+            </div>              
+          </div><!-- row -->
 
         </div><!-- /.col -->
       </div><!-- /.row -->

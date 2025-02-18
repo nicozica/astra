@@ -1,7 +1,7 @@
 ---
 import Layout from "../../../../layouts/Layout.astro";
 
-import HeaderSurvey from "../../../../components/survey/HeaderSurvey.astro";
+import HeaderLogoOnly from "../../../../components/HeaderLogoOnly.astro";
 import FooterSurvey from "../../../../components/survey/FooterSurvey.astro";
 
 import { Image } from 'astro:assets';
@@ -23,92 +23,91 @@ const { variable } = params;
 
 <Layout title="Daily Prize Wheel">
   <div class="container-fluid container-full-height px-0">
-    <HeaderSurvey />
+    <HeaderLogoOnly />
     <!-- Main Content -->
     <div class="container content">
       <div class="row"  transition:name="fadeAnimate" transition:animate="fade">
         <div class="col-12">
-          <div class="panel pt-0">
-            <div class="row text-center">
-              <div class="col">
+ 
+          <div class="row text-center">
+            <div class="col">
 
-                <!-- Conditional: incentive_points -->
-                {variable === 'incentive_points' && (
-                  <Fragment>
-                    <h1 class="h2 mt-2">😀 Congratulations!</h1>
-                    <div class="alert alert-success mt-4 text-center">
-                      <p class="fs-5 mb-0 text-success-plus-2">
-                        You earned <i class="fa-solid fa-star text-warning"></i>
-                        <strong class="text-success-plus-2">120 points</strong>!
-                      </p>
-                    </div>
-                    <Image
-                      src={animConfetti}
-                      class="img-fluid"
-                      style="margin-top: -120px; mix-blend-mode: multiply;"
-                      aria-hidden="true"
-                      alt=""
-                    />
-                    <p>
-                      Your prize has been added to your Ipsos iSay account. <br />
-                      Play again tomorrow for another chance to win!
+              <!-- Conditional: incentive_points -->
+              {variable === 'incentive_points' && (
+                <Fragment>
+                  <h1 class="h2 mt-2">😀 Congratulations!</h1>
+                  <div class="alert alert-success mt-4 text-center">
+                    <p class="fs-5 mb-0 text-success-plus-2">
+                      You earned <i class="fa-solid fa-star text-warning"></i>
+                      <strong class="text-success-plus-2">120 points</strong>!
                     </p>
-                    <a class="btn btn-primary px-4 mt-4 me-3" href="/p1/spinningwheel/wheel">
-                      Go to main page
-                    </a>
-                  </Fragment>
-                )}
-                
-                {/* Conditional: incentive_giftcard */}
-                {variable === 'incentive_giftcard' && (
-                  <Fragment>
-                    <h1 class="h2 mt-2">😀 Congratulations!</h1>
-                    <div class="alert alert-success mt-4 text-center">
-                      <p class="fs-5 mb-0 text-success-plus-2">
-                        You won a <i class="fa-solid fa-ticket"></i>
-                        <strong class="text-success-plus-2">$5 Starbucks eGift Card</strong>!
-                      </p>
-                    </div>
-                    <Image
-                      src={animConfetti}
-                      class="img-fluid"
-                      style="margin-top: -120px; mix-blend-mode: multiply;"
-                      aria-hidden="true"
-                      alt=""
-                    />
-                    <p>
-                      Your prize has been added to your Ipsos iSay account. <br />
-                      Play again tomorrow for another chance to win!
+                  </div>
+                  <Image
+                    src={animConfetti}
+                    class="img-fluid"
+                    style="margin-top: -120px; mix-blend-mode: multiply;"
+                    aria-hidden="true"
+                    alt=""
+                  />
+                  <p>
+                    Your prize has been added to your Ipsos iSay account. <br />
+                    Play again tomorrow for another chance to win!
+                  </p>
+                  <a class="btn btn-primary px-4 mt-4 me-3" href="/p1/spinningwheel/intro">
+                    Go to main page
+                  </a>
+                </Fragment>
+              )}
+              
+              {/* Conditional: incentive_giftcard */}
+              {variable === 'incentive_giftcard' && (
+                <Fragment>
+                  <h1 class="h2 mt-2">😀 Congratulations!</h1>
+                  <div class="alert alert-success mt-4 text-center">
+                    <p class="fs-5 mb-0 text-success-plus-2">
+                      You won a <i class="fa-solid fa-ticket"></i>
+                      <strong class="text-success-plus-2">$5 Starbucks eGift Card</strong>!
                     </p>
-                    <a class="btn btn-primary px-4 mt-4 me-3" href="/p1/spinningwheel/wheel">
-                      Go to main page
-                    </a>
-                  </Fragment>
-                )}
+                  </div>
+                  <Image
+                    src={animConfetti}
+                    class="img-fluid"
+                    style="margin-top: -120px; mix-blend-mode: multiply;"
+                    aria-hidden="true"
+                    alt=""
+                  />
+                  <p>
+                    Your prize has been added to your Ipsos iSay account. <br />
+                    Play again tomorrow for another chance to win!
+                  </p>
+                  <a class="btn btn-primary px-4 mt-4 me-3" href="/p1/spinningwheel/intro">
+                    Go to main page
+                  </a>
+                </Fragment>
+              )}
 
-                {variable === 'no_incentive' && (
-                  <Fragment>
-                    <h1 class="h2 mt-2">☹️ Ooops! That was close</h1>
-                    <div class="alert alert-success mt-4 text-center d-block">
-                      <p class="fs-5 mb-0 text-success-plus-2">
-                        Better luck next time!
-                      </p>
-                    </div>
-
-                    <p>
-                      You’re not a winner this time, but come back tomorrow <br />
-                      for another chance to spin the wheel.
+              {variable === 'no_incentive' && (
+                <Fragment>
+                  <h1 class="h2 mt-2">Ooops! That was close 🙂</h1>
+                  <div class="alert alert-primary mt-4 text-center d-block">
+                    <p class="fs-5 mb-0 text-primary-plus-1">
+                      Better luck next time!
                     </p>
-                    <a class="btn btn-primary px-4 mt-4 me-3" href="/p1/spinningwheel/wheel">
-                      Go to main page
-                    </a>
-                  </Fragment>
-                )}
-                
-                
-              </div>
-            </div><!-- row -->
-          </div><!-- panel -->
+                  </div>
+                  
+                  <p>
+                    You’re not a winner this time, but come back tomorrow <br />
+                    for another chance to spin the wheel.
+                  </p>
+                  <a class="btn btn-primary px-4 mt-4 me-3" href="/p1/spinningwheel/intro">
+                    Go to main page
+                  </a>
+                </Fragment>
+              )}
+              
+              
+            </div>
+          </div><!-- row -->
         </div><!-- /.col -->
       </div><!-- /.row -->
     </div><!-- /.container -->
@@ -146,7 +145,7 @@ const { variable } = params;
 </Layout>
 
 <style>
-  html,
+   html,
   body {
     height: 100%;
   }
@@ -163,9 +162,6 @@ const { variable } = params;
     justify-content: center;
     align-items: center;
     width: 100% !important;
-  }
-
-  @view-transition {
-    navigation: auto; 
-  }
+    max-width: 800px;
+  } 
 </style>
