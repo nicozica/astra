@@ -1,85 +1,107 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import Layout from "../../../layouts/Layout.astro";
 
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-
-// Images
-import { Image } from 'astro:assets';
-import imgChoice01 from '../../../assets/images/projects/censydiam/choice_01.jpg';
-import imgChoice02 from '../../../assets/images/projects/censydiam/choice_02.jpg';
-
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
 ---
-<Layout title="Choose an option">
-    <Header/>
-    <!-- PANEL: Quiz -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 col-xl-6 offset-lg-1 offset-xl-3">
-                
-                <div class="panel panel-default text-center py-4 mt-3 mb-4">
-    
-                    <div class="row py-3">
-                        <div class="col-12 text-center">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-10 offset-sm-1">
-                                    <h1 class="h2 mt-1 mb-1">What is your choice?</h1>
-                                    <p class="mt-1">Choose the picture that best reflects what you value in life.</p>
-                        
-                                </div><!-- col-xs-12 col-sm-10 offset-sm-1 -->
-                            </div><!-- row -->
 
-                            <div class="mt-1 choice">
-                                <a href="/projects/censydiam/result/orange" class="choice"><Image src={imgChoice01} class="img-fluid rounded" alt="Speedometer" aria-hidden="true" /></a>
-                                <a href="/projects/censydiam/result/black" class="choice"><Image src={imgChoice02} class="img-fluid rounded" alt="Eggs nest" aria-hidden="true" /></a>
-                            </div>
+<Layout title="Censydiam">
+  <div class="container-fluid container-full-height px-0">
+    <Header />
+    <!-- Main Content -->
+    <div class="container content">
+      <div class="panel text-center">
+        <div class="row py-3">
+          <div class="col-12">
+            <h1 class="h3 mt-1 mb-1 fw-light">What is your choice?</h1>
+            <p class="mt-1">Choose the picture that best reflects what you value in life.</p>
 
-                        </div><!-- row -->
-                    </div><!-- row -->
-    
-                </div><!-- panel -->
-    
-            </div><!-- /.col -->
-        </div><!-- /.row -->
+            <div class="pt-2 mt-3 choice">
+              <a href="javascript:void(0);" class="choice"
+                ><img
+                  src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/choice.webp"
+                  class="img-fluid rounded"
+                  alt="Choice 1"
+                  aria-hidden="true"
+                /></a
+              >
+              <a href="javascript:void(0);" class="choice"
+                ><img
+                  src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/choice.webp"
+                  class="img-fluid rounded"
+                  alt="Choice 2"
+                  aria-hidden="true"
+                /></a
+              >
+            </div>
+            <a href="/projects/censydiam/result/orange" class="btn btn-primary btn-start btn-lg px-5 mt-5">Next</a>
+          </div><!-- col-12 -->
+        </div><!-- row -->
+      </div><!-- panel -->
     </div><!-- /.container -->
-    <Footer/>
+
+    <Footer />
+  </div><!-- /.container-fluid -->
 </Layout>
 
-<!-- TrustBox script -->
-<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-
 <style>
-.panel-default {
-    background-color: #FFF;
-    border: 1px solid #E0E0E0;
-    border-radius: 12px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-}
+  html,
+  body {
+    height: 100%;
+  }
 
-.choice {
+  .container-full-height {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    max-width: 800px;
+  }
+
+  @view-transition {
+    navigation: auto;
+  }
+
+  ol.ordered-list {
+    padding-left: 1.2rem !important;
+  }
+
+  .choice {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
+  }
 
-.choice a {
+  .choice a {
     flex: 1;
     max-width: 200px;
     margin: 15px;
     padding: 8px;
     text-align: center;
-    border: 1px solid #E0E0E0;
+    border: 1px solid #e0e0e0;
     border-radius: 12px;
-}
+  }
 
-.choice a:hover {
-    background-color: #DBE2FF;
+  @media (min-width: 576px) {
+    .choice a {
+      max-width: 292px;
+    }
+  }
+  .choice a:hover {
+    background-color: #dbe2ff;
     border: 1px solid #2600ff;
-}
+  }
 
-.choice img {
+  .choice img {
     width: 100%;
     height: auto;
     max-width: 100%;
-}
+  }
 </style>
