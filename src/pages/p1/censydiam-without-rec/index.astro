@@ -4,21 +4,17 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
-
-// Images
-import { Image } from 'astro:assets';
-import imgSquadHome from '../../../assets/images/projects/censydiam/squad-home.png';
-import imgPlanet from '../../../assets/images/projects/censydiam/planet.png';
-
+// CSS to be optimized
+import '../../../assets/styles/p1/censydiam-without-rec.css';
 ---
 <Layout title="Censydiam">
     <Header/>
     <!-- START: Intro -->
-    <div class="panel panel-intro-blue">
+    <div class="panel panel-intro-light">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <Image src={imgSquadHome} class="img-fluid" alt="" aria-hidden="true" />
+                    <img src="" class="img-fluid" alt="" aria-hidden="true" />
                 </div><!-- col -->
             </div><!-- row -->
             <div class="row">

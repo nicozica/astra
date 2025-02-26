@@ -1,0 +1,59 @@
+a.choice {
+    margin: 20px 10px;
+    padding: 8px;
+    border: 1px solid #E0E0E0;
+    display: inline-block;
+    border-radius: 12px;
+}
+
+a.choice:hover {
+    background-color: #DBE2FF;
+    border: 1px solid #2600ff;
+}
+
+a.choice img {
+    max-width: 200px;
+    height: auto;
+}
+
+/****************** RESULTS PAGE ******************/
+
+.panel.panel-results.panel.panel-results-yellow h1, .panel.panel-results.panel.panel-results-yellow strong, .panel.panel-results.panel.panel-results-orange h1, .panel.panel-results.panel.panel-results-orange strong {
+    color: #02103F !important;
+}
+
+.panel.panel-results h1, .panel.panel-results strong {
+    color: #FFF !important;
+}
+
+.panel.panel-results-orange {
+    background: linear-gradient(to bottom right, #FFA238, #CB8600);
+}
+
+.panel.panel-results-black {
+    background: linear-gradient(to bottom right, #292929, #313131);
+}
+
+.panel.panel-results-yellow {
+    background: linear-gradient(to bottom right, #FFCE00, #E2B90C);
+}
+
+.panel.panel-results-brown {
+    background: linear-gradient(to bottom right, #974C0F, #663300);
+}
+
+.panel.panel-results-purple {
+    background: linear-gradient(to bottom right, #6701A5, #540785);
+}
+
+.panel.panel-results-blue {
+    background: linear-gradient(to bottom right, #009CFF, #0063AA);
+}
+
+.panel.panel-results-green {
+    background: linear-gradient(to bottom right, #007057, #169075);
+}
+
+.panel.panel-results-red {
+    background: linear-gradient(to bottom right, #C31421, #FE2F3E);
+}
