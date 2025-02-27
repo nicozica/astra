@@ -17,24 +17,15 @@ import Footer from "../../../components/Footer.astro";
             <p class="mt-1">Choose the picture that best reflects what you value in life.</p>
 
             <div class="pt-2 mt-3 choice">
-              <a href="javascript:void(0);" class="choice"
-                ><img
-                  src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/choice.webp"
-                  class="img-fluid rounded"
-                  alt="Choice 1"
-                  aria-hidden="true"
-                /></a
-              >
-              <a href="javascript:void(0);" class="choice"
-                ><img
-                  src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/choice.webp"
-                  class="img-fluid rounded"
-                  alt="Choice 2"
-                  aria-hidden="true"
-                /></a
+              <a href="javascript:void(0);" class="choice">
+                <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/choice.webp" class="img-fluid rounded" alt="Choice 1" aria-hidden="true"/>
+              </a>
+              <a href="javascript:void(0);" class="choice">
+                <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/choice.webp" class="img-fluid rounded" alt="Choice 2" aria-hidden="true"/>
+              </a
               >
             </div>
-            <a href="/projects/censydiam/result/orange" class="btn btn-primary btn-start btn-lg px-5 mt-5">Next</a>
+            <a href="/p1/censydiam-without-rec/result/orange" class="btn btn-primary btn-start btn-lg px-5 mt-5">Next</a>
           </div><!-- col-12 -->
         </div><!-- row -->
       </div><!-- panel -->
@@ -72,6 +63,9 @@ import Footer from "../../../components/Footer.astro";
   ol.ordered-list {
     padding-left: 1.2rem !important;
   }
+
+
+  /***** Choice ******/
 
   .choice {
     display: flex;
