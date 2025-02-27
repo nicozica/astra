@@ -27,7 +27,7 @@ export async function getStaticPaths() {
       title: "Magnetic Connectivity",
       description:
         "You are a fantastic people-magnet, thriving on meaningful connections. You're awesome at making everyone feel like a part of the gang, shrugging off any differences and welcoming folks into your world. Your ability to connect people is the key to a vibrant community, where diverse voices unite into a single, powerful force.",
-      image: "https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/bear.webp",
+      image: "https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/panda.webp",
     },
     {
       result: "brown",
@@ -91,7 +91,7 @@ const { result } = params;
 
         </div><!-- col -->
 
-        <div class="col-12 col-lg-7">
+        <div class="col-12 col-lg-7 pe-lg-5">
           <p class="mb-1">Your superpower is...</p>
           <h1>{title}</h1>
           <p set:html={description}></p>
@@ -142,7 +142,7 @@ const { result } = params;
                 </div>
 
                 <div class="col-12 col-xl-3 text-center text-xl-end">
-                  <a href="#" class="btn btn-outline-secondary w-100 w-xl-auto mt-4 mt-xl-0">Play now!</a>
+                  <a href="#" class="btn btn-outline-secondary px-4 mt-4 mt-xl-0">Play now!</a>
                 </div>
               
               </div>

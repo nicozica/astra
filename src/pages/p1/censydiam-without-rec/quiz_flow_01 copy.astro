@@ -3,9 +3,6 @@ import Layout from "../../../layouts/Layout.astro";
 
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
-
-// CSS to be optimized
-import '../../../assets/styles/p1/censydiam-without-rec.css';
 ---
 
 <Layout title="Censydiam">
@@ -18,36 +15,17 @@ import '../../../assets/styles/p1/censydiam-without-rec.css';
           <div class="col-12">
             <h1 class="h3 mt-1 mb-1 fw-light">What is your choice?</h1>
             <p class="mt-1">Choose the picture that best reflects what you value in life.</p>
-          
+
             <div class="pt-2 mt-3 choice">
-              
-              <!-- Option 1 -->
-              <label class="choice-label">
-                <input type="radio" name="choice" value="1" class="choice-input" />
-                <div class="choice-content">
-                  <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/choice.webp"
-                       class="img-fluid rounded" alt="Choice 1" />
-                  <div class="radio-indicator"></div>
-                </div>
-              </label>
-          
-              <!-- Option 2 -->
-              <label class="choice-label">
-                <input type="radio" name="choice" value="2" class="choice-input" />
-                <div class="choice-content">
-                  <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/choice.webp"
-                       class="img-fluid rounded" alt="Choice 2" />
-                  <div class="radio-indicator"></div>
-                </div>
-              </label>
-          
+              <a href="javascript:void(0);" class="choice">
+                <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/choice.webp" class="img-fluid rounded" alt="Choice 1" aria-hidden="true"/>
+              </a>
+              <a href="javascript:void(0);" class="choice">
+                <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/choice.webp" class="img-fluid rounded" alt="Choice 2" aria-hidden="true"/>
+              </a>
             </div>
-          
-            <!-- Botón CTA -->
             <a href="/p1/censydiam-without-rec/result/orange" class="btn btn-primary btn-start btn-lg px-5 mt-5">Next</a>
-          </div>
-          
-          
+          </div><!-- col-12 -->
         </div><!-- row -->
       </div><!-- panel -->
     </div><!-- /.container -->
@@ -79,5 +57,44 @@ import '../../../assets/styles/p1/censydiam-without-rec.css';
 
   @view-transition {
     navigation: auto;
+  }
+
+  ol.ordered-list {
+    padding-left: 1.2rem !important;
+  }
+
+
+  /***** Choice *****/
+
+  .choice {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .choice a {
+    flex: 1;
+    max-width: 200px;
+    margin: 15px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+  }
+
+  @media (min-width: 576px) {
+    .choice a {
+      max-width: 292px;
+    }
+  }
+  .choice a:hover {
+    background-color: #dbe2ff;
+    border: 1px solid #2600ff;
+  }
+
+  .choice img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
   }
 </style>
