@@ -1,157 +1,221 @@
 ---
-import Layout from '../../../../layouts/Layout.astro';
-import Header from '../../../../components/Header.astro';
-import PanelFeatures from '../../../../components/projects/censydiam/PanelFeatures.astro';
-import RecruitmentForm from '../../../../components/nmux/RecruitmentForm.astro';
-import Footer from '../../../../components/Footer.astro';
+import Layout from "../../../../layouts/Layout.astro";
+import Header from "../../../../components/Header.astro";
+import Footer from "../../../../components/Footer.astro";
 
 // CSS to be optimized
-import '../../../../assets/styles/projects/censydiam/censydiam.css';
-
-// Images
-import { Image } from 'astro:assets';
-import imgMonkey from '../../../../assets/images/projects/censydiam/monkey.png';
-import imgDolphin from '../../../../assets/images/projects/censydiam/dolphin.png';
-import imgBear from '../../../../assets/images/projects/censydiam/bear.png';
-import imgKangaroo from '../../../../assets/images/projects/censydiam/kangaroo.png';
-import imgLion from '../../../../assets/images/projects/censydiam/lion.png';
-import imgDog from '../../../../assets/images/projects/censydiam/dog.png';
-import imgFox from '../../../../assets/images/projects/censydiam/fox.png';
-import imgSquirrel from '../../../../assets/images/projects/censydiam/squirrel.png';
+import "../../../../assets/styles/p1/censydiam-without-rec.css";
 
 export async function getStaticPaths() {
   const results = [
     {
       result: "orange",
       title: "Cosmic Creativity",
-      description: "You are spontaneous, follow your instincts and infuse every moment with electrifying energy. In a world hungry for innovation, your Cosmic Creativity shapes a future where imagination knows no bounds!",
-      image: imgMonkey,
-      txtColor: ""
+      description:
+        "You are <strong>spontaneous</strong>, follow your instincts and live for the moment. You bring excitement everywhere you go.",
+      image: "https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/monkey.webp",
     },
     {
       result: "black",
       title: "Savvy Pragmatism",
-      description: "Discipline is your secret weapon to remain steady in the brightest of days or the darkest of storms. Your ability to craft and follow routines isn't just a personal trait, it's the key to shaping a brighter, more resilient future!",
-      image: imgDolphin,
-      txtColor: "text-white"
+      description:
+        "Discipline is your secret weapon to remain steady in the brightest of days or the darkest of storms. Your ability to craft and follow routines isn't just a personal trait, it's the key to shaping a brighter, more resilient future!",
+      image: "https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/dolphin.webp",
     },
     {
       result: "yellow",
       title: "Magnetic Connectivity",
-      description: "You are a fantastic people-magnet, thriving on meaningful connections. You're awesome at making everyone feel like a part of the gang, shrugging off any differences and welcoming folks into your world. Your ability to connect people is the key to a vibrant community, where diverse voices unite into a single, powerful force.",
-      image: imgBear,
-      txtColor: ""
+      description:
+        "You are a fantastic people-magnet, thriving on meaningful connections. You're awesome at making everyone feel like a part of the gang, shrugging off any differences and welcoming folks into your world. Your ability to connect people is the key to a vibrant community, where diverse voices unite into a single, powerful force.",
+      image: "https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/bear.webp",
     },
     {
       result: "brown",
       title: "Radiant Empathy",
-      description: "Community is your fortress, where everyone is equal and welcomed! You're great at making a cozy community, taking care of others, and letting them take care of you too. Your ability to nurture a strong support system is key to shaping a brighter future!",
-      image: imgKangaroo,
-      txtColor: "text-white"
+      description:
+        "Community is your fortress, where everyone is equal and welcomed! You're great at making a cozy community, taking care of others, and letting them take care of you too. Your ability to nurture a strong support system is key to shaping a brighter future!",
+      image: "https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/kangaroo.webp",
     },
     {
-      result: "purple", 
+      result: "purple",
       title: "Epic Leadership",
-      description: "Your warm and outgoing nature make you a perfect leader. Your great vision for strategy and long-term goals sets you apart, making you the ideal person to lead the way. With your friendly demeanor and clear vision, you're not just a leader, but a source of inspiration for those around you!",
-      image: imgLion,
-      txtColor: "text-white"
+      description:
+        "Your warm and outgoing nature make you a perfect leader. Your great vision for strategy and long-term goals sets you apart, making you the ideal person to lead the way. With your friendly demeanor and clear vision, you're not just a leader, but a source of inspiration for those around you!",
+      image: "https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/lion.webp",
     },
     {
       result: "blue",
       title: "Royal Protection",
-      description: "Finding peace and calm in the midst of chaos is your super ability! You're all about creating cozy and safe spaces, where you and your loved ones can relax and unwind. Your presence brings harmony and joy everywhere you go.",
-      image: imgDog,
-      txtColor: "text-white"
+      description:
+        "Finding peace and calm in the midst of chaos is your super ability! You're all about creating cozy and safe spaces, where you and your loved ones can relax and unwind. Your presence brings harmony and joy everywhere you go.",
+      image: "https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/dog.webp",
     },
     {
       result: "green",
       title: "Extraordinary Expertise",
-      description: "Standing out is your superpower, making every day an adventure! You love being different, showing off your amazing talents and skills. By celebrating your individuality and confidence, you're shaping a future that's bursting with bright possibilities and delightful surprises!",
-      image: imgFox,
-      txtColor: "text-white"
+      description:
+        "Standing out is your superpower, making every day an adventure! You love being different, showing off your amazing talents and skills. By celebrating your individuality and confidence, you're shaping a future that's bursting with bright possibilities and delightful surprises!",
+      image: "https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/fox.webp",
     },
     {
       result: "red",
       title: "Legendary exploration",
-      description: "Adventure is your jam! You love exploring, pushing boundaries, and finding new thrills. Your passion is always leading you toward endless excitement and awesome discoveries. And the greatest adventure of all? Shaping the world with your unique perspective and making a difference wherever you go.",
-      image: imgSquirrel,
-      txtColor: "text-white"
-    }
+      description:
+        "Adventure is your jam! You love exploring, pushing boundaries, and finding new thrills. Your passion is always leading you toward endless excitement and awesome discoveries. And the greatest adventure of all? Shaping the world with your unique perspective and making a difference wherever you go.",
+      image: "https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/squirrel.webp",
+    },
   ];
-  return results.map(({ result, title, description, image, txtColor }) => {
+  return results.map(({ result, title, description, image }) => {
     return {
       params: { result },
-      props: { title, description, image, txtColor },
+      props: { title, description, image },
     };
   });
 }
 
-const { title, description, image, txtColor } = Astro.props;
+const { title, description, image } = Astro.props;
 const { params } = Astro;
 const { result } = params;
 ---
 
 <Layout title={`${title}`}>
-  <Header/>
+  <Header />
   <!-- START: Intro -->
-  <div class={`panel panel-results panel-results-${result} px-0`}>
-      <div class="container">
-          <div class="row">
-              <div class={`col-12 col-lg-6 ${txtColor}`}>                    
-                  <p class="mb-1">Your superpower is...</p>
-                  <h1>{title}</h1>
-                  <p class="lead">{description}</p>
-                  <div class="text-center">
-                    <Image src={image} class="img-fluid" alt="Result Image" aria-hidden="true" />
-                  </div>
-                  <hr class="mb-4">
-                  <p class="lead">Your adventure has only just begun! Uncover more traits of your <strong>{title}</strong> superpower and use them to influence the world around you.</p>
-                  <p class="lead">Join the Ipsos iSay community, where every opinion holds the power to shape the future.</p>
-                  <p class="lead"><strong>Sign up and fill your profile to get to know more about yourself!</strong></p>
-              </div><!-- col -->
-              <div class="col-12 col-lg-6">
-                  <h2 class={`fs-3 ${txtColor}`}>Sign up for Ipsos iSay</h2>      
-                  <RecruitmentForm/>
-              </div><!-- col  -->
-          </div><!-- row -->
-      </div><!-- container -->
+
+  <div class="container">
+    <div class={`panel panel-results panel-results-${result}`}>
+      <div class="row">
+        <div class="col-10 offset-2 col-lg-5 offset-lg-0 text-center text-lg-end">
+         
+            <img src={image} class="img-fluid" alt="Result Image" aria-hidden="true" />
+
+        </div><!-- col -->
+
+        <div class="col-12 col-lg-7">
+          <p class="mb-1">Your superpower is...</p>
+          <h1>{title}</h1>
+          <p set:html={description}></p>
+
+
+          <!-- 3-Items list -->
+          <ul class="list-unstyled pt-2 mt-4">
+            <li class="d-flex align-items-start pb-2 mb-4">
+              <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/icon-smile-wink.svg" class="me-3" aria-hidden="true" />
+              <div>
+                <strong class="h5">Charisma</strong>
+                <p class="mb-0">You have a magnetic presence that draws people in.</p>
+              </div>
+            </li>
+
+            <li class="d-flex align-items-start pb-2 mb-4">
+              <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/icon-heart-circle-plus.svg" class="me-3" aria-hidden="true" />
+              <div>
+                <strong class="h5">Confidence</strong>
+                <p class="mb-0">Your words and actions inspire confidence in those around you.</p>
+              </div>
+            </li>
+
+            <li class="d-flex align-items-start pb-2 mb-4">
+              <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/icon-comment-dots.svg" class="me-3" aria-hidden="true" />
+              <div>
+                <strong class="h5">Communicative</strong>
+                <p class="mb-0">You excel at conveying your ideas and vision with passion.</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Banner Playlist -->
+          <div class="banner-playlist card mt-5 mb-4">
+            <div class="card-body">
+              <div class="row g-0 align-items-center text-center text-xl-start">
+            
+                <div class="col-12 col-xl-2 text-xl-center">
+                  <img src="https://cdn.ipsosinteractive.com/deploy/PanelOne/resources/images/revamp/censydiam/speaker.webp"
+                      class="img-fluid mb-3 mb-xl-0 me-xl-2" 
+                      style="width: 64px; height: auto;" 
+                      aria-hidden="true" />
+                </div>
+            
+                <div class="col-12 col-xl-7">
+                  <h5 class="card-title fw-bold mb-1">The playlist for the Creatives</h5>
+                  <p class="card-text mb-0">Listen to the songs that match your personality.</p>
+                </div>
+
+                <div class="col-12 col-xl-3 text-center text-xl-end">
+                  <a href="#" class="btn btn-outline-secondary w-100 w-xl-auto mt-4 mt-xl-0">Play now!</a>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+
+          <!-- Share Section -->
+          <div class="pt-2 mt-4 text-center">
+            <p class="mb-2">Share the fun with your friends!</p>
+            <div class="d-flex justify-content-center gap-3 pt-1 mt-2">
+              <a href="javascript:void(0);" class="btn share-btn facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span class="visually-hidden">Share on Facebook</span>
+              </a>
+              <a href="javascript:void(0);" class="btn share-btn messenger">
+                <i class="fab fa-facebook-messenger"></i>
+                <span class="visually-hidden">Share on Messenger</span>
+              </a>
+              <a href="javascript:void(0);" class="btn share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span class="visually-hidden">Share on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+
+        </div><!-- col -->
+      </div><!-- row -->
+    </div><!-- panel -->
+    <div class="text-center">
+      <a href="javascript:void(0);" class="btn btn-primary btn-start mt-5">Back to Dashboard</a>
+    </div>
+    
   </div><!-- END: Intro -->
 
-  <PanelFeatures/>
-  <Footer/>
+  <Footer />
 
-  <button type="button" class="btn btn-sm btn-primary btn-variants" data-bs-toggle="modal" data-bs-target="#resultsModal">
-      + Results
+  <button
+    type="button"
+    class="btn btn-sm btn-primary btn-variants"
+    data-bs-toggle="modal"
+    data-bs-target="#resultsModal"
+  >
+    + Results
   </button>
 
   <!-- JUST FOR THE PROTOTYPE: Not used in production -->
   <!-- Modal -->
   <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="resultsModalLabel">More results</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                  <ul>
-                      <li><a class="dropdown-item" href="/projects/censydiam/result/orange">Creative (orange)</a></li>
-                      <li><a class="dropdown-item" href="/projects/censydiam/result/black">Pragmatist (black)</a></li>
-                      <li><a class="dropdown-item" href="/projects/censydiam/result/yellow">Connector (yellow)</a></li>
-                      <li><a class="dropdown-item" href="/projects/censydiam/result/brown">Empathizer (brown)</a></li>
-                      <li><a class="dropdown-item" href="/projects/censydiam/result/purple">Leader (purple)</a></li>
-                      <li><a class="dropdown-item" href="/projects/censydiam/result/blue">Protector (blue)</a></li>
-                      <li><a class="dropdown-item" href="/projects/censydiam/result/green">Expert (green)</a></li>
-                      <li><a class="dropdown-item" href="/projects/censydiam/result/red">Explorer (red)</a></li>
-                  </ul>
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              </div>
-          </div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="resultsModalLabel">More results</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li><a class="dropdown-item" href="/p1/censydiam-without-rec/result/orange">Creative (orange)</a></li>
+            <li><a class="dropdown-item" href="/p1/censydiam-without-rec/result/black">Pragmatist (black)</a></li>
+            <li><a class="dropdown-item" href="/p1/censydiam-without-rec/result/yellow">Connector (yellow)</a></li>
+            <li><a class="dropdown-item" href="/p1/censydiam-without-rec/result/brown">Empathizer (brown)</a></li>
+            <li><a class="dropdown-item" href="/p1/censydiam-without-rec/result/purple">Leader (purple)</a></li>
+            <li><a class="dropdown-item" href="/p1/censydiam-without-rec/result/blue">Protector (blue)</a></li>
+            <li><a class="dropdown-item" href="/p1/censydiam-without-rec/result/green">Expert (green)</a></li>
+            <li><a class="dropdown-item" href="/p1/censydiam-without-rec/result/red">Explorer (red)</a></li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
+    </div>
   </div>
-
 </Layout>
 
 <!-- TrustBox script -->
