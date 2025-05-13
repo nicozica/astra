@@ -341,7 +341,7 @@ p {
 .panel-bg-success-plus-1 { background: var(--bg-success-plus-1); }
 .panel-bg-success-plus-2 { background: var(--bg-success-plus-2); }
 .panel-bg-success-minus-1 { background: var(--bg-success-minus-1); }
-.panel-bg-success-minus-2 { background: var(--bg-success-minus-2); }
+.panel-bg-success-minus-2 { background: #FEFBFF; }
 .panel-bg-success-default { background: var(--bg-success-default); }
 
 /* Warning Backgrounds */
