@@ -46,7 +46,7 @@ img.img-200px {
   
 
 .dotted-line {
-    border: none; border-top: 2px dotted var(--stroke-default-default);
+    border: none; border-top: 2px dotted #939096;
     margin: 24px 0
 }
 
