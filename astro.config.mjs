@@ -2,10 +2,20 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  // Otras configuraciones aquí
-  buildOptions: {
-    baseUrl: '/', // Ruta base personalizada
+  // Output mode: static site generation (default)
+  output: 'static',
+  
+  // Base URL for the site (root path)
+  base: '/',
+  
+  // Trailing slash behavior - 'always' adds trailing slashes to URLs
+  trailingSlash: 'always',
+  
+  // Build configuration
+  build: {
+    format: 'directory', // Creates /path/index.html instead of /path.html
   },
+  
   vite: {
     preview: {
       allowedHosts: [
