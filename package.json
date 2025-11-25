@@ -4,15 +4,16 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro preview --port $PORT --host 0.0.0.0",
     "build": "astro build",
     "preview": "astro preview",
+    "start": "serve -s dist -l $PORT",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "astro": "^5.8.1",
     "bootstrap": "^5.3.3",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.2",
+    "serve": "^14.2.3"
   }
 }
