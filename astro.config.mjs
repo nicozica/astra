@@ -8,8 +8,8 @@ export default defineConfig({
   // Base URL for the site (root path)
   base: '/',
   
-  // Trailing slash behavior - 'always' adds trailing slashes to URLs
-  trailingSlash: 'always',
+  // Trailing slash behavior - 'ignore' allows both /path and /path/ to work
+  trailingSlash: 'ignore',
   
   // Build configuration
   build: {
