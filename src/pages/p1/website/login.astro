@@ -1,0 +1,117 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="Log in to Ipsos iSay">
+  <div class="d-flex justify-content-center align-items-center min-vh-100" style="background-color: var(--bg-default-default);">
+    <div class="panel-default" style="width: 100%; max-width: 420px; margin: 20px;">
+      <div class="p-4">
+        <!-- Title -->
+        <h5 class="text-center mb-4 text-main">Log in to Ipsos iSay</h5>
+
+        <!-- Social Login Buttons -->
+        <div class="row g-2 mb-4">
+          <div class="col-6">
+            <a href="#" class="btn btn-outline-default w-100 d-flex align-items-center justify-content-center gap-2">
+              <i class="fab fa-google"></i><span>Google</span>
+            </a>
+          </div>
+          <div class="col-6">
+            <a href="#" class="btn btn-outline-default w-100 d-flex align-items-center justify-content-center gap-2">
+              <i class="fab fa-apple"></i><span>Apple</span>
+            </a>
+          </div>
+          <div class="col-6">
+            <a href="#" class="btn btn-outline-default w-100 d-flex align-items-center justify-content-center gap-2">
+              <i class="fas fa-id-card"></i><span>NetID</span>
+            </a>
+          </div>
+          <div class="col-6">
+            <a href="#" class="btn btn-outline-default w-100 d-flex align-items-center justify-content-center gap-2">
+              <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Extended Social Row -->
+        <div class="row g-2 mb-4">
+          <div class="col-12">
+            <a href="#" class="btn btn-outline-default w-100 d-flex align-items-center justify-content-center gap-2">
+              <i class="fab fa-facebook"></i><span>Facebook</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="d-flex align-items-center mb-4">
+          <div class="flex-grow-1" style="height: 1px; background-color: var(--stroke-default-minus-2);"></div>
+          <span class="px-3 text-placeholder small">or</span>
+          <div class="flex-grow-1" style="height: 1px; background-color: var(--stroke-default-minus-2);"></div>
+        </div>
+
+        <!-- Login Form -->
+        <form>
+          <!-- Email Field -->
+          <div class="mb-3">
+            <label for="email" class="form-label text-main">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <!-- Password Field -->
+          <div class="mb-3">
+            <label for="password" class="form-label text-main">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <!-- Helper Links -->
+          <div class="d-flex gap-3 mb-4 small">
+            <a href="#" class="text-link">Forgot password?</a>
+          </div>
+
+          <!-- Login Button -->
+          <button type="submit" class="btn btn-primary w-100">
+            Log in
+          </button>
+        </form>
+
+        <!-- Footer Text -->
+        <div class="text-center mt-4 small">
+          <span class="text-muted">Don't have an account?</span>
+          <a href="#" class="text-link fw-semibold">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .form-control {
+      border: 1px solid var(--stroke-default-minus-1);
+      border-radius: 6px;
+      padding: 9px 12px;
+      font-size: 14px;
+    }
+
+    .form-control:focus {
+      border-color: var(--stroke-primary-default);
+      box-shadow: 0 0 0 0.2rem rgba(47, 70, 156, 0.15);
+    }
+
+    .form-label {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+  </style>
+</Layout>

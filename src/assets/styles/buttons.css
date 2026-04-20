@@ -88,27 +88,38 @@ a.btn-white {
 
 /* Buttons Outline Default */
 .btn.btn-outline-default {
-    color: var(--text-default-plus-2) !important;
+    color: var(--text-main) !important;
     border: 2px solid var(--stroke-default-default) !important;
     background: var(--bg-default-minus-2);
 }
 
 .btn.btn-outline-default:hover {
-    color: var(--text-default-plus-2);
+    color: var(--text-main);
     border: 2px solid var(--stroke-default-minus-1) !important;
     background: var(--bg-default-default);
 }
 
 .btn.btn-outline-default:focus {
-    color: var(--text-foreground) !important;
-    border: 2px solid var(--stroke-default-default) !important;
+    color: var(--text-main) !important;
+    border: 2px solid var(--stroke-primary-minus-2) !important;
     background: var(--bg-default-default);
+    box-shadow: 0 0 0 0.2rem rgba(164, 179, 234, 0.35);
 }
 
 .btn.btn-outline-default:active {
-    color: var(--text-foreground) !important;
+    color: var(--text-main) !important;
     border: 2px solid var(--stroke-default-plus-1) !important;
     background: var(--bg-default-default);
+    box-shadow: none;
+}
+
+.btn.btn-outline-default:disabled,
+.btn.btn-outline-default.disabled {
+    color: var(--text-disabled) !important;
+    border: 2px solid var(--stroke-default-minus-2) !important;
+    background: var(--bg-default-default);
+    opacity: 1;
+    box-shadow: none;
 }
 
 /* Buttons Outline Primary */
