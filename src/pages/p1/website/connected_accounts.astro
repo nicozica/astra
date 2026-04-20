@@ -1,0 +1,138 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import HeaderLogoOnly from '../../../components/HeaderLogoOnly.astro';
+import Footer from '../../../components/Footer.astro';
+---
+
+<Layout title="Connected accounts">
+  <div class="d-flex flex-column min-vh-100">
+    <HeaderLogoOnly />
+
+    <main class="flex-grow-1 px-3 py-4">
+      <div class="connected-accounts-shell mx-auto">
+        <div class="settings-heading">
+          <a href="#" class="text-main" aria-label="Go back to account settings">
+            <i class="fas fa-arrow-left" aria-hidden="true"></i>
+          </a>
+          <p class="text-muted fw-semibold mb-0">Account settings</p>
+        </div>
+
+        <div class="panel-default w-100">
+          <div class="p-4">
+          <section class="mb-4">
+            <h3 class="mb-3 text-main">Connected accounts</h3>
+            <p class="mb-0">
+              Connect or disconnect your SSO accounts for faster sign-in.
+              <br />
+              Use any connected account to log in.
+            </p>
+          </section>
+
+          <section class="mb-4">
+            <h4 class="mb-3 text-main">Your connected SSO accounts</h4>
+            <div class="account-list">
+              <article class="account-card" aria-label="Google connected account">
+                <div class="account-main">
+                  <i class="fab fa-google text-primary fs-4" aria-hidden="true"></i>
+                  <div class="account-copy">
+                    <h5 class="mb-0 text-main">Google</h5>
+                    <span class="small text-success-plus-1">
+                      <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+                      Connected
+                    </span>
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-outline-default">
+                  Disconnect
+                </button>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <h4 class="mb-3 text-main">Available SSO accounts</h4>
+            <div class="account-list">
+              <article class="account-card" aria-label="Apple available account">
+                <div class="account-main">
+                  <i class="fab fa-apple text-main fs-4" aria-hidden="true"></i>
+                  <h5 class="mb-0 text-main">Apple</h5>
+                </div>
+
+                <button type="button" class="btn btn-success">
+                  Connect
+                </button>
+              </article>
+
+              <article class="account-card" aria-label="netID available account">
+                <div class="account-main">
+                  <i class="fas fa-id-card text-gray-plus-1 fs-4" aria-hidden="true"></i>
+                  <h5 class="mb-0 text-main">netID</h5>
+                </div>
+
+                <button type="button" class="btn btn-success">
+                  Connect
+                </button>
+              </article>
+            </div>
+          </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <Footer />
+  </div>
+
+  <style>
+    .connected-accounts-shell {
+      max-width: 480px;
+    }
+
+    .settings-heading {
+      display: grid;
+      grid-template-columns: 20px auto;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .account-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .account-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      border: 1px solid var(--stroke-default-minus-2);
+      border-radius: 1rem;
+      background: var(--bg-default-default);
+    }
+
+    .account-main {
+      display: grid;
+      grid-template-columns: 24px minmax(0, 1fr);
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .account-copy {
+      display: grid;
+      gap: 0.2rem;
+    }
+
+    .account-copy i {
+      margin-right: 0.2rem;
+    }
+
+    @media (max-width: 575.98px) {
+      .account-card {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</Layout>
